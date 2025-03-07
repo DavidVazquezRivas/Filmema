@@ -7,6 +7,10 @@
         "es": "Español",
         "cat": "Catalán"
       }
+    },
+    "theme": {
+      "lightLabel": "Cambiar a modo claro",
+      "darkLabel": "Cambiar a modo oscuro"
     }
   }
 }
