@@ -1,0 +1,12 @@
+{
+  "header": {
+    "language": {
+      "label": "Language",
+      "options": {
+        "en": "English",
+        "es": "Spanish",
+        "cat": "Catalan"
+      }
+    }
+  }
+}
