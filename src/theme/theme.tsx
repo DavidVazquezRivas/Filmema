@@ -6,6 +6,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     ...(mode === 'light'
       ? {
           // palette values for light mode
+          darkZone: '#d6d6d6',
         }
       : {
           // palette values for dark mode
