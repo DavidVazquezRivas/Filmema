@@ -1,7 +1,8 @@
 import { useThemeContext } from '@/theme/ThemeContextProvider'
-import { ThemeModeToggle } from '@/components/ThemeModeToggle'
 import { CssBaseline, ThemeProvider } from '@mui/material'
-import { LanguageSelector } from './components/LanguageSelector'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { Home } from '@/pages/home/Home'
+import { NotFound } from '@/pages/404/NotFound'
 
 function App() {
   const { theme } = useThemeContext()
@@ -9,8 +10,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <ThemeModeToggle />
-      <LanguageSelector />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }

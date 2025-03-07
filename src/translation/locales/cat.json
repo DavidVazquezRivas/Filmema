@@ -1,5 +1,31 @@
 {
   "header": {
+    "navigation": {
+      "label": "Seccions",
+      "discover": "Descobrir",
+      "discoverLabel": "Anar a la pàgina de descobrir",
+      "nearYou": "A prop teu",
+      "nearYouLabel": "Anar a la pàgina de a prop teu",
+      "nowPlaying": "Als cinemes",
+      "nowPlayingLabel": "Anar a la pàgina de als cinemes",
+      "upcoming": "Properament",
+      "upcomingLabel": "Anar a la pàgina de properament"
+    },
+    "search": {
+      "placeholder": "Cercar a Filmema",
+      "label": "Cercar pel·lícules"
+    },
+    "user": {
+      "label": "Seccions d'usuari",
+      "watchlist": {
+        "link": "Redirigir a la pàgina de favorits",
+        "label": "Favorits"
+      },
+      "profile": {
+        "link": "Redirigir a la pàgina de perfil",
+        "label": "Perfil"
+      }
+    },
     "language": {
       "label": "Idioma",
       "options": {
@@ -7,6 +33,10 @@
         "es": "Espanyol",
         "cat": "Català"
       }
+    },
+    "theme": {
+      "lightLabel": "Canviar a mode clar",
+      "darkLabel": "Canviar a mode fosc"
     }
   }
 }

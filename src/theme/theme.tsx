@@ -9,6 +9,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
         }
       : {
           // palette values for dark mode
+          darkZone: '#080808',
         }),
   },
 })

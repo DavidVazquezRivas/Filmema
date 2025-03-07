@@ -1,5 +1,31 @@
 {
   "header": {
+    "navigation": {
+      "label": "Secciones",
+      "discover": "Descubrir",
+      "discoverLabel": "Ir a la página de descubrir",
+      "nearYou": "Cerca de ti",
+      "nearYouLabel": "Ir a la página de cerca de ti",
+      "nowPlaying": "En cines",
+      "nowPlayingLabel": "Ir a la página de en cines",
+      "upcoming": "Proximamente",
+      "upcomingLabel": "Ir a la página de próximamente"
+    },
+    "search": {
+      "placeholder": "Buscar en Filmema",
+      "label": "Buscar películas"
+    },
+    "user": {
+      "label": "Secciones de usuario",
+      "watchlist": {
+        "link": "Redirigir a la página de favoritos",
+        "label": "Favoritos"
+      },
+      "profile": {
+        "link": "Redirigir a la página de perfil",
+        "label": "Perfil"
+      }
+    },
     "language": {
       "label": "Idioma",
       "options": {

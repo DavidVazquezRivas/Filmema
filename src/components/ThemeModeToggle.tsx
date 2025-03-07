@@ -12,7 +12,7 @@ export const ThemeModeToggle = () => {
     mode === 'dark' ? t('header.theme.lightLabel') : t('header.theme.darkLabel')
   const icon = mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />
   return (
-    <IconButton onClick={toggleColorMode} color="inherit" aria-label={label}>
+    <IconButton onClick={toggleColorMode} aria-label={label}>
       {icon}
     </IconButton>
   )

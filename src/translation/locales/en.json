@@ -1,5 +1,31 @@
 {
   "header": {
+    "navigation": {
+      "label": "Sections",
+      "discover": "Discover",
+      "discoverLabel": "Go to the discover page",
+      "nearYou": "Near You",
+      "nearYouLabel": "Go to the near you page",
+      "nowPlaying": "Now Playing",
+      "nowPlayingLabel": "Go to the now playing page",
+      "upcoming": "Upcoming",
+      "upcomingLabel": "Go to the upcoming page"
+    },
+    "search": {
+      "placeholder": "Search in Filmema",
+      "label": "Search movies"
+    },
+    "user": {
+      "label": "User sections",
+      "watchlist": {
+        "link": "Redirect to the watchlist page",
+        "label": "Watchlist"
+      },
+      "profile": {
+        "link": "Redirect to the profile page",
+        "label": "Profile"
+      }
+    },
     "language": {
       "label": "Language",
       "options": {
@@ -7,6 +33,10 @@
         "es": "Spanish",
         "cat": "Catalan"
       }
+    },
+    "theme": {
+      "lightLabel": "Switch to light mode",
+      "darkLabel": "Switch to dark mode"
     }
   }
 }

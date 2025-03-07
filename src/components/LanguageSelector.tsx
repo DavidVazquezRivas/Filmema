@@ -1,4 +1,4 @@
-import { Languages } from '@/constants/Languages'
+import { Languages } from '@/constants/languages'
 import i18n from '@/translation/i18n'
 import {
   FormControl,
