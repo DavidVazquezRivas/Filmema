@@ -17,7 +17,12 @@ export const Header = () => {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      sx={{ backgroundColor: 'darkZone' }}
+      position="sticky"
+      top={0}
+      zIndex={1}
+      sx={{
+        backgroundColor: 'darkZone',
+      }}
     >
       <Container
         maxWidth="lg"

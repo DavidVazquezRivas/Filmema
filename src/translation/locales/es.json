@@ -38,5 +38,18 @@
       "lightLabel": "Cambiar a modo claro",
       "darkLabel": "Cambiar a modo oscuro"
     }
+  },
+  "footer": {
+    "credits": {
+      "label": "Créditos",
+      "design": "Inspiración para el diseño",
+      "data": "Principal proveedor de datos "
+    },
+    "copyright": {
+      "label": "Derechos de autor",
+      "github": {
+        "label": "Repositorio de GitHub"
+      }
+    }
   }
 }

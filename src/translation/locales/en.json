@@ -38,5 +38,18 @@
       "lightLabel": "Switch to light mode",
       "darkLabel": "Switch to dark mode"
     }
+  },
+  "footer": {
+  "credits": {
+    "label": "Credits",
+    "design": "Design inspiration",
+    "data": "Main data provider"
+  },
+  "copyright": {
+    "label": "Copyright",
+    "github": {
+      "label": "GitHub Repository"
+    }
   }
+}
 }
