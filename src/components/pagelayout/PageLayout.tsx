@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { Footer } from '@/components/pagelayout/footer/Footer'
+import { Header } from '@/components/pagelayout/header/Header'
 import { Box, Container } from '@mui/material'
 
 export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {

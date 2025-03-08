@@ -4,9 +4,9 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import { Link } from 'react-router-dom'
 import Logo from '@/assets/logo.svg'
 import { useTranslation } from 'react-i18next'
-import { SearchBar } from '@/components/SearchBar'
-import { ThemeModeToggle } from '@/components/ThemeModeToggle'
-import { LanguageSelector } from '@/components/LanguageSelector'
+import { SearchBar } from '@/components/pagelayout/header/SearchBar'
+import { ThemeModeToggle } from '@/components/pagelayout/header/ThemeModeToggle'
+import { LanguageSelector } from '@/components/pagelayout/header/LanguageSelector'
 
 export const Header = () => {
   const { t } = useTranslation()
