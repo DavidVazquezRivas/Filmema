@@ -40,16 +40,23 @@
     }
   },
   "footer": {
-  "credits": {
-    "label": "Credits",
-    "design": "Design inspiration",
-    "data": "Main data provider"
+    "credits": {
+      "label": "Credits",
+      "design": "Design inspiration",
+      "data": "Main data provider"
+    },
+    "copyright": {
+      "label": "Copyright",
+      "github": {
+        "label": "GitHub Repository"
+      }
+    }
   },
-  "copyright": {
-    "label": "Copyright",
-    "github": {
-      "label": "GitHub Repository"
+  "discover": {
+    "card": {
+      "posterAlt": "Movie poster: {{title}}",
+      "votes": "Votes: ",
+      "rate": "Rate"
     }
   }
-}
 }

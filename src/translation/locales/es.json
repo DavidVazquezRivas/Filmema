@@ -51,5 +51,12 @@
         "label": "Repositorio de GitHub"
       }
     }
+  },
+  "discover": {
+    "card": {
+      "posterAlt": "Cartel de la película: {{title}}",
+      "votes": "Votos: ",
+      "rate": "Puntúa"
+    }
   }
 }

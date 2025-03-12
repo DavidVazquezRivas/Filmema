@@ -40,16 +40,23 @@
     }
   },
   "footer": {
-  "credits": {
-    "label": "Crèdits",
-    "design": "Inspiració per al disseny",
-    "data": "Proveïdor principal de dades"
+    "credits": {
+      "label": "Crèdits",
+      "design": "Inspiració per al disseny",
+      "data": "Proveïdor principal de dades"
+    },
+    "copyright": {
+      "label": "Drets d'autor",
+      "github": {
+        "label": "Repositori de GitHub"
+      }
+    }
   },
-  "copyright": {
-    "label": "Drets d'autor",
-    "github": {
-      "label": "Repositori de GitHub"
+  "discover": {
+    "card": {
+      "posterAlt": "Cartell de la pel·lícula: {{title}}",
+      "votes": "Vots: ",
+      "rate": "Valora"
     }
   }
-}
 }
