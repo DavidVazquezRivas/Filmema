@@ -36,6 +36,8 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
   const indexSize = theme.typography.h4.fontSize
   const releaseYear = new Date(movie.releaseDate).getFullYear()
   const overview = truncateText(movie.overview, 200)
+  // TODO add tooltips to truncated text
+  const movieTitle = truncateText(movie.title, 25)
 
   return (
     <Card
@@ -46,6 +48,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
         p: 2,
         borderRadius: 2,
         maxWidth: 800,
+        minWidth: 800,
         maxHeight: 240,
       }}
     >
@@ -89,7 +92,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
         }}
       >
         <Typography variant="h5" fontWeight="bold">
-          {movie.title}
+          {movieTitle}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {releaseYear}
