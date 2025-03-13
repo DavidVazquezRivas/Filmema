@@ -20,6 +20,7 @@ export const LanguageSelector = () => {
     if (currentLanguage === selectedLanguage) return
     i18n.changeLanguage(selectedLanguage)
     setCurrentLanguage(selectedLanguage)
+    window.location.reload()
   }
 
   const options = Languages.map((lang) => (
