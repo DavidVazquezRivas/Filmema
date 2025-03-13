@@ -43,6 +43,7 @@ export const getMovies = async ({
     : ''
 
   let url = `${TMDB_API_URL}/${modeUrl}page=${page}&language=${language}&sort_by=popularity.desc${filterQuery}`
+  console.log(url)
 
   const response = await fetch(url, options)
   const { results } = await response.json()

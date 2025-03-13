@@ -5,6 +5,7 @@ import { Home } from '@/pages/home/Home'
 import { NotFound } from '@/pages/404/NotFound'
 import { Discover } from '@/pages/discover/Discover'
 import { useLoadGenres } from '@/hooks/genres/useLoadGenres'
+import { DiscoverMode } from '@/models/discoverModes'
 
 function App() {
   const { theme } = useThemeContext()
@@ -17,7 +18,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/discover" element={<Discover />} />
+          <Route
+            path="/discover"
+            element={<Discover mode={DiscoverMode.discover} />}
+          />
+          <Route
+            path="/now-playing"
+            element={<Discover mode={DiscoverMode.nowPlaying} />}
+          />
+          <Route
+            path="/upcoming"
+            element={<Discover mode={DiscoverMode.upcoming} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

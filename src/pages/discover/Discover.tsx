@@ -6,11 +6,17 @@ import { DiscoverMode } from '@/models/discoverModes'
 import { getMovies } from './services/getMovies'
 import { useEffect, useState } from 'react'
 
-export const Discover = () => {
+interface DiscoverProps {
+  mode?: DiscoverMode
+}
+
+export const Discover: React.FC<DiscoverProps> = ({
+  mode = DiscoverMode.discover,
+}) => {
   const [movies, setMovies] = useState<Movie[]>([])
 
   const fetchMovies = async () => {
-    return await getMovies({ mode: DiscoverMode.discover })
+    return await getMovies({ mode: mode })
   }
 
   useEffect(() => {
@@ -20,7 +26,7 @@ export const Discover = () => {
     }
 
     fetchData()
-  }, [])
+  }, [mode])
 
   const movieCards = movies.map((movie, index) => (
     <FullMovieCard key={movie.id} index={index + 1} movie={movie} />
