@@ -1,4 +1,7 @@
 {
+  "global": {
+    "noData": "No està disponible en aquest idioma"
+  },
   "header": {
     "navigation": {
       "label": "Seccions",

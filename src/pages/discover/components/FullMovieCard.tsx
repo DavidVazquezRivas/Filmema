@@ -15,6 +15,7 @@ import StarRoundedIcon from '@mui/icons-material/StarRounded'
 import StarOutlineRoundedIcon from '@mui/icons-material/StarOutlineRounded'
 import { BookmarkButton } from '@/components/bookmarkbutton/BookmarkButton'
 import { PosterContainer } from '@/components/containers/PosterContainer'
+import { AccesibleText } from '@/components/accessibletext/AccesibleText'
 
 interface FullMovieCardProps {
   index: number
@@ -35,9 +36,6 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
 
   const indexSize = theme.typography.h4.fontSize
   const releaseYear = new Date(movie.releaseDate).getFullYear()
-  const overview = truncateText(movie.overview, 200)
-  // TODO add tooltips to truncated text
-  const movieTitle = truncateText(movie.title, 25)
 
   return (
     <Card
@@ -91,9 +89,9 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
           gap: 1,
         }}
       >
-        <Typography variant="h5" fontWeight="bold">
-          {movieTitle}
-        </Typography>
+        <AccesibleText variant="h5" fontWeight="bold" maxLength={25} audible>
+          {movie.title}
+        </AccesibleText>
         <Typography variant="body2" color="text.secondary">
           {releaseYear}
         </Typography>
@@ -102,7 +100,9 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
             <Chip component="li" key={genre} label={genre} variant="filled" />
           ))}
         </Box>
-        <Typography variant="body2">{overview}</Typography>
+        <AccesibleText variant="body2" maxLength={200} audible>
+          {movie.overview}
+        </AccesibleText>
         <Typography variant="body2" color="text.secondary">
           <strong>{t('discover.card.votes')}</strong>
           {movie.voteCount.toLocaleString()}

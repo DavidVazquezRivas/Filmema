@@ -1,4 +1,7 @@
 {
+  "global": {
+    "noData": "Not avaliable in this language"
+  },
   "header": {
     "navigation": {
       "label": "Sections",
