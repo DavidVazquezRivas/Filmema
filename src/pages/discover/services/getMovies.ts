@@ -7,7 +7,7 @@ import {
 import { DiscoverMode } from '@/models/discoverModes'
 import { TmdbFilters } from '@/models/filters'
 import i18n from '@/translation/i18n'
-import { movieListAdapter } from '@/pages/discover/adapters/MovieListAdapter'
+import { movieListAdapter } from '@/pages/discover/adapters/movieListAdapter'
 
 interface GetMoviesParams {
   query?: string

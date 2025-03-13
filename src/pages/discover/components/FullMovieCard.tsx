@@ -3,7 +3,6 @@ import {
   Box,
   Card,
   CardContent,
-  Chip,
   Divider,
   IconButton,
   Typography,
@@ -15,6 +14,7 @@ import StarOutlineRoundedIcon from '@mui/icons-material/StarOutlineRounded'
 import { BookmarkButton } from '@/components/bookmarkbutton/BookmarkButton'
 import { PosterContainer } from '@/components/containers/PosterContainer'
 import { AccesibleText } from '@/components/accessibletext/AccesibleText'
+import { GenreChip } from '@/components/genrechip/GenreChip'
 
 interface FullMovieCardProps {
   index: number
@@ -96,7 +96,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
         </Typography>
         <Box component="ul" display="flex" gap={1} m={0} p={0}>
           {movie.genres.map((genre) => (
-            <Chip component="li" key={genre} label={genre} variant="filled" />
+            <GenreChip genreId={genre} component="li" variant="filled" />
           ))}
         </Box>
         <AccesibleText variant="body2" maxLength={200} audible>

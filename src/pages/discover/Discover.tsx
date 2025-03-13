@@ -16,7 +16,6 @@ export const Discover = () => {
   useEffect(() => {
     const fetchData = async () => {
       const moviesData = await fetchMovies()
-      console.log(moviesData)
       setMovies(moviesData)
     }
 

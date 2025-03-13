@@ -1,6 +1,6 @@
 export type Movie = {
   backdrop: string
-  genres: string[]
+  genres: number[]
   id: number
   title: string
   overview: string
