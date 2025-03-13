@@ -10,7 +10,6 @@ import {
   useTheme,
 } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { truncateText } from '@/utils/text-utils'
 import StarRoundedIcon from '@mui/icons-material/StarRounded'
 import StarOutlineRoundedIcon from '@mui/icons-material/StarOutlineRounded'
 import { BookmarkButton } from '@/components/bookmarkbutton/BookmarkButton'
@@ -123,7 +122,10 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
         <Typography mr={2} variant="h6">
           {movie.voteAverage}
         </Typography>
-        <IconButton onClick={handleClickRate}>
+        <IconButton
+          onClick={handleClickRate}
+          aria-label={t('discover.card.rate')}
+        >
           <StarOutlineRoundedIcon color="primary" />
         </IconButton>
         <Typography variant="body1">{t('discover.card.rate')}</Typography>

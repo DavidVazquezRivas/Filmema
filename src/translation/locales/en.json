@@ -1,6 +1,8 @@
 {
   "global": {
-    "noData": "Not avaliable in this language"
+    "noData": "Not avaliable in this language",
+    "listen": "Listen",
+    "watchlist" : "Add to watchlist"
   },
   "header": {
     "navigation": {

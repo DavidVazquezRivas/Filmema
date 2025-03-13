@@ -1,5 +1,4 @@
 import { IconButton, Tooltip, Typography, TypographyProps } from '@mui/material'
-import { Variant } from '@mui/material/styles/createTypography'
 import { useTranslation } from 'react-i18next'
 import VolumeUpIcon from '@mui/icons-material/VolumeUp'
 import { AUDIBLE_LIMIT } from '@/constants/accesibility'
@@ -48,7 +47,12 @@ export const AccesibleText: React.FC<AccesibleTextProps> = ({
     <Typography {...typographyProps}>
       {displayedText}
       {isAudible && (
-        <IconButton size="small" sx={{ p: 0, ml: 1 }} onClick={handleClick}>
+        <IconButton
+          size="small"
+          sx={{ p: 0, ml: 1 }}
+          onClick={handleClick}
+          aria-label={t('global.listen')}
+        >
           <VolumeUpIcon />
         </IconButton>
       )}

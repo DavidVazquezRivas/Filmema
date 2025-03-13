@@ -1,6 +1,8 @@
 {
   "global": {
-    "noData": "No està disponible en aquest idioma"
+    "noData": "No està disponible en aquest idioma",
+    "listen": "Escoltar",
+    "watchlist": "Afegir a favorits"
   },
   "header": {
     "navigation": {

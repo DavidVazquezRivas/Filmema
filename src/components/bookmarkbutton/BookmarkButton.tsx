@@ -2,6 +2,7 @@ import { IconButton } from '@mui/material'
 import BookmarkSharpIcon from '@mui/icons-material/BookmarkSharp'
 import BookmarkBorderSharpIcon from '@mui/icons-material/BookmarkBorderSharp'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface BookmarkButtonProps {
   movieId: number
@@ -15,6 +16,7 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
 }) => {
   // TODO: Implement logic to know if the movie is already in the watchlist and toggle watchlist
   const [isInWatchlist, setIsInWatchlist] = useState(false)
+  const { t } = useTranslation()
   const handleToggleWatchlist = () => {
     setIsInWatchlist((prev) => !prev)
     console.log('Toggle watchlist: ' + movieId)
@@ -40,6 +42,7 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
         ...bookmarkHover,
       }}
       size={'large'}
+      aria-label={t('global.watchlist')}
     >
       {bookmarkIcon}
     </IconButton>
