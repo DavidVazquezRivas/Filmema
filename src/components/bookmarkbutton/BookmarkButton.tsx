@@ -24,11 +24,11 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
 
   const bookmarkIcon = isInWatchlist ? (
     <BookmarkSharpIcon
-      sx={{ position: 'absolute', fontSize: 'inherit', top: '-3px' }}
+      sx={{ position: 'absolute', fontSize: 'inherit', top: '-4px' }}
     />
   ) : (
     <BookmarkBorderSharpIcon
-      sx={{ position: 'absolute', fontSize: 'inherit', top: '-3px' }}
+      sx={{ position: 'absolute', fontSize: 'inherit', top: '-4px' }}
     />
   )
 
@@ -39,6 +39,7 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
         position: 'absolute',
         top: 0,
         left: '10%',
+        color: 'primary.main',
         ...bookmarkHover,
       }}
       size={'large'}
