@@ -30,6 +30,10 @@ function App() {
             path="/upcoming"
             element={<Discover mode={DiscoverMode.upcoming} />}
           />
+          <Route
+            path="/search/:query"
+            element={<Discover mode={DiscoverMode.search} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

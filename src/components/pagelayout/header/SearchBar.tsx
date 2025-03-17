@@ -1,36 +1,37 @@
 import React, { useState } from 'react'
 import { Paper, InputBase, IconButton } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
+import { useNavigate } from 'react-router-dom'
 
 interface SearchBarProps {
   placeholder?: string
   label?: string
-  onSearch: (value: string) => void
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({
-  onSearch,
-  placeholder,
-  label,
-}) => {
+export const SearchBar: React.FC<SearchBarProps> = ({ placeholder, label }) => {
   const [value, setValue] = useState<string>('')
+  const navigate = useNavigate()
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (value === '') return
     if (e.key === 'Enter') {
       e.preventDefault()
-      onSearch(value)
+      handleSearch(value)
     }
   }
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault()
     if (value === '') return
-    onSearch(value)
+    handleSearch(value)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value)
+  }
+
+  const handleSearch = (query: string) => {
+    navigate(`/search/${query}`)
   }
 
   return (
