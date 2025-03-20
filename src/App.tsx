@@ -9,7 +9,11 @@ import { DiscoverMode } from '@/models/discoverModes'
 
 function App() {
   const { theme } = useThemeContext()
-  useLoadGenres()
+  const loading = useLoadGenres()
+
+  if (loading) {
+    return <div>Cargando ...</div> // TODO good loading component
+  }
 
   return (
     <ThemeProvider theme={theme}>
