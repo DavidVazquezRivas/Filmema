@@ -74,6 +74,7 @@
       "voteCount": "Minimum votes",
       "countries": "Countries",
       "runtime": "Runtime (minutes)"
-    }
+    },
+    "noResults": "No results found matching the selected filters or search"
   }
 }

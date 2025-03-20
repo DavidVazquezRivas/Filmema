@@ -74,6 +74,7 @@
       "voteCount": "Mínim de vots",
       "countries": "Països",
       "runtime": "Durada (minuts)"
-    }
+    },
+    "noResults": "No s'han trobat resultats pels filtres o la cerca seleccionats"
   }
 }

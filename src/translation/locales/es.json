@@ -74,6 +74,7 @@
       "voteCount": "Mínimo de votos",
       "countries" : "Países",
       "runtime": "Duración (minutos)"
-    } 
+    },
+    "noResults": "No hay resultados que coincidan con la búsqueda o los filtros aplicados"
   }
 }

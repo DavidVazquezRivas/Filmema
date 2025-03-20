@@ -1,7 +1,7 @@
 import { PageLayout } from '@/components/pagelayout/PageLayout'
 import { Movie } from '@/models/movie'
 import { FullMovieCard } from './components/FullMovieCard'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { DiscoverMode } from '@/models/discoverModes'
 import { getMovies } from './services/getMovies'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -107,6 +107,19 @@ export const Discover: React.FC<DiscoverProps> = ({
     <FullMovieCard key={movie.id} index={index + 1} movie={movie} />
   ))
 
+  const noContent = (
+    <Typography
+      variant="h4"
+      p={2}
+      pt={10}
+      sx={{ textAlign: 'center', textWrap: 'balance' }}
+    >
+      {t('discover.noResults')}
+    </Typography>
+  )
+
+  const content = state.movies.length ? movieCards : noContent
+
   return (
     <PageLayout>
       <Box
@@ -124,7 +137,7 @@ export const Discover: React.FC<DiscoverProps> = ({
           component="section"
           alignItems="center"
         >
-          {movieCards}
+          {content}
         </Box>
       </Box>
     </PageLayout>
