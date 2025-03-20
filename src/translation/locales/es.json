@@ -2,7 +2,11 @@
   "global": {
     "noData": "No está disponible en este idioma",
     "listen": "Escuchar",
-    "watchlist": "Añadir a favoritos"
+    "watchlist": "Añadir a favoritos",
+    "filters": {
+      "title": "Filtros",
+      "apply": "Aplicar"
+    }
   },
   "header": {
     "navigation": {
@@ -62,6 +66,14 @@
       "posterAlt": "Cartel de la película: {{title}}",
       "votes": "Votos: ",
       "rate": "Puntúa"
-    }
+    },
+    "filters": {
+      "genres": "Géneros",
+      "releaseDate": "Fecha de estreno",
+      "voteAverage": "Puntuación", 
+      "voteCount": "Mínimo de votos",
+      "countries" : "Países",
+      "runtime": "Duración (minutos)"
+    } 
   }
 }

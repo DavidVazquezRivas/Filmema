@@ -2,7 +2,11 @@
   "global": {
     "noData": "Not avaliable in this language",
     "listen": "Listen",
-    "watchlist" : "Add to watchlist"
+    "watchlist" : "Add to watchlist",
+    "filters": {
+      "title": "Filters",
+      "apply": "Apply"
+    }
   },
   "header": {
     "navigation": {
@@ -62,6 +66,14 @@
       "posterAlt": "Movie poster: {{title}}",
       "votes": "Votes: ",
       "rate": "Rate"
+    },
+    "filters": {
+      "genres": "Genres",
+      "releaseDate": "Release Date",
+      "voteAverage": "Vote Average",
+      "voteCount": "Minimum votes",
+      "countries": "Countries",
+      "runtime": "Runtime (minutes)"
     }
   }
 }

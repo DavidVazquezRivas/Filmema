@@ -2,7 +2,11 @@
   "global": {
     "noData": "No està disponible en aquest idioma",
     "listen": "Escoltar",
-    "watchlist": "Afegir a favorits"
+    "watchlist": "Afegir a favorits",
+    "filters": {
+      "title": "Filtres",
+      "apply": "Aplicar"
+    }
   },
   "header": {
     "navigation": {
@@ -62,6 +66,14 @@
       "posterAlt": "Cartell de la pel·lícula: {{title}}",
       "votes": "Vots: ",
       "rate": "Valora"
+    },
+    "filters": {
+      "genres": "Gèneres",
+      "releaseDate": "Data d'estrena",
+      "voteAverage": "Puntuació",
+      "voteCount": "Mínim de vots",
+      "countries": "Països",
+      "runtime": "Durada (minuts)"
     }
   }
 }

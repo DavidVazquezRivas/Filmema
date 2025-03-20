@@ -5,7 +5,7 @@ import {
   TMDB_DEFAULT_LANGUAGE,
 } from '@/constants/tmdbConstants'
 import { DiscoverMode } from '@/models/discoverModes'
-import { TmdbFilters } from '@/models/filters'
+import { TmdbFilters } from '@/pages/discover/models/filters'
 import i18n from '@/translation/i18n'
 import { movieListAdapter } from '@/pages/discover/adapters/movieListAdapter'
 
