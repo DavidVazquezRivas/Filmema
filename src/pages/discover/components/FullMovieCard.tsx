@@ -51,7 +51,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
     >
       {/* Index number */}
       <Box display="flex" alignItems="start" flexDirection={'row'} p={2}>
-        <Typography variant="h5" fontWeight="bold">
+        <Typography variant="h5" fontWeight="bold" component="h4">
           {index}
         </Typography>
         <Divider
@@ -96,7 +96,12 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
         </Typography>
         <Box component="ul" display="flex" gap={1} m={0} p={0}>
           {movie.genres.map((genre) => (
-            <GenreChip genreId={genre} component="li" variant="filled" />
+            <GenreChip
+              genreId={genre}
+              component="li"
+              variant="filled"
+              key={genre}
+            />
           ))}
         </Box>
         <AccesibleText variant="body2" maxLength={200} audible>
