@@ -69,7 +69,6 @@ export const Header = () => {
           </Link>
         </ButtonGroup>
         <SearchBar
-          onSearch={(input) => console.log('Searching: ', input)}
           placeholder={t('header.search.placeholder')}
           label={t('header.search.label')}
         />
