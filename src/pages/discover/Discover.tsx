@@ -168,11 +168,6 @@ export const Discover: React.FC<DiscoverProps> = ({
           component="section"
           alignItems="center"
         >
-          <DiscoverPagination
-            page={state.page}
-            totalPages={state.totalPages}
-            setPage={handleChangePage}
-          />
           {content}
           <DiscoverPagination
             page={state.page}
