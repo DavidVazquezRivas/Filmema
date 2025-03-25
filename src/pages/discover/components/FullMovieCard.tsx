@@ -17,14 +17,10 @@ import { AccesibleText } from '@/components/accessibletext/AccesibleText'
 import { GenreChip } from '@/components/genrechip/GenreChip'
 
 interface FullMovieCardProps {
-  index: number
   movie: Movie
 }
 
-export const FullMovieCard: React.FC<FullMovieCardProps> = ({
-  index,
-  movie,
-}) => {
+export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
   const theme = useTheme()
   const { t } = useTranslation()
 
@@ -49,11 +45,8 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
         maxHeight: 240,
       }}
     >
-      {/* Index number */}
-      <Box display="flex" alignItems="start" flexDirection={'row'} p={2}>
-        <Typography variant="h5" fontWeight="bold" component="h4">
-          {index}
-        </Typography>
+      {/* Left divider (used to be index) */}
+      <Box display="flex" alignItems="start" flexDirection="row" p={2}>
         <Divider
           orientation="vertical"
           sx={{
@@ -88,7 +81,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({
           gap: 1,
         }}
       >
-        <AccesibleText variant="h5" fontWeight="bold" maxLength={25} audible>
+        <AccesibleText variant="h5" fontWeight="bold" maxLength={20} audible>
           {movie.title}
         </AccesibleText>
         <Typography variant="body2" color="text.secondary">

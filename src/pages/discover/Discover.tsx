@@ -13,6 +13,8 @@ import { useGetGenres } from '@/hooks/genres/useGetGenres'
 import { SelectOption } from '@/models/selectOption'
 import { DiscoverFiltersResult } from './models/filters'
 import { filterRequestAdapter } from './adapters/filterRequestAdapter'
+import { DiscoverPagination } from './components/DiscoverPagination'
+import { INITIAL_PAGE, MAX_PAGES, PAGE_SIZE } from './constants/pageConstants'
 
 interface DiscoverProps {
   mode?: DiscoverMode
@@ -21,12 +23,19 @@ interface DiscoverProps {
 interface DiscoverState {
   movies: Movie[]
   filters: DiscoverFiltersResult
+  page: number
+  totalPages: number
 }
 
 export const Discover: React.FC<DiscoverProps> = ({
   mode = DiscoverMode.discover,
 }) => {
-  const [state, setState] = useState<DiscoverState>({ movies: [], filters: {} })
+  const [state, setState] = useState<DiscoverState>({
+    movies: [],
+    filters: {},
+    page: INITIAL_PAGE,
+    totalPages: MAX_PAGES,
+  })
   const { query } = useParams<{ query: string }>()
   const { t } = useTranslation()
   const genresRaw = useGetGenres()
@@ -42,17 +51,25 @@ export const Discover: React.FC<DiscoverProps> = ({
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const moviesData = await getMovies({
+      const response = await getMovies({
         mode,
         query: query || '',
         filters: filterRequestAdapter(state.filters),
+        page: state.page,
       })
-      if (JSON.stringify(state.movies) === JSON.stringify(moviesData)) return
-      setState((prev) => ({ ...prev, movies: moviesData }))
+
+      if (JSON.stringify(state.movies) === JSON.stringify(response.movies))
+        return
+      setState((prev) => ({
+        ...prev,
+        movies: response.movies,
+        page: response.page,
+        totalPages: Math.min(response.totalPages, MAX_PAGES),
+      }))
     }
 
     fetchMovies()
-  }, [mode, query, state.filters])
+  }, [mode, query, state.filters, state.page])
 
   const handleApplyFilters = useCallback(
     (filterValues: DiscoverFiltersResult) => {
@@ -61,6 +78,10 @@ export const Discover: React.FC<DiscoverProps> = ({
     },
     []
   )
+
+  const handleChangePage = useCallback((page: number) => {
+    setState((prev) => ({ ...prev, page }))
+  }, [])
 
   const filters: FilterType[] = [
     {
@@ -103,8 +124,8 @@ export const Discover: React.FC<DiscoverProps> = ({
     },
   ]
 
-  const movieCards = state.movies.map((movie, index) => (
-    <FullMovieCard key={movie.id} index={index + 1} movie={movie} />
+  const movieCards = state.movies.map((movie) => (
+    <FullMovieCard key={movie.id} movie={movie} />
   ))
 
   const noContent = (
@@ -137,7 +158,17 @@ export const Discover: React.FC<DiscoverProps> = ({
           component="section"
           alignItems="center"
         >
+          <DiscoverPagination
+            page={state.page}
+            totalPages={state.totalPages}
+            setPage={handleChangePage}
+          />
           {content}
+          <DiscoverPagination
+            page={state.page}
+            totalPages={state.totalPages}
+            setPage={handleChangePage}
+          />
         </Box>
       </Box>
     </PageLayout>

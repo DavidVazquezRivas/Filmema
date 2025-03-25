@@ -3,10 +3,10 @@ import {
   POSTER_SIZES,
   TMDB_IMAGE_URL,
 } from '@/constants/tmdbConstants'
-import { Movie } from '@/models/movie'
+import { GetMoviesResponse } from '@/pages/discover/models/response'
 
-export const movieListAdapter = (result: any): Movie[] => {
-  return result.map((movie: any) => ({
+export const movieListAdapter = (obj: any): GetMoviesResponse => {
+  const movies = obj.results.map((movie: any) => ({
     backdrop: `${TMDB_IMAGE_URL}/${BACKDROP_SIZES[0]}/${movie.backdrop_path}`,
     genres: movie.genre_ids,
     id: movie.id,
@@ -17,4 +17,10 @@ export const movieListAdapter = (result: any): Movie[] => {
     voteAverage: movie.vote_average,
     voteCount: movie.vote_count,
   }))
+
+  return {
+    movies: movies,
+    page: obj.page,
+    totalPages: obj.total_pages,
+  }
 }
