@@ -14,7 +14,16 @@ import { SelectOption } from '@/models/selectOption'
 import { DiscoverFiltersResult } from './models/filters'
 import { filterRequestAdapter } from './adapters/filterRequestAdapter'
 import { DiscoverPagination } from './components/DiscoverPagination'
-import { INITIAL_PAGE, MAX_PAGES, PAGE_SIZE } from './constants/pageConstants'
+import { INITIAL_PAGE, MAX_PAGES } from './constants/pageConstants'
+import {
+  MAX_RELEASE_DATE,
+  MAX_RUNTIME,
+  MAX_VOTE_AVERAGE,
+  MAX_VOTE_COUNT,
+  MIN_RELEASE_DATE,
+  MIN_RUNTIME,
+  MIN_VOTE_COUNT,
+} from './constants/filters'
 
 interface DiscoverProps {
   mode?: DiscoverMode
@@ -54,7 +63,7 @@ export const Discover: React.FC<DiscoverProps> = ({
       const response = await getMovies({
         mode,
         query: query || '',
-        filters: filterRequestAdapter(state.filters),
+        filters: filterRequestAdapter(state.filters, mode),
         page: state.page,
       })
 
@@ -94,20 +103,21 @@ export const Discover: React.FC<DiscoverProps> = ({
       key: 'releaseDate',
       title: t('discover.filters.releaseDate'),
       type: FilterTypeEnum.range,
-      min: 1900,
-      max: 2022,
+      min: MIN_RELEASE_DATE[mode],
+      max: MAX_RELEASE_DATE[mode],
     },
     {
       key: 'voteAverage',
       title: t('discover.filters.voteAverage'),
       type: FilterTypeEnum.rating,
-      max: 10,
+      max: MAX_VOTE_AVERAGE,
     },
     {
       key: 'voteCount',
       title: t('discover.filters.voteCount'),
       type: FilterTypeEnum.number,
-      max: 5000,
+      min: MIN_VOTE_COUNT[mode],
+      max: MAX_VOTE_COUNT,
     },
     {
       key: 'countries',
@@ -119,8 +129,8 @@ export const Discover: React.FC<DiscoverProps> = ({
       key: 'runtime',
       title: t('discover.filters.runtime'),
       type: FilterTypeEnum.range,
-      min: 0,
-      max: 300,
+      min: MIN_RUNTIME,
+      max: MAX_RUNTIME,
     },
   ]
 

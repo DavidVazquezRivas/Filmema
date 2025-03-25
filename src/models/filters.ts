@@ -20,6 +20,7 @@ export interface RangeFilter extends BaseFilter {
 
 export interface NumberFilter extends BaseFilter {
   type: FilterTypeEnum.number
+  min: number
   max: number
 }
 export interface RatingFilter extends BaseFilter {

@@ -16,6 +16,7 @@ export const NumberFilterComponent: React.FC<NumberFilterProps> = ({
     <PrettoSlider
       value={value}
       onChange={(_, newValue) => onChange(newValue as number)}
+      min={filter.min}
       max={filter.max}
       aria-label={filter.title}
       valueLabelDisplay="auto"

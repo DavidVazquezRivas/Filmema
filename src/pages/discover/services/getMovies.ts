@@ -53,8 +53,8 @@ const getModeUrl = (mode: DiscoverMode, query = '') => {
   const modeUrls: Record<DiscoverMode, string> = {
     [DiscoverMode.discover]: 'discover/movie?',
     [DiscoverMode.search]: `search/movie?query=${query}&`,
-    [DiscoverMode.upcoming]: 'movie/upcoming?',
-    [DiscoverMode.nowPlaying]: 'movie/now_playing?',
+    [DiscoverMode.upcoming]: 'discover/movie?',
+    [DiscoverMode.nowPlaying]: 'discover/movie?',
   }
 
   return modeUrls[mode]
