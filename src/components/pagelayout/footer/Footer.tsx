@@ -8,19 +8,21 @@ export const Footer = () => {
 
   return (
     <Box
+      component="footer"
       padding={4}
-      alignItems={'center'}
-      display={'flex'}
-      justifyContent={'space-evenly'}
+      alignItems="center"
+      display="flex"
+      justifyContent="space-evenly"
       sx={{
         backgroundColor: 'darkZone',
       }}
     >
       <Box
+        component="section"
         aria-label={t('footer.credits.label')}
-        display={'flex'}
+        display="flex"
         gap={1}
-        flexDirection={'column'}
+        flexDirection="column"
       >
         <Link
           variant="button"
@@ -62,11 +64,12 @@ export const Footer = () => {
         </Link>
       </Box>
       <Box
+        component="section"
         aria-label={t('footer.copyright.label')}
-        display={'flex'}
+        display="flex"
         gap={2}
-        flexDirection={'column'}
-        alignItems={'center'}
+        flexDirection="column"
+        alignItems="center"
       >
         <Typography variant="body2">
           Copyright © {new Date().getFullYear()} Filmema

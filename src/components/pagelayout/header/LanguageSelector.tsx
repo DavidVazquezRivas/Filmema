@@ -35,8 +35,12 @@ export const LanguageSelector = () => {
   ))
 
   return (
-    <FormControl>
-      <InputLabel id="language-label" sx={{ display: 'none' }}>
+    <FormControl component="fieldset">
+      <InputLabel
+        component="label"
+        id="language-label"
+        sx={{ display: 'none' }}
+      >
         {t('header.language.label')}
       </InputLabel>
       <Select

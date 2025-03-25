@@ -13,6 +13,7 @@ export const Header = () => {
 
   return (
     <Box
+      component="header"
       padding={2}
       display="flex"
       justifyContent="space-between"
@@ -34,7 +35,7 @@ export const Header = () => {
         }}
       >
         <Link to="/home">
-          <Box component="img" src={Logo} alt="App Logo" maxHeight={'35px'} />
+          <Box component="img" src={Logo} alt="App Logo" maxHeight="35px" />
         </Link>
         <ButtonGroup
           variant="outlined"
@@ -47,56 +48,65 @@ export const Header = () => {
             },
           }}
         >
-          <Link to="/discover" style={{ textDecoration: 'none' }}>
-            <Button aria-label={t('header.navigation.discoverLabel')}>
-              {t('header.navigation.discover')}
-            </Button>
-          </Link>
-          <Link to="/near-you" style={{ textDecoration: 'none' }}>
-            <Button aria-label={t('header.navigation.nearYouLabel')}>
-              {t('header.navigation.nearYou')}
-            </Button>
-          </Link>
-          <Link to="/now-playing" style={{ textDecoration: 'none' }}>
-            <Button aria-label={t('header.navigation.nowPlayingLabel')}>
-              {t('header.navigation.nowPlaying')}
-            </Button>
-          </Link>
-          <Link to="/upcoming" style={{ textDecoration: 'none' }}>
-            <Button aria-label={t('header.navigation.upcomingLabel')}>
-              {t('header.navigation.upcoming')}
-            </Button>
-          </Link>
+          <Button
+            component={Link}
+            to="/discover"
+            aria-label={t('header.navigation.discoverLabel')}
+          >
+            {t('header.navigation.discover')}
+          </Button>
+          <Button
+            component={Link}
+            to="/near-you"
+            aria-label={t('header.navigation.nearYouLabel')}
+          >
+            {t('header.navigation.nearYou')}
+          </Button>
+          <Button
+            component={Link}
+            to="/now-playing"
+            aria-label={t('header.navigation.nowPlayingLabel')}
+          >
+            {t('header.navigation.nowPlaying')}
+          </Button>
+          <Button
+            component={Link}
+            to="/upcoming"
+            aria-label={t('header.navigation.upcomingLabel')}
+          >
+            {t('header.navigation.upcoming')}
+          </Button>
         </ButtonGroup>
         <SearchBar
           placeholder={t('header.search.placeholder')}
           label={t('header.search.label')}
         />
         <Box
+          component="nav"
           sx={{ display: 'flex', gap: 1 }}
           aria-label={t('header.user.label')}
         >
-          <Link
+          <IconButton
+            component={Link}
             to="/watchlist"
-            style={{ textDecoration: 'none' }}
-            aria-label={t('header.user.watchlist.link')}
+            aria-label={t('header.user.watchlist.label')}
           >
-            <IconButton aria-label={t('header.user.watchlist.label')}>
-              <BookmarkIcon />
-            </IconButton>
-          </Link>
+            <BookmarkIcon />
+          </IconButton>
 
-          <Link
+          <IconButton
+            component={Link}
             to="/profile"
-            style={{ textDecoration: 'none' }}
-            aria-label={t('header.user.profile.link')}
+            aria-label={t('header.user.profile.label')}
           >
-            <IconButton aria-label={t('header.user.profile.label')}>
-              <AccountCircleIcon />
-            </IconButton>
-          </Link>
+            <AccountCircleIcon />
+          </IconButton>
         </Box>
-        <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+        <Box
+          component="section"
+          role="group"
+          sx={{ display: 'flex', gap: 1, alignItems: 'center' }}
+        >
           <LanguageSelector />
           <ThemeModeToggle />
         </Box>
