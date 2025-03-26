@@ -1,5 +1,5 @@
 import { ComboboxFilter } from '@/models/filters'
-import { SelectOption } from '@/models/selectOption'
+import { SelectOption } from '@/models/SelectOption'
 import { Autocomplete, TextField } from '@mui/material'
 
 interface ComboboxFilterProps {

@@ -1,4 +1,4 @@
-import { SelectOption } from '@/models/selectOption'
+import { SelectOption } from '@/models/SelectOption'
 
 export const Languages: SelectOption[] = [
   { label: 'EN', value: 'en' },
