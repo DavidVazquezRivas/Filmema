@@ -1,0 +1,1 @@
+export const MAIN_HERO_INTERVAL = 30000

@@ -61,6 +61,13 @@
       }
     }
   },
+  "home": {
+    "hero": {
+      "posterAlt": "Cartel de la película: {{title}}",
+      "play": "Reproducir trailer de la película",
+      "subtitle": "Ve ahora el último trailer de {{title}}"
+    }
+  },
   "discover": {
     "card": {
       "posterAlt": "Cartel de la película: {{title}}",

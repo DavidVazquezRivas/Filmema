@@ -61,6 +61,13 @@
       }
     }
   },
+  "home": {
+    "hero": {
+      "posterAlt": "Movie poster: {{title}}",
+      "play": "Play movie trailer",
+      "subtitle": "Watch now the latest trailer of {{title}}"
+    }
+  },
   "discover": {
     "card": {
       "posterAlt": "Movie poster: {{title}}",

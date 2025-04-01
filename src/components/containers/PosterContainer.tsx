@@ -1,6 +1,6 @@
 import { posterPlaceholder } from '@/constants/placeholders'
 import { Box, CardMedia, Skeleton } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 type PosterContainerProps = {
   width?: string
@@ -20,6 +20,13 @@ export const PosterContainer: React.FC<PosterContainerProps> = ({
     imageSrc: src,
     loading: true,
   })
+
+  useEffect(() => {
+    setImageState((prev) => ({
+      imageSrc: src,
+      loading: prev.imageSrc !== src,
+    }))
+  }, [src])
 
   const handleLoad = () => {
     setImageState((prev) => ({

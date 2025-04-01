@@ -10,7 +10,11 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
         sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}
       >
         <Header />
-        <Container maxWidth="lg" sx={{ padding: 2 }} component="main">
+        <Container
+          maxWidth="lg"
+          sx={{ padding: 2, marginTop: '50px' }}
+          component="main"
+        >
           {children}
         </Container>
       </Box>
