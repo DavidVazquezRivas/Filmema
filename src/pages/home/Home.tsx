@@ -53,17 +53,17 @@ export const Home = () => {
         <GenericSection
           title={t('home.upcoming.title')}
           subtitle={t('home.upcoming.subtitle')}
-          descriptions={formatFromTo(
-            new Date(new Date().setMonth(new Date().getMonth() - 3)),
-            new Date()
-          )}
+          descriptions={formatFromTo(new Date())}
           movies={state.movies.upcoming}
           href="/upcoming"
         />
         <GenericSection
           title={t('home.nowPlaying.title')}
           subtitle={t('home.nowPlaying.subtitle')}
-          descriptions={formatFromTo(new Date())}
+          descriptions={formatFromTo(
+            new Date(new Date().setMonth(new Date().getMonth() - 3)),
+            new Date()
+          )}
           movies={state.movies.nowPlaying}
           href="/now-playing"
         />
