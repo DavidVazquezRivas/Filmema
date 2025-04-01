@@ -93,10 +93,11 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
           component="ul"
           display="flex"
           flexWrap="wrap"
-          overflow="hidden"
+          overflow="scroll"
           gap={1}
           m={0}
           p={0}
+          className="no-scrollbar"
         >
           {movie.genres.map((genre) => (
             <GenreChip
