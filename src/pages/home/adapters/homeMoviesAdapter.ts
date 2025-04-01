@@ -13,7 +13,7 @@ import {
 
 export const homeMoviesAdapter = (obj: any): HomeMovies => {
   return {
-    hero: mapMovies(obj.hero, heroMovieAmmount).slice(0, heroMovieAmmount),
+    hero: mapMovies(obj.hero, 2).slice(0, heroMovieAmmount),
     discover: mapMovies(obj.discover).slice(0, discoverMovieAmmount),
     upcoming: mapMovies(obj.upcoming).slice(0, upcomingMovieAmmount),
     nowPlaying: mapMovies(obj.nowPlaying).slice(0, nowPlayingMovieAmmount),

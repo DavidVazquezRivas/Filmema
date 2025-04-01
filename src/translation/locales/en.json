@@ -66,6 +66,22 @@
       "posterAlt": "Movie poster: {{title}}",
       "play": "Play movie trailer",
       "subtitle": "Watch now the latest trailer of {{title}}"
+    },
+    "discover": {
+      "title": "Discover",
+      "subtitle": "Discover new movies"
+    },
+    "nowPlaying": {
+      "title": "Now Playing",
+      "subtitle": "Watch the latest movies in theaters"
+    },
+    "upcoming": {
+      "title": "Upcoming",
+      "subtitle": "Watch the movies coming soon"
+    },
+    "nearYou": {
+      "title": "Near You",
+      "subtitle": "Movies recorded near you"
     }
   },
   "discover": {

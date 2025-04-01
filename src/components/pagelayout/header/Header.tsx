@@ -20,7 +20,7 @@ export const Header = () => {
       alignItems="center"
       position="sticky"
       top={0}
-      zIndex={1}
+      zIndex={100}
       sx={{
         backgroundColor: 'darkZone',
       }}

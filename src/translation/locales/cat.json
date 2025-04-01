@@ -66,6 +66,22 @@
       "posterAlt": "Cartell de la pel·lícula: {{title}}",
       "play": "Reproduir trailer de la pel·lícula",
       "subtitle": "Veu ara el darrer trailer de {{title}}"
+    },
+    "discover": {
+      "title": "Descobreix",
+      "subtitle": "Explora noves pel·lícules"
+    },
+    "nowPlaying": {
+      "title": "Als cinemes",
+      "subtitle": "Pel·lícules que s'estan projectant als cinemes"
+    },
+    "upcoming": {
+      "title": "Properament",
+      "subtitle": "Pel·lícules que s'estrenaran aviat"
+    },
+    "nearYou": {
+      "title": "A prop teu",
+      "subtitle": "Pel·lícules grabades a prop teu"
     }
   },
   "discover": {

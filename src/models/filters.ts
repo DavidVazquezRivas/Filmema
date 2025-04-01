@@ -1,4 +1,4 @@
-import { SelectOption } from './SelectOption'
+import { SelectOption } from './selectOption'
 
 export enum FilterTypeEnum {
   range = 'range',

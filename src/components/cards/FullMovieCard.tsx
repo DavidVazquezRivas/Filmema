@@ -34,7 +34,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
 
   return (
     <Card
-      component={'article'}
+      component="article"
       sx={{
         position: 'relative',
         display: 'flex',
@@ -71,7 +71,6 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
       </Box>
       {/* Movie info */}
       <CardContent
-        component="section"
         sx={{
           ml: 2,
           padding: 0,
@@ -113,7 +112,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
         p={2}
         position="absolute"
         top={0}
-        right={'10px'}
+        right="10px"
         alignItems="center"
       >
         <StarRoundedIcon color="primary" />

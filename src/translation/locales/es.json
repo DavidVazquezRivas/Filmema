@@ -66,6 +66,22 @@
       "posterAlt": "Cartel de la película: {{title}}",
       "play": "Reproducir trailer de la película",
       "subtitle": "Ve ahora el último trailer de {{title}}"
+    },
+    "discover": {
+      "title": "Descubrir",
+      "subtitle": "Descubre nuevas películas"
+    },
+    "nowPlaying": {
+      "title": "En cines",
+      "subtitle": "Películas que se están proyectando en cines"
+    },
+    "upcoming": {
+      "title": "Próximamente",
+      "subtitle": "Películas que se estrenarán pronto"
+    },
+    "nearYou": {
+      "title": "Cerca de ti",
+      "subtitle": "Películas grabadas cerca de ti"
     }
   },
   "discover": {
