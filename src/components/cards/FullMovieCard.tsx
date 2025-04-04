@@ -1,6 +1,7 @@
 import { Movie } from '@/models/movie'
 import {
   Box,
+  Button,
   Card,
   CardContent,
   Divider,
@@ -15,6 +16,8 @@ import { BookmarkButton } from '@/components/bookmarkbutton/BookmarkButton'
 import { PosterContainer } from '@/components/containers/PosterContainer'
 import { AccesibleText } from '@/components/accessibletext/AccesibleText'
 import { GenreChip } from '@/components/genrechip/GenreChip'
+import { Link } from 'react-router-dom'
+import { DetailActions } from '@/models/detailActions'
 
 interface FullMovieCardProps {
   movie: Movie
@@ -23,11 +26,6 @@ interface FullMovieCardProps {
 export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
   const theme = useTheme()
   const { t } = useTranslation()
-
-  const handleClickRate = () => {
-    // TODO: Open dialog to rate movie
-    console.log('Rate movie')
-  }
 
   const indexSize = theme.typography.h4.fontSize
   const releaseYear = new Date(movie.releaseDate).getFullYear()
@@ -99,10 +97,27 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
         <AccesibleText variant="body2" maxLength={200} audible>
           {movie.overview}
         </AccesibleText>
-        <Typography variant="body2" color="text.secondary">
-          <strong>{t('discover.card.votes')}</strong>
-          {movie.voteCount.toLocaleString()}
-        </Typography>
+        <Box
+          display="flex"
+          flexDirection="row"
+          width="100%"
+          justifyContent="space-between"
+          pr={1}
+          alignItems="center"
+        >
+          <Typography variant="body2" color="text.secondary">
+            <strong>{t('discover.card.votes')}</strong>
+            {movie.voteCount.toLocaleString()}
+          </Typography>
+          <Link
+            to={`/movie/${movie.id}`}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <Button variant="contained" color="primary" size="small">
+              {t('discover.card.more')}
+            </Button>
+          </Link>
+        </Box>
       </CardContent>
       {/* Rate movie */}
       <Box
@@ -120,7 +135,8 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
           {movie.voteAverage}
         </Typography>
         <IconButton
-          onClick={handleClickRate}
+          component={Link}
+          to={`/movie/${movie.id}/${DetailActions.Rate}`}
           aria-label={t('discover.card.rate')}
         >
           <StarOutlineRoundedIcon color="primary" />

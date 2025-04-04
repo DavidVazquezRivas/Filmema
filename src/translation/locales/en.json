@@ -88,7 +88,8 @@
     "card": {
       "posterAlt": "Movie poster: {{title}}",
       "votes": "Votes: ",
-      "rate": "Rate"
+      "rate": "Rate",
+      "more": "More information"
     },
     "filters": {
       "genres": "Genres",

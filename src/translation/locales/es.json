@@ -88,7 +88,8 @@
     "card": {
       "posterAlt": "Cartel de la película: {{title}}",
       "votes": "Votos: ",
-      "rate": "Puntúa"
+      "rate": "Puntúa",
+      "more": "Más información"
     },
     "filters": {
       "genres": "Géneros",

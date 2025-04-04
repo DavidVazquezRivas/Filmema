@@ -4,6 +4,7 @@ import { Box, IconButton, Typography } from '@mui/material'
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { DetailActions } from '@/models/detailActions'
 
 interface HeroCardProps {
   movie: Movie
@@ -72,7 +73,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
           <IconButton
             aria-label={t('home.hero.subtitle', { title: movie.title })}
             component={Link}
-            to="/"
+            to={`/movie/${movie.id}/${DetailActions.Play}`}
             sx={{
               backgroundColor: 'rgba(0, 0, 0, 0.3)',
               '&:hover': {

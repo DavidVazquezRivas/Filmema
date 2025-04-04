@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next'
 import { AccesibleText } from '@/components/accessibletext/AccesibleText'
 import { GenreChip } from '@/components/genrechip/GenreChip'
 import StarRoundedIcon from '@mui/icons-material/StarRounded'
+import { Link } from 'react-router-dom'
 
 interface HalfMovieCardProps {
   index?: string
@@ -30,8 +31,11 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
 
   return (
     <Card
-      component="article"
+      component={Link}
+      to={`/movie/${movie.id}`}
       sx={{
+        textDecoration: 'none',
+        color: 'inherit',
         position: 'relative',
         display: 'flex',
         p: 2,

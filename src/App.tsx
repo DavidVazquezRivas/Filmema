@@ -6,6 +6,7 @@ import { NotFound } from '@/pages/404/NotFound'
 import { Discover } from '@/pages/discover/Discover'
 import { useLoadGenres } from '@/hooks/genres/useLoadGenres'
 import { DiscoverMode } from '@/models/discoverModes'
+import { Detail } from './pages/detail/Detail'
 import { useSelector } from 'react-redux'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             path="/search/:query"
             element={<Discover mode={DiscoverMode.search} />}
           />
+          <Route path="/movie/:id/:action?" element={<Detail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

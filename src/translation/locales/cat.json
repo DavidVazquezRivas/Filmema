@@ -88,7 +88,8 @@
     "card": {
       "posterAlt": "Cartell de la pel·lícula: {{title}}",
       "votes": "Vots: ",
-      "rate": "Valora"
+      "rate": "Valora",
+      "more": "Més informació"
     },
     "filters": {
       "genres": "Gèneres",
