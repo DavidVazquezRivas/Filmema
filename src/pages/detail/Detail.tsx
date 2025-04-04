@@ -12,6 +12,7 @@ export const Detail = () => {
   const typedAction = isValidAction
     ? (action as DetailActions)
     : DetailActions.None
+  console.log('action', action, 'typedAction', typedAction)
 
   const { details, loading, error } = useGetDetails(id as string)
 

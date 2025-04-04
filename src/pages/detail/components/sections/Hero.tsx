@@ -45,9 +45,9 @@ export const Hero: React.FC<HeroProps> = ({
     // TODO : Handle rate click
   }
 
-  const handleAddToWatchlist = () => {
-    // TODO : Handle add to watchlist click
-  }
+  // const handleAddToWatchlist = () => {
+  //   // TODO : Handle add to watchlist click
+  // }
 
   const genreChips = genres.map((genre) => (
     <GenreChip
