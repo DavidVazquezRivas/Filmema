@@ -1,4 +1,4 @@
-import { IconButton } from '@mui/material'
+import { Button, IconButton } from '@mui/material'
 import BookmarkSharpIcon from '@mui/icons-material/BookmarkSharp'
 import BookmarkBorderSharpIcon from '@mui/icons-material/BookmarkBorderSharp'
 import { useState } from 'react'
@@ -50,7 +50,17 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
       {bookmarkIcon}
     </IconButton>
   ) : (
-    'not implemented yet'
+    <Button
+      variant="contained"
+      onClick={handleToggleWatchlist}
+      sx={{
+        borderRadius: 2,
+        padding: 1,
+        height: 'fit-content',
+      }}
+    >
+      {t('global.watchlist')}
+    </Button>
   )
 }
 
