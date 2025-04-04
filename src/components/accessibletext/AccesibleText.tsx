@@ -25,8 +25,13 @@ export const AccesibleText: React.FC<AccesibleTextProps> = ({
   const displayedText = truncateText(textContent, maxLength)
   const isTruncated = children && textContent !== displayedText
 
-  const handleClick = () => {
-    window.speechSynthesis.cancel()
+  const handleClick = (event: React.MouseEvent) => {
+    event.stopPropagation()
+    event.preventDefault()
+    if (window.speechSynthesis.speaking) {
+      window.speechSynthesis.cancel()
+      return
+    }
 
     const speech = new SpeechSynthesisUtterance(textContent)
     const language = LanguagesMap[i18n.resolvedLanguage as string]
@@ -43,19 +48,23 @@ export const AccesibleText: React.FC<AccesibleTextProps> = ({
     window.speechSynthesis.speak(speech)
   }
 
+  const listenButton = isAudible ? (
+    <IconButton
+      size="small"
+      sx={{ p: 0, ml: 1 }}
+      onClick={handleClick}
+      aria-label={t('global.listen')}
+    >
+      {<VolumeUpIcon />}
+    </IconButton>
+  ) : (
+    ''
+  )
+
   const content = (
     <Typography {...typographyProps}>
       {displayedText}
-      {isAudible && (
-        <IconButton
-          size="small"
-          sx={{ p: 0, ml: 1 }}
-          onClick={handleClick}
-          aria-label={t('global.listen')}
-        >
-          <VolumeUpIcon />
-        </IconButton>
-      )}
+      {listenButton}
     </Typography>
   )
 
