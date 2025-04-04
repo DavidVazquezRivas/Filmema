@@ -1,4 +1,5 @@
 import { Languages } from '@/constants/languages'
+import { setLanguage } from '@/redux/states/language'
 import i18n from '@/translation/i18n'
 import {
   FormControl,
@@ -8,19 +9,21 @@ import {
   SelectChangeEvent,
   Tooltip,
 } from '@mui/material'
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const LanguageSelector = () => {
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.resolvedLanguage)
+  const dispatch = useDispatch()
+  const currentLanguage = useSelector(
+    (state: any) => state.language.currentLanguage
+  )
   const { t } = useTranslation()
 
-  const handleChange = (event: SelectChangeEvent) => {
+  const handleChange = async (event: SelectChangeEvent) => {
     const selectedLanguage = event.target.value
     if (currentLanguage === selectedLanguage) return
-    i18n.changeLanguage(selectedLanguage)
-    setCurrentLanguage(selectedLanguage)
-    window.location.reload()
+    await i18n.changeLanguage(selectedLanguage)
+    dispatch(setLanguage(selectedLanguage))
   }
 
   const options = Languages.map((lang) => (

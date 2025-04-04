@@ -6,10 +6,12 @@ import { NotFound } from '@/pages/404/NotFound'
 import { Discover } from '@/pages/discover/Discover'
 import { useLoadGenres } from '@/hooks/genres/useLoadGenres'
 import { DiscoverMode } from '@/models/discoverModes'
+import { useSelector } from 'react-redux'
 
 function App() {
   const { theme } = useThemeContext()
   const loading = useLoadGenres()
+  const version = useSelector((state: any) => state.language.version)
 
   if (loading) {
     return <div>Cargando ...</div> // TODO good loading component
@@ -19,7 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <Routes>
+        <Routes key={version}>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route
