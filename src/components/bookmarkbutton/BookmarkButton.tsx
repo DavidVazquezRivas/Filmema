@@ -17,7 +17,9 @@ export const BookmarkButton: React.FC<BookmarkButtonProps> = ({
   // TODO: Implement logic to know if the movie is already in the watchlist and toggle watchlist
   const [isInWatchlist, setIsInWatchlist] = useState(false)
   const { t } = useTranslation()
-  const handleToggleWatchlist = () => {
+  const handleToggleWatchlist = (event: React.MouseEvent) => {
+    event.stopPropagation()
+    event.preventDefault()
     setIsInWatchlist((prev) => !prev)
     console.log('Toggle watchlist: ' + movieId)
   }
