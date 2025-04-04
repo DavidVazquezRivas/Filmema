@@ -85,7 +85,6 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
           fontWeight="bold"
           maxLength={20}
           sx={{ fontSize: '1.3rem' }}
-          audible
         >
           {movie.title}
         </AccesibleText>

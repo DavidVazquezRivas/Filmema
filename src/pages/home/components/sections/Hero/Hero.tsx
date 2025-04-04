@@ -35,6 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
       display="flex"
       flexDirection="row"
       gap={3}
+      minHeight="550px"
       height="60vh"
       width="100%"
     >
