@@ -99,5 +99,32 @@
       "runtime": "Durada (minuts)"
     },
     "noResults": "No s'han trobat resultats pels filtres o la cerca seleccionats"
+  },
+  "details": {
+    "hero":{
+      "rate": "Puntua",
+      "genre": "Gènere",
+      "overview": "Resum",
+      "stars": "Estrelles",
+      "noStars": "La pel·lícula no té estrelles",
+      "posterAlt": "Cartell de la pel·lícula: {{title}}",
+      "backdropAlt": "Fons de la pel·lícula: {{title}}"
+    },
+    "credits": {
+      "departments": {
+        "Art": "Art",
+        "Writing": "Escriptura",
+        "Editing": "Edició",
+        "Directing": "Direcció",
+        "Costume & Make-Up": "Vestuari i Maquillatge",
+        "Camera": "Càmera",
+        "Actors": "Actors",
+        "Lighting": "Il·luminació",
+        "Production": "Producció",
+        "Visual Effects": "Efectes Visuals",
+        "Crew": "Equip",
+        "Sound": "So"
+      }
+    }
   }
 }

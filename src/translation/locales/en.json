@@ -99,5 +99,32 @@
       "runtime": "Runtime (minutes)"
     },
     "noResults": "No results found matching the selected filters or search"
+  },
+  "details": {
+    "hero":{
+      "rate": "Rate",
+      "genre": "Genre",
+      "overview": "Overview",
+      "stars": "Stars",
+      "noStars": "The movie has no stars",
+      "posterAlt": "Movie poster: {{title}}",
+      "backdropAlt": "Movie backdrop: {{title}}"
+    },
+    "credits": {
+      "departments": {
+        "Art": "Art",
+        "Writing": "Writing",
+        "Editing": "Editing",
+        "Directing": "Directing",
+        "Costume & Make-Up": "Costume & Make-Up",
+        "Camera": "Camera",
+        "Actors": "Actors",
+        "Lighting": "Lighting",
+        "Production": "Production",
+        "Visual Effects": "Visual Effects",
+        "Crew": "Crew",
+        "Sound": "Sound"
+      }
+    }
   }
 }

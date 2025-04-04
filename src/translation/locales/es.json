@@ -99,5 +99,32 @@
       "runtime": "Duración (minutos)"
     },
     "noResults": "No hay resultados que coincidan con la búsqueda o los filtros aplicados"
+  },
+  "details": {
+    "hero":{
+      "rate": "Puntúa",
+      "genre": "Género",
+      "overview": "Resumen",
+      "stars": "Estrellas",
+      "noStars": "La película no tiene estrellas",
+      "posterAlt": "Cartel de la película: {{title}}",
+      "backdropAlt": "Fondo de la película: {{title}}"
+    },
+    "credits": {
+      "departments": {
+        "Art": "Arte",
+        "Writing": "Escritura",
+        "Editing": "Edición",
+        "Directing": "Dirección",
+        "Costume & Make-Up": "Vestuario y Maquillaje",
+        "Camera": "Cámara",
+        "Actors": "Actores",
+        "Lighting": "Iluminación",
+        "Production": "Producción",
+        "Visual Effects": "Efectos Visuales",
+        "Crew": "Equipo",
+        "Sound": "Sonido"
+      }
+    }
   }
 }
