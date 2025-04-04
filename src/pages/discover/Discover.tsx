@@ -7,23 +7,13 @@ import { getMovies } from './services/getMovies'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { FilterPanel } from '@/components/filters/FilterPanel'
-import { FilterType, FilterTypeEnum } from '@/models/filters'
 import { useTranslation } from 'react-i18next'
 import { useGetGenres } from '@/hooks/genres/useGetGenres'
-import { SelectOption } from '@/models/selectOption'
 import { DiscoverFiltersResult } from './models/filters'
 import { filterRequestAdapter } from './adapters/filterRequestAdapter'
 import { DiscoverPagination } from './components/DiscoverPagination'
 import { INITIAL_PAGE, MAX_PAGES } from './constants/pageConstants'
-import {
-  MAX_RELEASE_DATE,
-  MAX_RUNTIME,
-  MAX_VOTE_AVERAGE,
-  MAX_VOTE_COUNT,
-  MIN_RELEASE_DATE,
-  MIN_RUNTIME,
-  MIN_VOTE_COUNT,
-} from './constants/filters'
+import { getFilters } from './constants/filters'
 
 interface DiscoverProps {
   mode?: DiscoverMode
@@ -92,47 +82,7 @@ export const Discover: React.FC<DiscoverProps> = ({
     setState((prev) => ({ ...prev, page }))
   }, [])
 
-  const filters: FilterType[] = [
-    {
-      key: 'genres',
-      title: t('discover.filters.genres'),
-      type: FilterTypeEnum.combobox,
-      options: genres,
-    },
-    {
-      key: 'releaseDate',
-      title: t('discover.filters.releaseDate'),
-      type: FilterTypeEnum.range,
-      min: MIN_RELEASE_DATE[mode],
-      max: MAX_RELEASE_DATE[mode],
-    },
-    {
-      key: 'voteAverage',
-      title: t('discover.filters.voteAverage'),
-      type: FilterTypeEnum.rating,
-      max: MAX_VOTE_AVERAGE,
-    },
-    {
-      key: 'voteCount',
-      title: t('discover.filters.voteCount'),
-      type: FilterTypeEnum.number,
-      min: MIN_VOTE_COUNT[mode],
-      max: MAX_VOTE_COUNT,
-    },
-    {
-      key: 'countries',
-      title: t('discover.filters.countries'),
-      type: FilterTypeEnum.combobox,
-      options: [] as SelectOption[], // TODO get countries
-    },
-    {
-      key: 'runtime',
-      title: t('discover.filters.runtime'),
-      type: FilterTypeEnum.range,
-      min: MIN_RUNTIME,
-      max: MAX_RUNTIME,
-    },
-  ]
+  const filters = getFilters(mode, genres, t)
 
   const movieCards = state.movies.map((movie) => (
     <FullMovieCard key={movie.id} movie={movie} />
