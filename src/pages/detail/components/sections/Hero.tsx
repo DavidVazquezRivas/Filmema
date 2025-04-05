@@ -169,19 +169,12 @@ export const Hero: React.FC<HeroProps> = ({
           }}
         />
       </Box>
-      <Box
-        display="flex"
-        position="relative"
-        flexDirection="row"
-        justifyContent="space-between"
-        gap={10}
-      >
+      <Box display="grid" position="relative" gridTemplateColumns="1fr auto">
         <Box
           display="grid"
           gridTemplateColumns="auto 1fr"
           gap={3}
           alignItems="flex-start"
-          width="100%"
         >
           {/* First row */}
           <Typography
