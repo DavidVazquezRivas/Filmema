@@ -6,6 +6,7 @@ import { Box } from '@mui/material'
 import { Hero } from './components/sections/Hero'
 import { ImageSection } from './components/sections/ImageSection'
 import { VideoSection } from './components/sections/VideoSection'
+import { CastSection } from './components/sections/CastSection'
 
 export const Detail = () => {
   const { id, action } = useParams()
@@ -52,6 +53,7 @@ export const Detail = () => {
           onOpen={() => {}}
           onSeeAll={() => {}}
         />
+        <CastSection cast={details.credits.cast} onSeeAll={() => {}} />
       </Box>
     </PageLayout>
   )

@@ -30,6 +30,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     return (
       <Box
         component="img"
+        loading="lazy"
         role="button"
         src={item}
         alt={t('details.images.alt', { title })}

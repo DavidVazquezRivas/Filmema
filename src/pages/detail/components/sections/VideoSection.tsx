@@ -26,6 +26,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
       <Box position="relative">
         <Box
           component="img"
+          loading="lazy"
           src={getThumbnailUrl(item.key, '0')}
           alt={t('details.videos.alt', { title })}
           height={SLIDER_HEIGHT}
