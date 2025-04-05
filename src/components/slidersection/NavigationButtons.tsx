@@ -15,7 +15,7 @@ interface NavigationButtonState {
 
 const NavigationButtonInitialState: NavigationButtonState = {
   isBeginning: true,
-  isEnd: true,
+  isEnd: false,
 }
 
 const NavigationButtonsStyle = {
@@ -40,7 +40,6 @@ export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
 
     const isBeginning = swiper.isBeginning
     const isEnd = swiper.isEnd
-    if (isBeginning === state.isBeginning && isEnd === state.isEnd) return
     setState({ isBeginning, isEnd })
   }
 
@@ -49,7 +48,6 @@ export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
     if (!swiper) return
 
     swiper.on('slideChange', updateNavigationState)
-    updateNavigationState()
 
     return () => {
       swiper.off('slideChange', updateNavigationState)
