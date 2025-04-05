@@ -6,6 +6,9 @@
     "filters": {
       "title": "Filtres",
       "apply": "Aplicar"
+    },
+    "slider": {
+      "seeAll": "Veure més"
     }
   },
   "header": {
