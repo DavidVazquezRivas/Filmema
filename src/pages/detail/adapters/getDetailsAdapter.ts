@@ -7,6 +7,7 @@ import {
 } from '@/constants/tmdbConstants'
 import {
   Company,
+  Image,
   MovieDetails,
   Person,
   Review,
@@ -85,12 +86,18 @@ function mapGenre(obj: any): SelectOption {
   }
 }
 
-function mapBackdrop(obj: any): string {
-  return `${TMDB_IMAGE_URL}/${BACKDROP_SIZES[1]}/${obj.file_path}`
+function mapBackdrop(obj: any): Image {
+  return {
+    src: `${TMDB_IMAGE_URL}/${BACKDROP_SIZES[1]}/${obj.file_path}`,
+    aspectRatio: obj.aspect_ratio,
+  }
 }
 
-function mapPoster(obj: any): string {
-  return `${TMDB_IMAGE_URL}/${POSTER_SIZES[3]}/${obj.file_path}`
+function mapPoster(obj: any): Image {
+  return {
+    src: `${TMDB_IMAGE_URL}/${POSTER_SIZES[3]}/${obj.file_path}`,
+    aspectRatio: obj.aspect_ratio,
+  }
 }
 
 function mapProductionCompany(obj: any): Company {

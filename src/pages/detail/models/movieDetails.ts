@@ -38,6 +38,11 @@ export interface Video {
   name: string
 }
 
+export interface Image {
+  aspectRatio: number
+  src: string
+}
+
 export interface MovieDetails {
   backdrop: string
   budget: number
@@ -49,8 +54,8 @@ export interface MovieDetails {
   homePage: string
   id: number
   images: {
-    backdrops: string[]
-    posters: string[]
+    backdrops: Image[]
+    posters: Image[]
   }
   overview: string
   poster: string

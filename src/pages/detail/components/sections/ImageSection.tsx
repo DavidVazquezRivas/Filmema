@@ -1,16 +1,17 @@
 import React from 'react'
 import { SliderSection } from '@/components/slidersection/SliderSection'
-import { Box } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { SLIDER_HEIGHT } from '@/pages/detail/constants/detailConstants'
+import { Image } from '../../models/movieDetails'
+import { ImageContainer } from '@/components/containers/ImageContainer'
 
 interface ImageSectionProps {
   title: string
   images: {
-    backdrops: string[]
-    posters: string[]
+    backdrops: Image[]
+    posters: Image[]
   }
-  onOpen: (image: string) => void
+  onOpen: (image: Image) => void
   onSeeAll: () => void
 }
 
@@ -26,21 +27,32 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
     () => Math.random() - 0.5
   )
 
-  const renderItem = (item: string) => {
+  const renderItem = (item: Image) => {
     return (
-      <Box
-        component="img"
-        loading="lazy"
-        role="button"
-        src={item}
-        alt={t('details.images.alt', { title })}
+      <ImageContainer
         height={SLIDER_HEIGHT}
-        width="auto"
+        aspectRatio={item.aspectRatio}
+        src={item.src}
+        role="button"
+        alt={t('details.images.alt', { title })}
         onClick={() => onOpen(item)}
         borderRadius={3}
         sx={{ cursor: 'pointer' }}
         tabIndex={0}
-      ></Box>
+      />
+      // <Box
+      //   component="img"
+      //   loading="lazy"
+      //   role="button"
+      //   src={item}
+      //   alt={t('details.images.alt', { title })}
+      //   height={SLIDER_HEIGHT}
+      //   width="auto"
+      //   onClick={() => onOpen(item)}
+      //   borderRadius={3}
+      //   sx={{ cursor: 'pointer' }}
+      //   tabIndex={0}
+      // ></Box>
     )
   }
 

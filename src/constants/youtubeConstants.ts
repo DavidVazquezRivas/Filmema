@@ -6,3 +6,5 @@ export const getThumbnailUrl = (
 ) => {
   return `https://img.youtube.com/vi/${key}/${quality}.jpg`
 }
+
+export const YOUTUBE_ASPECT_RATIO = 4 / 3

@@ -1,10 +1,14 @@
-import { getThumbnailUrl } from '@/constants/youtubeConstants'
+import {
+  getThumbnailUrl,
+  YOUTUBE_ASPECT_RATIO,
+} from '@/constants/youtubeConstants'
 import { Video } from '@/pages/detail/models/movieDetails'
 import { Box, IconButton } from '@mui/material'
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
 import { SLIDER_HEIGHT } from '@/pages/detail/constants/detailConstants'
 import { SliderSection } from '@/components/slidersection/SliderSection'
+import { ImageContainer } from '@/components/containers/ImageContainer'
 
 interface VideoSectionProps {
   title: string
@@ -24,15 +28,13 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
   const renderItem = (item: Video) => {
     return (
       <Box position="relative">
-        <Box
-          component="img"
-          loading="lazy"
+        <ImageContainer
+          height={SLIDER_HEIGHT}
+          aspectRatio={YOUTUBE_ASPECT_RATIO}
           src={getThumbnailUrl(item.key, '0')}
           alt={t('details.videos.alt', { title })}
-          height={SLIDER_HEIGHT}
-          width="auto"
           borderRadius={3}
-        ></Box>
+        />
         <IconButton
           onClick={() => onOpen(item)}
           sx={{
