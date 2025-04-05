@@ -5,6 +5,7 @@ import { useGetDetails } from './hooks/useGetDetail'
 import { Box } from '@mui/material'
 import { Hero } from './components/sections/Hero'
 import { ImageSection } from './components/sections/ImageSection'
+import { VideoSection } from './components/sections/VideoSection'
 
 export const Detail = () => {
   const { id, action } = useParams()
@@ -38,6 +39,12 @@ export const Detail = () => {
           cast={details.credits.cast}
           voteAverage={details.voteAverage}
           voteCount={details.voteCount}
+        />
+        <VideoSection
+          title={details.title}
+          videos={details.videos}
+          onOpen={() => {}}
+          onSeeAll={() => {}}
         />
         <ImageSection
           title={details.title}
