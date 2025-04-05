@@ -114,6 +114,18 @@
       "posterAlt": "Cartel de la película: {{title}}",
       "backdropAlt": "Fondo de la película: {{title}}"
     },
+    "videos": {
+      "title": "Videos",
+      "alt": "Vídeo de la película: {{title}}"
+    },
+    "images": {
+      "title": "Imágenes",
+      "alt": "Imagen de la película: {{title}}"
+    },
+    "cast": {
+      "title": "Reparto",
+      "alt": "Imagen del actor: {{name}}"
+    },
     "credits": {
       "departments": {
         "Art": "Arte",

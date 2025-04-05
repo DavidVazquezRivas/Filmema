@@ -114,6 +114,18 @@
       "posterAlt": "Movie poster: {{title}}",
       "backdropAlt": "Movie backdrop: {{title}}"
     },
+    "videos": {
+      "title": "Videos",
+      "alt": "Video of the movie: {{title}}"
+    },
+    "images": {
+      "title": "Images",
+      "alt": "Image of the movie: {{title}}"
+    },
+    "cast": {
+      "title": "Cast",
+      "alt": "Image of the actor: {{name}}"
+    },
     "credits": {
       "departments": {
         "Art": "Art",

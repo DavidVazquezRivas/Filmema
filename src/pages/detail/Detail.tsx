@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useGetDetails } from './hooks/useGetDetail'
 import { Box } from '@mui/material'
 import { Hero } from './components/sections/Hero'
+import { ImageSection } from './components/sections/ImageSection'
 
 export const Detail = () => {
   const { id, action } = useParams()
@@ -24,7 +25,7 @@ export const Detail = () => {
 
   return (
     <PageLayout>
-      <Box display="flex" flexDirection="column" gap={2} width="80%">
+      <Box display="flex" flexDirection="column" gap={20} width="80%">
         <Hero
           backdrop={details.backdrop}
           genres={details.genres}
@@ -37,6 +38,12 @@ export const Detail = () => {
           cast={details.credits.cast}
           voteAverage={details.voteAverage}
           voteCount={details.voteCount}
+        />
+        <ImageSection
+          title={details.title}
+          images={details.images}
+          onOpen={() => {}}
+          onSeeAll={() => {}}
         />
       </Box>
     </PageLayout>
