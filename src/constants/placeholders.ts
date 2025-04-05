@@ -3,3 +3,5 @@ export const posterPlaceholder =
 
 export const profilePlaceholder =
   'https://placehold.jp/30/cccccc/cccccc/185x277.jpg'
+
+export const PLACEHOLDER_COLOR = '#e0e0e0'

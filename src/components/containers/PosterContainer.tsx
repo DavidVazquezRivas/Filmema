@@ -53,6 +53,7 @@ export const PosterContainer: React.FC<PosterContainerProps> = ({
       {imageState.loading && (
         <Skeleton
           variant="rectangular"
+          animation="wave"
           sx={{ borderRadius: 2, height: '100%', width: '100%' }}
         />
       )}
