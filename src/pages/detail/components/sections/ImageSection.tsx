@@ -49,6 +49,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
       items={plainImages}
       onSeeAll={onSeeAll}
       renderItem={renderItem}
+      seeAllLabel={t('global.slider.seeAll') + ` ${plainImages.length}`}
     />
   )
 }
