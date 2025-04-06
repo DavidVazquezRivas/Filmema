@@ -10,6 +10,9 @@
     "slider": {
       "seeAll": "Veure més",
       "noContent": "No hi ha cap element en aquesta secció"
+    },
+    "panel": {
+      "close": "Tancar"
     }
   },
   "header": {

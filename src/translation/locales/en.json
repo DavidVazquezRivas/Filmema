@@ -10,6 +10,9 @@
     "slider": {
       "seeAll": "See all",
       "noContent": "No items in this section"
+    },
+    "panel": {
+      "close": "Close"
     }
   },
   "header": {
