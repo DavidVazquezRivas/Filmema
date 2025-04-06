@@ -8,7 +8,8 @@
       "apply": "Aplicar"
     },
     "slider": {
-      "seeAll": "Veure més"
+      "seeAll": "Veure més",
+      "noContent": "No hi ha cap element en aquesta secció"
     }
   },
   "header": {
@@ -116,11 +117,13 @@
     },
     "videos": {
       "title": "Vídeos",
-      "alt": "Vídeo de la pel·lícula: {{title}}"
+      "alt": "Vídeo de la pel·lícula: {{title}}",
+      "noContent": "No hi ha vídeos disponibles per a aquesta pel·lícula en aquest idioma"
     },
     "images": {
       "title": "Imatges",
-      "alt": "Imatge de la pel·lícula: {{title}}"
+      "alt": "Imatge de la pel·lícula: {{title}}",
+      "noContent": "No hi ha imatges disponibles per a aquesta pel·lícula en aquest idioma"
     },
     "cast": {
       "title": "Repartiment",

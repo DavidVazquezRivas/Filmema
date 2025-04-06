@@ -40,19 +40,6 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
         sx={{ cursor: 'pointer' }}
         tabIndex={0}
       />
-      // <Box
-      //   component="img"
-      //   loading="lazy"
-      //   role="button"
-      //   src={item}
-      //   alt={t('details.images.alt', { title })}
-      //   height={SLIDER_HEIGHT}
-      //   width="auto"
-      //   onClick={() => onOpen(item)}
-      //   borderRadius={3}
-      //   sx={{ cursor: 'pointer' }}
-      //   tabIndex={0}
-      // ></Box>
     )
   }
 
@@ -63,6 +50,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
       onSeeAll={onSeeAll}
       renderItem={renderItem}
       seeAllLabel={t('global.slider.seeAll') + ` ${plainImages.length}`}
+      noContent={t('details.images.noContent')}
     />
   )
 }

@@ -8,7 +8,8 @@
       "apply": "Aplicar"
     },
     "slider": {
-      "seeAll": "Ver más"
+      "seeAll": "Ver más",
+      "noContent": "No hay ningún elemento en esta sección"
     }
   },
   "header": {
@@ -116,11 +117,13 @@
     },
     "videos": {
       "title": "Videos",
-      "alt": "Vídeo de la película: {{title}}"
+      "alt": "Vídeo de la película: {{title}}",
+      "noContent": "No hay vídeos disponibles para esta película en este idioma"
     },
     "images": {
       "title": "Imágenes",
-      "alt": "Imagen de la película: {{title}}"
+      "alt": "Imagen de la película: {{title}}",
+      "noContent": "No hay imágenes disponibles para esta película en este idioma"
     },
     "cast": {
       "title": "Reparto",

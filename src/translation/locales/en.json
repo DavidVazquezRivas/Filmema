@@ -8,7 +8,8 @@
       "apply": "Apply"
     },
     "slider": {
-      "seeAll": "See all"
+      "seeAll": "See all",
+      "noContent": "No items in this section"
     }
   },
   "header": {
@@ -116,11 +117,13 @@
     },
     "videos": {
       "title": "Videos",
-      "alt": "Video of the movie: {{title}}"
+      "alt": "Video of the movie: {{title}}",
+      "noContent": "No videos available for this movie in this language"
     },
     "images": {
       "title": "Images",
-      "alt": "Image of the movie: {{title}}"
+      "alt": "Image of the movie: {{title}}",
+      "noContent": "No images available for this movie in this language"
     },
     "cast": {
       "title": "Cast",

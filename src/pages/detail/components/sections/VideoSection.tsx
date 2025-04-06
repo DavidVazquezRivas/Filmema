@@ -65,6 +65,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
       onSeeAll={onSeeAll}
       renderItem={renderItem}
       seeAllLabel={t('global.slider.seeAll') + ` ${videos.length}`}
+      noContent={t('details.videos.noContent')}
     />
   )
 }

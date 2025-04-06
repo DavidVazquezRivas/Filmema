@@ -17,6 +17,7 @@ interface SliderSectionProps {
   sx?: SxProps
   slidesPerView?: number | 'auto'
   spaceBetween?: number
+  noContent?: string
 }
 
 export const SliderSection = ({
@@ -28,11 +29,25 @@ export const SliderSection = ({
   sx,
   slidesPerView = 'auto',
   spaceBetween = 20,
+  noContent,
 }: SliderSectionProps) => {
   const { t } = useTranslation()
   const swiperRef = useRef<SwiperRef>(null)
 
   seeAllLabel = seeAllLabel ?? t('global.slider.seeAll')
+  const noContentMessage = noContent ?? t('global.slider.noContent')
+  const swiperContent =
+    items.length > 0 ? (
+      items.map((item, index) => (
+        <SwiperSlide key={index} style={{ width: 'auto' }}>
+          {renderItem(item, index)}
+        </SwiperSlide>
+      ))
+    ) : (
+      <Typography variant="body1" color="text.secondary">
+        {noContentMessage}
+      </Typography>
+    )
 
   return (
     <Box component="section" sx={{ position: 'relative', ...sx }}>
@@ -76,11 +91,7 @@ export const SliderSection = ({
         spaceBetween={spaceBetween}
         slidesPerView={slidesPerView}
       >
-        {items.map((item, index) => (
-          <SwiperSlide key={index} style={{ width: 'auto' }}>
-            {renderItem(item, index)}
-          </SwiperSlide>
-        ))}
+        {swiperContent}
       </Swiper>
     </Box>
   )
