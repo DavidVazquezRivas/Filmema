@@ -61,7 +61,12 @@ export const Hero: React.FC<HeroProps> = ({
   const stars = cast
     .filter((person) => person.popularity >= starLimit)
     .map((person) => (
-      <Typography key={person.id} color="primary" variant="body1">
+      <Typography
+        component="li"
+        key={person.id}
+        color="primary"
+        variant="body1"
+      >
         {person.name}
       </Typography>
     ))
@@ -72,9 +77,11 @@ export const Hero: React.FC<HeroProps> = ({
         component="ul"
         display="flex"
         flexDirection="row"
+        flexWrap="wrap"
         gap={1.5}
         m={0}
         p={0}
+        sx={{ listStyle: 'none' }}
       >
         {stars}
       </Box>
@@ -169,7 +176,12 @@ export const Hero: React.FC<HeroProps> = ({
           }}
         />
       </Box>
-      <Box display="grid" position="relative" gridTemplateColumns="1fr auto">
+      <Box
+        display="grid"
+        position="relative"
+        gridTemplateColumns="3fr 1fr"
+        gap={3}
+      >
         <Box
           display="grid"
           gridTemplateColumns="auto 1fr"
@@ -199,9 +211,7 @@ export const Hero: React.FC<HeroProps> = ({
           <Typography variant="body1" color="text.secondary" fontWeight="bold">
             {t('details.hero.stars')}
           </Typography>
-          <Typography variant="body1" color="text.secondary">
-            {starsContent}
-          </Typography>
+          {starsContent}
         </Box>
         <BookmarkButton movieId={id} style="button" />
       </Box>
