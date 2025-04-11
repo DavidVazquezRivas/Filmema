@@ -8,6 +8,8 @@ import { useLoadGenres } from '@/hooks/genres/useLoadGenres'
 import { DiscoverMode } from '@/models/discoverModes'
 import { Detail } from './pages/detail/Detail'
 import { useSelector } from 'react-redux'
+import { PanelProvider } from './context/PanelContext'
+import { Panel } from './components/panel/Panel'
 
 function App() {
   const { theme } = useThemeContext()
@@ -21,30 +23,33 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
-        <Routes key={version}>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-          <Route
-            path="/discover"
-            element={<Discover mode={DiscoverMode.discover} />}
-          />
-          <Route
-            path="/now-playing"
-            element={<Discover mode={DiscoverMode.nowPlaying} />}
-          />
-          <Route
-            path="/upcoming"
-            element={<Discover mode={DiscoverMode.upcoming} />}
-          />
-          <Route
-            path="/search/:query"
-            element={<Discover mode={DiscoverMode.search} />}
-          />
-          <Route path="/movie/:id/:action?" element={<Detail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <PanelProvider>
+        <BrowserRouter>
+          <Routes key={version}>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home />} />
+            <Route
+              path="/discover"
+              element={<Discover mode={DiscoverMode.discover} />}
+            />
+            <Route
+              path="/now-playing"
+              element={<Discover mode={DiscoverMode.nowPlaying} />}
+            />
+            <Route
+              path="/upcoming"
+              element={<Discover mode={DiscoverMode.upcoming} />}
+            />
+            <Route
+              path="/search/:query"
+              element={<Discover mode={DiscoverMode.search} />}
+            />
+            <Route path="/movie/:id/:action?" element={<Detail />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+        <Panel />
+      </PanelProvider>
     </ThemeProvider>
   )
 }
