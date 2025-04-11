@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { SLIDER_HEIGHT } from '@/pages/detail/constants/detailConstants'
 import { Image } from '../../models/movieDetails'
 import { ImageContainer } from '@/components/containers/ImageContainer'
+import { plainImages } from '@/pages/detail/utils/image-utils'
 
 interface ImageSectionProps {
   title: string
@@ -23,9 +24,7 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
 }) => {
   const { t } = useTranslation()
 
-  const plainImages = [...images.backdrops, ...images.posters].sort(
-    () => Math.random() - 0.5
-  )
+  const plainedImages = plainImages(images)
 
   const renderItem = (item: Image) => {
     return (
@@ -46,10 +45,10 @@ export const ImageSection: React.FC<ImageSectionProps> = ({
   return (
     <SliderSection
       title={t('details.images.title')}
-      items={plainImages}
+      items={plainedImages}
       onSeeAll={onSeeAll}
       renderItem={renderItem}
-      seeAllLabel={t('global.slider.seeAll') + ` ${plainImages.length}`}
+      seeAllLabel={t('global.slider.seeAll') + ` ${plainedImages.length}`}
       noContent={t('details.images.noContent')}
     />
   )
