@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filmema</title>
     <meta name="description" content="Filmema is a movie app, it provides functionalities to search, explore and watch movie detail." />
@@ -14,6 +11,23 @@
     <meta name="author" content="David Vázquez" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Filmema – Discover and Explore Movies" />
+    <meta property="og:description" content="Filmema is a movie app to search, explore and check movie details easily." />
+    <meta property="og:image" content="https://filmematv.com/media-card.jpg" />
+    <meta property="og:url" content="https://filmematv.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Filmema – Discover and Explore Movies" />
+    <meta name="twitter:description" content="Search and explore your favorite films with Filmema." />
+    <meta name="twitter:image" content="https://filmematv.com/media-card.jpg" />
+    <meta name="twitter:creator" content="@DaVaR277" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://filmematv.com" />
   </head>
   <body>
     <div id="root"></div>
