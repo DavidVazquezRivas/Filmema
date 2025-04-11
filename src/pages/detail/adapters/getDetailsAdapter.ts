@@ -17,6 +17,11 @@ import {
 import { profilePlaceholder } from '@/constants/placeholders'
 import { SelectOption } from '@/models/selectOption'
 import { Movie } from '@/models/movie'
+import {
+  BACKDROP_SIZE_INDEX,
+  POSTER_SIZE_INDEX,
+  PROFILE_SIZE_INDEX,
+} from '../constants/detailConstants'
 
 export const getDetailsAdapter = (obj: any): MovieDetails => {
   // TODO: Add country detection
@@ -74,7 +79,7 @@ function mapPerson(obj: any): Person {
     name: obj.name,
     popularity: obj.popularity,
     profilePath: obj.profile_path
-      ? `${TMDB_IMAGE_URL}/${PROFILE_SIZES[1]}/${obj.profile_path}`
+      ? `${TMDB_IMAGE_URL}/${PROFILE_SIZES[PROFILE_SIZE_INDEX]}/${obj.profile_path}`
       : profilePlaceholder,
   }
 }
@@ -88,14 +93,14 @@ function mapGenre(obj: any): SelectOption {
 
 function mapBackdrop(obj: any): Image {
   return {
-    src: `${TMDB_IMAGE_URL}/${BACKDROP_SIZES[1]}/${obj.file_path}`,
+    src: `${TMDB_IMAGE_URL}/${BACKDROP_SIZES[BACKDROP_SIZE_INDEX]}/${obj.file_path}`,
     aspectRatio: obj.aspect_ratio,
   }
 }
 
 function mapPoster(obj: any): Image {
   return {
-    src: `${TMDB_IMAGE_URL}/${POSTER_SIZES[3]}/${obj.file_path}`,
+    src: `${TMDB_IMAGE_URL}/${POSTER_SIZES[POSTER_SIZE_INDEX]}/${obj.file_path}`,
     aspectRatio: obj.aspect_ratio,
   }
 }
