@@ -126,7 +126,8 @@
     "images": {
       "title": "Images",
       "alt": "Image of the movie: {{title}}",
-      "noContent": "No images available for this movie in this language"
+      "noContent": "No images available for this movie in this language",
+      "count": "Showing {{count}} images"
     },
     "cast": {
       "title": "Cast",

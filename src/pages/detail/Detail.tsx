@@ -47,12 +47,7 @@ export const Detail = () => {
           onOpen={() => {}}
           onSeeAll={() => {}}
         />
-        <ImageSection
-          title={details.title}
-          images={details.images}
-          onOpen={() => {}}
-          onSeeAll={() => {}}
-        />
+        <ImageSection title={details.title} images={details.images} />
         <CastSection cast={details.credits.cast} onSeeAll={() => {}} />
       </Box>
     </PageLayout>
