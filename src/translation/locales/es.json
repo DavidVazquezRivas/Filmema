@@ -126,7 +126,8 @@
     "images": {
       "title": "Imágenes",
       "alt": "Imagen de la película: {{title}}",
-      "noContent": "No hay imágenes disponibles para esta película en este idioma"
+      "noContent": "No hay imágenes disponibles para esta película en este idioma",
+      "count": "Mostrando {{count}} imágenes"
     },
     "cast": {
       "title": "Reparto",

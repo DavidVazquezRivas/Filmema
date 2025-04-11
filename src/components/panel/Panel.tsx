@@ -1,4 +1,5 @@
-import { ReactNode } from 'react'
+import React from 'react'
+import { usePanel } from '@/context/PanelContext'
 import {
   SwipeableDrawer,
   IconButton,
@@ -8,29 +9,27 @@ import {
 } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 
-interface PanelProps {
-  children: ReactNode
-  title: string
-  open: boolean
-  onClose: () => void
-  onOpen: () => void
-}
+interface PanelProps {}
 
-export const Panel = ({
-  children,
-  title,
-  open,
-  onClose,
-  onOpen,
-}: PanelProps) => {
+export const Panel: React.FC<PanelProps> = () => {
+  const { panelState, closePanel } = usePanel()
   const theme = useTheme()
+  const isOpen = panelState.isOpen
+
+  const handleCloseDrawer = () => {
+    closePanel()
+  }
+
+  const handleOpenDrawer = () => {}
+
+  const { content: PanelContent, title } = panelState
 
   return (
     <SwipeableDrawer
       anchor="bottom"
-      open={open}
-      onClose={onClose}
-      onOpen={onOpen}
+      open={isOpen}
+      onClose={handleCloseDrawer}
+      onOpen={handleOpenDrawer}
       disableSwipeToOpen={true}
       allowSwipeInChildren={true}
       swipeAreaWidth={0}
@@ -75,7 +74,7 @@ export const Panel = ({
         </Typography>
 
         <IconButton
-          onClick={onClose}
+          onClick={handleCloseDrawer}
           aria-label="cerrar"
           sx={{ color: 'text.primary', mr: -1 }}
         >
@@ -92,7 +91,7 @@ export const Panel = ({
           overscrollBehavior: 'contain',
         }}
       >
-        {children}
+        {PanelContent}
       </Box>
     </SwipeableDrawer>
   )

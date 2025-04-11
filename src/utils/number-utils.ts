@@ -10,3 +10,8 @@ export const shortNumber = (num: number): string => {
   if (num < million) return (num / 1000).toFixed(0).replace(/\.0$/, '') + 'K'
   return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M'
 }
+
+export function extractNumber(str: string): number | null {
+  const match = str.match(/\d+/)
+  return match ? parseInt(match[0], 10) : null
+}

@@ -126,7 +126,8 @@
     "images": {
       "title": "Imatges",
       "alt": "Imatge de la pel·lícula: {{title}}",
-      "noContent": "No hi ha imatges disponibles per a aquesta pel·lícula en aquest idioma"
+      "noContent": "No hi ha imatges disponibles per a aquesta pel·lícula en aquest idioma",
+      "count": "Mostrant {{count}} imatges"
     },
     "cast": {
       "title": "Repartiment",
