@@ -61,6 +61,7 @@ export const ImageContainer: React.FC<ImageContainerProps> = ({
       position="relative"
       overflow="hidden"
       sx={{
+        ...props.sx,
         aspectRatio: dimensions.aspectRatio,
       }}
     >
