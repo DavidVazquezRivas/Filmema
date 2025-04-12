@@ -26,7 +26,6 @@ import {
 export const getDetailsAdapter = (obj: any): MovieDetails => {
   // TODO: Add country detection
   const country = 'US'
-  console.log(obj)
   return {
     backdrop: `${TMDB_IMAGE_URL}/${BACKDROP_SIZES[1]}/${obj.backdrop_path}`,
     budget: obj.budget,

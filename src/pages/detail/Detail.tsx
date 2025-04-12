@@ -18,8 +18,6 @@ export const Detail = () => {
 
   const { details, loading, error } = useGetDetails(id as string)
 
-  console.log(details, loading, error)
-
   if (loading) return 'Loading...' // TODO: Handle loading state
   if (error) return 'Error loading details' // TODO: Handle error state
   if (!details) return 'No data fetched' // TODO: Handle no details state
