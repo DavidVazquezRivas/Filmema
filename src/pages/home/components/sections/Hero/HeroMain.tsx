@@ -88,6 +88,7 @@ export const HeroMain: React.FC<HeroMainProps> = ({ movie }) => {
           <Box component="article" display="flex" flexDirection="column" p={1}>
             <Typography
               variant="h4"
+              component="div"
               fontWeight="bold"
               color="textPrimary"
               role="button"

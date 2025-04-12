@@ -20,7 +20,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
 
   return (
     <Box
-      component="li"
+      component="div"
       display="flex"
       flexDirection="row"
       justifyContent="flex-start"

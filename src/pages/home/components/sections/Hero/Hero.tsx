@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
     >
       <HeroMain movie={movies?.[currentMain] || null} />
       <Box
-        component="ul"
+        component="div"
         display="flex"
         flexDirection="column"
         gap={4}
