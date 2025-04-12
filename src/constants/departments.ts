@@ -1,14 +1,17 @@
 export const DEPARTMENTS = [
+  'Acting',
   'Art',
-  'Writing',
-  'Editing',
-  'Directing',
-  'Costume & Make-Up',
   'Camera',
-  'Actors',
+  'Costume & Make-Up',
+  'Creator',
+  'Crew',
+  'Directing',
+  'Editing',
   'Lighting',
   'Production',
-  'Visual Effects',
-  'Crew',
   'Sound',
-]
+  'Visual Effects',
+  'Writing',
+] as const
+
+export type Department = (typeof DEPARTMENTS)[number]
