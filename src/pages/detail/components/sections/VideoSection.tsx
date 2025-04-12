@@ -9,23 +9,43 @@ import { useTranslation } from 'react-i18next'
 import { SLIDER_HEIGHT } from '@/pages/detail/constants/detailConstants'
 import { SliderSection } from '@/components/slidersection/SliderSection'
 import { ImageContainer } from '@/components/containers/ImageContainer'
+import { usePanel } from '@/context/PanelContext'
+import { useCallback, useEffect } from 'react'
+import { AllVideosPanel } from '../panels/AllVideosPanel'
+import { VideoPanel } from '../panels/VideoPanel'
 
 interface VideoSectionProps {
   title: string
   videos: Video[]
-  onOpen: (video: Video) => void
-  onSeeAll: () => void
+  autoplay?: boolean
 }
 
 export const VideoSection: React.FC<VideoSectionProps> = ({
   title,
   videos,
-  onOpen,
-  onSeeAll,
+  autoplay = false,
 }) => {
   const { t } = useTranslation()
+  const { openPanel } = usePanel()
 
-  const renderItem = (item: Video) => {
+  useEffect(() => {
+    if (autoplay && videos.length > 0) {
+      handleOpenVideo(videos[0])
+    }
+  }, [autoplay, videos])
+
+  const handleOpenAllVideos = () => {
+    openPanel(<AllVideosPanel videos={videos} title={title} />, title)
+  }
+
+  const handleOpenVideo = (video: Video) => {
+    openPanel(
+      <VideoPanel video={video} videos={videos} title={title} autoplay />,
+      video.name
+    )
+  }
+
+  const renderItem = useCallback((item: Video) => {
     return (
       <Box position="relative">
         <ImageContainer
@@ -36,7 +56,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
           borderRadius={3}
         />
         <IconButton
-          onClick={() => onOpen(item)}
+          onClick={() => handleOpenVideo(item)}
           sx={{
             position: 'absolute',
             top: '50%',
@@ -56,13 +76,13 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
         </IconButton>
       </Box>
     )
-  }
+  }, [])
 
   return (
     <SliderSection
       title={t('details.videos.title')}
       items={videos}
-      onSeeAll={onSeeAll}
+      onSeeAll={() => handleOpenAllVideos()}
       renderItem={renderItem}
       seeAllLabel={t('global.slider.seeAll') + ` ${videos.length}`}
       noContent={t('details.videos.noContent')}

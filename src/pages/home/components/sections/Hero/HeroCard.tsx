@@ -3,7 +3,7 @@ import { Movie } from '@/models/movie'
 import { Box, IconButton, Typography } from '@mui/material'
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { DetailActions } from '@/models/detailActions'
 
 interface HeroCardProps {
@@ -12,6 +12,11 @@ interface HeroCardProps {
 
 export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const navigateToMovie = () => {
+    navigate(`/movie/${movie.id}`)
+  }
 
   return (
     <Box
@@ -29,6 +34,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
         width: '300px',
         overflow: 'hidden',
         borderRadius: 6,
+        cursor: 'pointer',
         '&::before': {
           content: '""',
           position: 'absolute',
@@ -45,6 +51,8 @@ export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
           zIndex: -1,
         },
       }}
+      role="button"
+      onClick={navigateToMovie}
     >
       {/* Movie poster */}
       <Box component="aside" position="relative">
@@ -74,6 +82,7 @@ export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
             aria-label={t('home.hero.subtitle', { title: movie.title })}
             component={Link}
             to={`/movie/${movie.id}/${DetailActions.Play}`}
+            onClick={(e) => e.stopPropagation()}
             sx={{
               backgroundColor: 'rgba(0, 0, 0, 0.3)',
               '&:hover': {

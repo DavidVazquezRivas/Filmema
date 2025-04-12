@@ -4,7 +4,7 @@ import { Movie } from '@/models/movie'
 import { Box, IconButton, Typography } from '@mui/material'
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { DetailActions } from '@/models/detailActions'
 
 interface HeroMainProps {
@@ -13,6 +13,13 @@ interface HeroMainProps {
 
 export const HeroMain: React.FC<HeroMainProps> = ({ movie }) => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const navigateToMovie = () => {
+    if (movie) {
+      navigate(`/movie/${movie.id}`)
+    }
+  }
 
   if (!movie) {
     return null
@@ -79,7 +86,14 @@ export const HeroMain: React.FC<HeroMainProps> = ({ movie }) => {
             <PlayArrowRoundedIcon sx={{ fontSize: 60, color: 'white' }} />
           </IconButton>
           <Box component="article" display="flex" flexDirection="column" p={1}>
-            <Typography variant="h4" fontWeight="bold" color="textPrimary">
+            <Typography
+              variant="h4"
+              fontWeight="bold"
+              color="textPrimary"
+              role="button"
+              onClick={navigateToMovie}
+              sx={{ cursor: 'pointer' }}
+            >
               {movie.title}
             </Typography>
             <Typography variant="h5" color="textSecondary">
