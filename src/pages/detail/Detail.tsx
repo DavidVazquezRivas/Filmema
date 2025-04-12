@@ -15,7 +15,6 @@ export const Detail = () => {
   const typedAction = isValidAction
     ? (action as DetailActions)
     : DetailActions.None
-  console.log('action', action, 'typedAction', typedAction)
 
   const { details, loading, error } = useGetDetails(id as string)
 
@@ -24,6 +23,8 @@ export const Detail = () => {
   if (loading) return 'Loading...' // TODO: Handle loading state
   if (error) return 'Error loading details' // TODO: Handle error state
   if (!details) return 'No data fetched' // TODO: Handle no details state
+
+  const autoplay = typedAction === DetailActions.Play
 
   return (
     <PageLayout>
@@ -44,8 +45,7 @@ export const Detail = () => {
         <VideoSection
           title={details.title}
           videos={details.videos}
-          onOpen={() => {}}
-          onSeeAll={() => {}}
+          autoplay={autoplay}
         />
         <ImageSection title={details.title} images={details.images} />
         <CastSection cast={details.credits.cast} onSeeAll={() => {}} />
