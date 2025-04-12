@@ -141,12 +141,13 @@
         "Directing": "Direcció",
         "Costume & Make-Up": "Vestuari i Maquillatge",
         "Camera": "Càmera",
-        "Actors": "Actors",
+        "Acting": "Actors",
         "Lighting": "Il·luminació",
         "Production": "Producció",
         "Visual Effects": "Efectes Visuals",
         "Crew": "Equip",
-        "Sound": "So"
+        "Sound": "So",
+        "Creator": "Creador"
       }
     }
   }
