@@ -1,0 +1,156 @@
+{
+  "@context": "https://schema.org",
+  "movies": [
+    {
+      "@type": "Movie",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingCount": 12597,
+        "ratingValue": 7.928
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w342/Ia3dzj5LnCj1ZBdlVeJrbKJQxG.jpg",
+          "description": "Poster de la pel·lícula Abans de tu",
+          "name": "Poster"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w780/3WK7p9EdZmmvB1IbB2Vw9Rf4lXH.jpg",
+          "description": "Imatge de fons de la pel·lícula Abans de tu",
+          "name": "Backdrop"
+        }
+      ],
+      "datePublished": "2016-06-01",
+      "description": "Louisa “Lou” Clark (Emilia Clarke), una noia inestable i creativa, resideix en un petit poble de la campinya anglesa. Viu sense rumb i va d'un treball a un altre per ajudar la seva família a arribar a final de mes. Tanmateix, una nova feina posarà a prova la seva habitual alegria. Al castell local, es fa càrrec de cuidar i acompanyar Will Traynor (Sam Claflin), un jove i ric banquer que va quedar paralític després d'un accident.",
+      "duration": "PT1H50M",
+      "genre": [
+        "Drama",
+        "Romàntic"
+      ],
+      "identifier": 296096,
+      "locationCreated": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Espanya",
+          "addressLocality": "Pollença",
+          "addressRegion": 1
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "accessibility",
+            "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "publicAccess",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "zoneType",
+            "value": 0
+          }
+        ],
+        "description": "Els protagonistes viatgen a la platja per animar Will i ensenyar-li a Louisa a deixar-se portar una mica per l'aventura.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.92675733600185,
+          "longitude": 3.1449824652163185
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/scenes/hotel.webp",
+            "description": "Escena de la pel·lícula Abans de tu vista aèria de l'hotel"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/scenes/beach.webp",
+            "description": "Escena de la pel·lícula Abans de tu a la platja de nit, amb Will i Louisa"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/location/hotel.webp",
+            "description": "Jardí de l'hotel Barceló de Pollença de la pel·lícula, es veu una zona de chillout amb molta vegetació i estructures tradicionals mallorquines"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/location/beach.webp",
+            "description": "Platja de Pollença, on es va rodar l'escena de la pel·lícula Abans de tu"
+          }
+        ],
+        "name": "Hotel Barceló Platja de Pollença"
+      },
+      "name": "Abans de tu",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Reno",
+            "image": "https://image.tmdb.org/t/p/w185/6ZpVUJzqXMzH35VprEtnX0sNI3.jpg"
+          },
+          "datePublished": "2016-10-14T20:10:22Z",
+          "reviewBody": "**Canviar la mentalitat fixa d'un no és una tasca fàcil.**\r\n\r\nBasada en la novel·la del mateix nom, dirigida per una nova cineasta. Aquesta pel·lícula britànica compta amb dues joves sensacions, Sam Claflin i Emilia Clarke, als papers principals. La història d'un jove que va quedar paralitzat recentment i coneix la seva nova cuidadora. Al principi, cap dels dos encaixa amb l'altre, però amb el temps tot canvia quan junts realitzen algunes activitats a l'aire lliure. A mesura que avança la pel·lícula, es torna cada vegada més emotiva. A més, és divertit veure els dos primers actes, especialment les interpretacions dels dos protagonistes que impacten fortament.\r\n\r\nDesprés de molt de temps, vaig veure un bon drama emotiu, però no tan intens. És una història senzilla, no hi ha grans aventures ni romanç en ella. Així és, no és una pel·lícula romàntica i si decideixes veure-la esperant això, definitivament et decebràs. També transmet un missatge una mica negatiu sobre estar greument malalt i seguir viu. Aquest tema només toca el terreny de la humanitat, però al final, cadascú té dret a fer el que vulgui, perquè és la seva vida.\r\n\r\nDe totes maneres, la pel·lícula evita els clixés habituals. No hi ha escenes que hagis vist en altres pel·lícules amb temes similars. Es va evitar deliberadament per fer-la una peça fresca. Bàsicament, si observes bé, els dos personatges principals tenen una agenda diferent sobre les seves vides. En particular, la cuidadora mai va intentar seriosament complir amb la seva tasca.\r\n\r\nD'altra banda, aquestes parts van ser molt realistes, però encara així ens brindaven una experiència cinematogràfica gràcies a la seva elegant presentació a la pantalla. Sense cap dubte, és una bona pel·lícula, crec que tothom hauria de veure-la, perquè no hi ha drogues, sexe, nus ni escenes de petons forts. Només el tema principal és una mica inquietant, especialment per a les persones de cor sensible. A part d'això, espero que la vegis si encara no ho has fet.\r\n\r\n_7/10_"
+        }
+      ],
+      "trailer": [
+        {
+          "@type": "VideoObject",
+          "identifier": "hTPwTpMxhcg",
+          "contentUrl": "https://www.youtube.com/watch?v=hTPwTpMxhcg",
+          "description": "Escenes eliminades de la pel·lícula 'Jo abans de tu'.",
+          "embedUrl": "https://www.youtube.com/embed/hTPwTpMxhcg",
+          "name": "Jo abans de tu (escenes eliminades)",
+          "thumbnailUrl": "https://img.youtube.com/vi/hTPwTpMxhcg/maxresdefault.jpg",
+          "uploadDate": "2017-04-15T14:45:31Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "d8_guuEdwEc",
+          "contentUrl": "https://www.youtube.com/watch?v=d8_guuEdwEc",
+          "description": "Outtakes de la pel·lícula 'Me Before You'.",
+          "embedUrl": "https://www.youtube.com/embed/d8_guuEdwEc",
+          "name": "Me Before You - Outtakes",
+          "thumbnailUrl": "https://img.youtube.com/vi/d8_guuEdwEc/maxresdefault.jpg",
+          "uploadDate": "2016-09-03T18:28:54Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "y2AuorhhGnI",
+          "contentUrl": "https://www.youtube.com/watch?v=y2AuorhhGnI",
+          "description": "Spot de TV 'Descobreix el fenomen' de 'Abans de tu' en Català.",
+          "embedUrl": "https://www.youtube.com/embed/y2AuorhhGnI",
+          "name": "Abans de tu - Spot TV \"Descobreix el fenomen\" Català HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/y2AuorhhGnI/maxresdefault.jpg",
+          "uploadDate": "2016-07-13T12:22:53Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "wJqNpsbMShk",
+          "contentUrl": "https://www.youtube.com/watch?v=wJqNpsbMShk",
+          "description": "Entrevista a Sam Claflin de la pel·lícula 'Abans de tu'.",
+          "embedUrl": "https://www.youtube.com/embed/wJqNpsbMShk",
+          "name": "Abans de tu - Entrevista a Sam Claflin HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/wJqNpsbMShk/maxresdefault.jpg",
+          "uploadDate": "2016-07-12T14:04:23Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "HeMq0nJREz8",
+          "contentUrl": "https://www.youtube.com/watch?v=HeMq0nJREz8",
+          "description": "Entrevista a Emilia Clarke de la pel·lícula 'Abans de tu'.",
+          "embedUrl": "https://www.youtube.com/embed/HeMq0nJREz8",
+          "name": "Abans de tu - Entrevista a Emilia Clarke HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/HeMq0nJREz8/maxresdefault.jpg",
+          "uploadDate": "2016-07-11T13:09:43Z"
+        }
+      ],
+      "url": "https://www.filmematv.com/movie/296096"
+    }
+  ]
+}

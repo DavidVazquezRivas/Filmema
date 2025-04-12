@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org",
+  "movies": [
+    {
+      "@type": "Movie",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingCount": 12597,
+        "ratingValue": 7.928
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w342//vVIDt9FjuTLbXeuc2mJRYnqMh1F.jpg",
+          "description": "Poster of the movie Before You",
+          "name": "Poster"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w780//3WK7p9EdZmmvB1IbB2Vw9Rf4lXH.jpg",
+          "description": "Background image of the movie Before You",
+          "name": "Backdrop"
+        }
+      ],
+      "datePublished": "2016-06-01",
+      "description": "Louisa “Lou” Clark (Emilia Clarke), an unstable and creative girl, lives in a small village in the English countryside. She lives aimlessly, moving from one job to another to help her family make ends meet. However, a new job will test her usual joy. At the local castle, she takes care of and accompanies Will Traynor (Sam Claflin), a young and wealthy banker who became paralyzed after an accident.",
+      "duration": "PT1H50M",
+      "genre": [
+        "Drama",
+        "Romance"
+      ],
+      "identifier": 296096,
+      "locationCreated": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Spain",
+          "addressLocality": "Pollensa",
+          "addressRegion": 1
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "accessibility",
+            "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "publicAccess",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "zoneType",
+            "value": 0
+          }
+        ],
+        "description": "The protagonists travel to the beach to cheer up Will and teach Louisa to let go a little and embrace adventure.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.92675733600185,
+          "longitude": 3.1449824652163185
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/scenes/hotel.webp",
+            "description": "Scene from the movie Before You, aerial view of the hotel"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/scenes/beach.webp",
+            "description": "Scene from the movie Before You on the beach at night, with Will and Louisa"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/location/hotel.webp",
+            "description": "Garden of the Barceló hotel in Pollensa from the movie, showing a chillout area with lots of vegetation and traditional Mallorcan structures"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/location/beach.webp",
+            "description": "Pollensa beach, where the scene from the movie Before You was filmed"
+          }
+        ],
+        "name": "Hotel Barceló Playa de Pollensa"
+      },
+      "name": "Before You",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Reno",
+            "image": "https://image.tmdb.org/t/p/w185/6ZpVUJzqXMzH35VprEtnX0sNI3.jpg"
+          },
+          "datePublished": "2016-10-14T20:10:22Z",
+          "reviewBody": "**Changing one's fixed mindset is not an easy task.**\r\n\r\nBased on the novel of the same name, directed by a new filmmaker. This British movie stars two young sensations, Sam Claflin and Emilia Clarke, in the lead roles. It tells the story of a young man who has recently been paralyzed and meets his new caregiver. At first, neither of them fits with the other, but over time, things change as they engage in some outdoor activities together. As the movie progresses, it becomes more and more emotional. Also, it's fun to watch the first two acts, especially the performances of both protagonists, which make a strong impact.\r\n\r\nAfter a long time, I watched a good emotional drama, but not too intense. It's a simple story, with no big adventures or romances. Yes, it's not a romantic movie, and if you go into it expecting one, you'll definitely be disappointed. It also conveys a somewhat negative message about being seriously ill and still alive. This theme only touches on humanity, but in the end, everyone has the right to do whatever they want because it's their life.\r\n\r\nThat said, the film avoids usual clichés. There are no scenes you’ve seen in other films with similar themes. This was deliberately avoided to make it a fresh piece. Basically, if you look closely, both main characters have different agendas about their lives. In particular, the caregiver never seriously attempted to fulfill her task.\r\n\r\nOn the other hand, those parts were very realistic, but still give us a cinematic experience thanks to the elegant screen presentation. It's definitely a good movie, I think everyone should watch it, because there are no drugs, sex, nudity, or intense kissing scenes. The main theme is a bit disturbing, especially for people with a sensitive heart. Apart from that, I hope you watch it if you haven’t already.\r\n\r\n_7/10_"
+        }
+      ],
+      "trailer": [
+        {
+            "@type": "VideoObject",
+            "identifier": "gUxkKV-J1wA",
+            "contentUrl": "https://www.youtube.com/watch?v=gUxkKV-J1wA",
+            "description": "Me Before You | Full Movie Preview | Warner Bros. Entertainment",
+            "embedUrl": "https://www.youtube.com/embed/gUxkKV-J1wA",
+            "name": "Me Before You | Full Movie Preview | Warner Bros. Entertainment",
+            "thumbnailUrl": "https://img.youtube.com/vi/gUxkKV-J1wA/maxresdefault.jpg",
+            "uploadDate": "2020-07-19T17:59:52Z"
+        },
+        {
+            "@type": "VideoObject",
+            "identifier": "up7_B8x4Obs",
+            "contentUrl": "https://www.youtube.com/watch?v=up7_B8x4Obs",
+            "description": "Me Before You – Featurette – Official Warner Bros. UK",
+            "embedUrl": "https://www.youtube.com/embed/up7_B8x4Obs",
+            "name": "Me Before You – Featurette – Official Warner Bros. UK",
+            "thumbnailUrl": "https://img.youtube.com/vi/up7_B8x4Obs/maxresdefault.jpg",
+            "uploadDate": "2016-06-03T14:04:47Z"
+        },
+        {
+            "@type": "VideoObject",
+            "identifier": "T0MmkG_nG1U",
+            "contentUrl": "https://www.youtube.com/watch?v=T0MmkG_nG1U",
+            "description": "Me Before You - Official Trailer [HD]",
+            "embedUrl": "https://www.youtube.com/embed/T0MmkG_nG1U",
+            "name": "Me Before You - Official Trailer [HD]",
+            "thumbnailUrl": "https://img.youtube.com/vi/T0MmkG_nG1U/maxresdefault.jpg",
+            "uploadDate": "2016-02-03T18:00:09Z"
+        }
+    ],
+      "url": "https://www.filmematv.com/movie/296096"
+      }
+    ]
+  }
