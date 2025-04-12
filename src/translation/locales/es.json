@@ -141,12 +141,13 @@
         "Directing": "Dirección",
         "Costume & Make-Up": "Vestuario y Maquillaje",
         "Camera": "Cámara",
-        "Actors": "Actores",
+        "Acting": "Actores",
         "Lighting": "Iluminación",
         "Production": "Producción",
         "Visual Effects": "Efectos Visuales",
         "Crew": "Equipo",
-        "Sound": "Sonido"
+        "Sound": "Sonido",
+        "Creator": "Creador"
       }
     }
   }

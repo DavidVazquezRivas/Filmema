@@ -141,12 +141,13 @@
         "Directing": "Directing",
         "Costume & Make-Up": "Costume & Make-Up",
         "Camera": "Camera",
-        "Actors": "Actors",
+        "Acting": "Actors",
         "Lighting": "Lighting",
         "Production": "Production",
         "Visual Effects": "Visual Effects",
         "Crew": "Crew",
-        "Sound": "Sound"
+        "Sound": "Sound",
+        "Creator": "Creator"
       }
     }
   }
