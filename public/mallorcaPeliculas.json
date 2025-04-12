@@ -1,0 +1,256 @@
+{
+  "@context": "https://schema.org",
+  "movies": [
+    {
+      "@type": "Movie",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingCount": 12597,
+        "ratingValue": 7.928
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w342//vVIDt9FjuTLbXeuc2mJRYnqMh1F.jpg",
+          "description": "Poster de la película Antes de ti",
+          "name": "Poster"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w780//3WK7p9EdZmmvB1IbB2Vw9Rf4lXH.jpg",
+          "description": "Imágen de fondo de la película Antes de ti",
+          "name": "Backdrop"
+        }
+      ],
+      "datePublished": "2016-06-01",
+      "description": "Louisa “Lou” Clark (Emilia Clarke), una chica inestable y creativa, reside en un pequeño pueblo de la campiña inglesa. Vive sin rumbo y va de un trabajo a otro para ayudar a su familia a llegar a fin de mes. Sin embargo, un nuevo trabajo pondrá a prueba su habitual alegría. En el castillo local, se ocupa de cuidar y acompañar a Will Traynor (Sam Claflin), un joven y rico banquero que se quedó paralítico tras un accidente.",
+      "duration": "PT1H50M",
+      "genre": [
+        "Drama",
+        "Romance"
+      ],
+      "identifier": 296096,
+      "locationCreated": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "España",
+          "addressLocality": "Pollensa",
+          "addressRegion": 1
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "accessibility",
+            "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "publicAccess",
+            "value": false
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "zoneType",
+            "value": 0
+          }
+        ],
+        "description": "Los protagonistas viajan a la playa para animar a Will y enseñarle a Louisa a soltarse un poco a la aventura.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.92675733600185,
+          "longitude": 3.1449824652163185
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/scenes/hotel.webp",
+            "description": "Escena de la película Antes de ti vista aérea del hotel"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/scenes/beach.webp",
+            "description": "Escena de la película Antes de ti en la playa de noche, con Will y Louisa"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/location/hotel.webp",
+            "description": "Jardín del hotel barceló de Pollensa de la película, se ve una zona de chillout con mucha vegetacion y estructuras tradicionales mallorquinas"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/images/296096/location/beach.webp",
+            "description": "Playa de Pollensa, donde se rodó la escena de la película Antes de ti"
+          }
+        ],
+        "name": "Hotel Barceló Playa de Pollensa"
+      },
+      "name": "Antes de ti",
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Reno",
+            "image": "https://image.tmdb.org/t/p/w185/6ZpVUJzqXMzH35VprEtnX0sNI3.jpg"
+          },
+          "datePublished": "2016-10-14T20:10:22Z",
+          "reviewBody": "**Cambiar la mentalidad fija de uno no es una tarea fácil.**\r\n\r\nBasada en la novela del mismo nombre, dirigida por una nueva cineasta. Esta película británica cuenta con dos jóvenes sensaciones, Sam Claflin y Emilia Clarke, en los papeles principales. La historia de un joven que quedó paralizado recientemente y conoce a su nueva cuidadora. Al principio, ninguno de los dos encaja con el otro, pero con el tiempo todo cambia cuando juntos realizan algunas actividades al aire libre. A medida que avanza la película, se vuelve cada vez más emotiva. Además, es divertido ver los primeros dos actos, especialmente las interpretaciones de ambos protagonistas que impactan fuertemente.\r\n\r\nDespués de mucho tiempo, vi un buen drama emotivo, pero no tan intenso. Es una historia sencilla, no hay grandes aventuras ni romances en ella. Así es, no es una película romántica y si decides verla esperando una, definitivamente te decepcionarás. También transmite un mensaje algo negativo sobre estar enfermo gravemente y seguir vivo. Este tema solo toca el terreno de la humanidad, pero al final, cada quien tiene derecho de hacer lo que quiera, porque es su vida.\r\n\r\nDe todos modos, la película evita los clichés usuales. No hay escenas que hayas visto en otras películas con temas similares. Se evitó deliberadamente para hacerla una pieza fresca. Básicamente, si observas bien, los dos personajes principales tienen una agenda diferente sobre sus vidas. En particular, la cuidadora nunca intentó seriamente cumplir con su tarea.\r\n\r\nPor otro lado, esas partes fueron muy realistas, pero aún así nos brindan una experiencia cinematográfica gracias a la elegante presentación en pantalla. Sin duda, es una buena película, creo que todos deberían verla, porque no hay drogas, sexo, desnudos ni escenas de besos fuertes. Solo el tema principal es algo perturbador, especialmente para las personas de corazón sensible. Aparte de eso, espero que la veas si aún no lo has hecho.\r\n\r\n_7/10_"
+        }
+      ],
+      "trailer": [
+        {
+          "@type": "VideoObject",
+          "identifier": "hTPwTpMxhcg",
+          "contentUrl": "https://www.youtube.com/watch?v=hTPwTpMxhcg",
+          "description": "Escenas eliminadas de la película 'Yo antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/hTPwTpMxhcg",
+          "name": "Yo antes de ti (escenas eliminadas)",
+          "thumbnailUrl": "https://img.youtube.com/vi/hTPwTpMxhcg/maxresdefault.jpg",
+          "uploadDate": "2017-04-15T14:45:31Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "d8_guuEdwEc",
+          "contentUrl": "https://www.youtube.com/watch?v=d8_guuEdwEc",
+          "description": "Outtakes de la película 'Me Before You'.",
+          "embedUrl": "https://www.youtube.com/embed/d8_guuEdwEc",
+          "name": "Me Before You - Outtakes",
+          "thumbnailUrl": "https://img.youtube.com/vi/d8_guuEdwEc/maxresdefault.jpg",
+          "uploadDate": "2016-09-03T18:28:54Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "y2AuorhhGnI",
+          "contentUrl": "https://www.youtube.com/watch?v=y2AuorhhGnI",
+          "description": "Spot de TV 'Descubre el fenómeno' de 'Antes de ti' en Castellano.",
+          "embedUrl": "https://www.youtube.com/embed/y2AuorhhGnI",
+          "name": "Antes de ti - Spot TV \"Descubre el fenómeno\" Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/y2AuorhhGnI/maxresdefault.jpg",
+          "uploadDate": "2016-07-13T12:22:53Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "wJqNpsbMShk",
+          "contentUrl": "https://www.youtube.com/watch?v=wJqNpsbMShk",
+          "description": "Entrevista a Sam Claflin de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/wJqNpsbMShk",
+          "name": "Antes de ti - Entrevista a Sam Claflin HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/wJqNpsbMShk/maxresdefault.jpg",
+          "uploadDate": "2016-07-12T14:04:23Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "HeMq0nJREz8",
+          "contentUrl": "https://www.youtube.com/watch?v=HeMq0nJREz8",
+          "description": "Entrevista a Emilia Clarke de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/HeMq0nJREz8",
+          "name": "Antes de ti - Entrevista a Emilia Clarke HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/HeMq0nJREz8/maxresdefault.jpg",
+          "uploadDate": "2016-07-11T13:09:43Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "lNjUPnmM_S0",
+          "contentUrl": "https://www.youtube.com/watch?v=lNjUPnmM_S0",
+          "description": "Clip 'Cuéntame algo más' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/lNjUPnmM_S0",
+          "name": "Antes de ti - Clip \"Cuéntame algo más'' Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/lNjUPnmM_S0/maxresdefault.jpg",
+          "uploadDate": "2016-07-10T10:48:14Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "-IDn5i25MxM",
+          "contentUrl": "https://www.youtube.com/watch?v=-IDn5i25MxM",
+          "description": "Clip 'La única razón' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/-IDn5i25MxM",
+          "name": "Antes de ti - Clip 'La única razón'' Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/-IDn5i25MxM/maxresdefault.jpg",
+          "uploadDate": "2016-07-10T10:46:40Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "GvscTvkP6bk",
+          "contentUrl": "https://www.youtube.com/watch?v=GvscTvkP6bk",
+          "description": "Clip 'Paris' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/GvscTvkP6bk",
+          "name": "Antes de ti - Clip \"Paris'' Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/GvscTvkP6bk/maxresdefault.jpg",
+          "uploadDate": "2016-07-07T12:47:49Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "fQekwhHmvAU",
+          "contentUrl": "https://www.youtube.com/watch?v=fQekwhHmvAU",
+          "description": "Vídeo 'Reacciones' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/fQekwhHmvAU",
+          "name": "Antes De ti - Vídeo 'Reacciones' HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/fQekwhHmvAU/maxresdefault.jpg",
+          "uploadDate": "2016-06-30T16:38:14Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "aki562N3RhY",
+          "contentUrl": "https://www.youtube.com/watch?v=aki562N3RhY",
+          "description": "Clip 'Me quedo' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/aki562N3RhY",
+          "name": "Antes de ti - Clip 'Me quedo' Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/aki562N3RhY/maxresdefault.jpg",
+          "uploadDate": "2016-06-29T16:48:48Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "dKimAwqUQrw",
+          "contentUrl": "https://www.youtube.com/watch?v=dKimAwqUQrw",
+          "description": "Clip 'Vestido rojo' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/dKimAwqUQrw",
+          "name": "Antes de ti - Clip 'Vestido rojo' Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/dKimAwqUQrw/maxresdefault.jpg",
+          "uploadDate": "2016-06-26T16:37:06Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "RHHUY9oLbLc",
+          "contentUrl": "https://www.youtube.com/watch?v=RHHUY9oLbLc",
+          "description": "Spot 'Vive Intensamente' con 'Photograph' de Ed Sheeran.",
+          "embedUrl": "https://www.youtube.com/embed/RHHUY9oLbLc",
+          "name": "Antes de ti - Spot 'Vive Intensamente' - Photograph Ed Sheeran",
+          "thumbnailUrl": "https://img.youtube.com/vi/RHHUY9oLbLc/maxresdefault.jpg",
+          "uploadDate": "2016-06-20T09:20:54Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "lRveqAu0fn0",
+          "contentUrl": "https://www.youtube.com/watch?v=lRveqAu0fn0",
+          "description": "Spot 'Vive Intensamente' de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/lRveqAu0fn0",
+          "name": "Antes de ti - Spot 'Vive Instensamente' HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/lRveqAu0fn0/maxresdefault.jpg",
+          "uploadDate": "2016-06-09T14:25:07Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "y-tS4DcM-Ug",
+          "contentUrl": "https://www.youtube.com/watch?v=y-tS4DcM-Ug",
+          "description": "Tráiler extendido de 'Antes de ti' en Castellano.",
+          "embedUrl": "https://www.youtube.com/embed/y-tS4DcM-Ug",
+          "name": "Antes de ti - Tráiler Extendido en Castellano HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/y-tS4DcM-Ug/maxresdefault.jpg",
+          "uploadDate": "2016-04-24T12:22:25Z"
+        },
+        {
+          "@type": "VideoObject",
+          "identifier": "57vE58O4log",
+          "contentUrl": "https://www.youtube.com/watch?v=57vE58O4log",
+          "description": "Tráiler oficial en español de la película 'Antes de ti'.",
+          "embedUrl": "https://www.youtube.com/embed/57vE58O4log",
+          "name": "Antes de ti - Tráiler Oficial en Español HD",
+          "thumbnailUrl": "https://img.youtube.com/vi/57vE58O4log/maxresdefault.jpg",
+          "uploadDate": "2016-03-10T18:45:35Z"
+        }
+      ],
+      "url": "https://www.filmematv.com/movie/296096"
+    }
+  ]
+}
