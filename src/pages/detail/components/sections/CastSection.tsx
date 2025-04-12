@@ -5,14 +5,27 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { SLIDER_HEIGHT } from '@/pages/detail/constants/detailConstants'
 import { AccesibleText } from '@/components/accessibletext/AccesibleText'
+import { usePanel } from '@/context/PanelContext'
+import { CreditPanel } from '../panels/CreditPanel'
 
 interface CastSectionProps {
-  cast: Person[]
-  onSeeAll: () => void
+  title: string
+  credits: {
+    cast: Person[]
+    crew: Person[]
+  }
 }
 
-export const CastSection: React.FC<CastSectionProps> = ({ cast, onSeeAll }) => {
+export const CastSection: React.FC<CastSectionProps> = ({ title, credits }) => {
   const { t } = useTranslation()
+  const { openPanel } = usePanel()
+
+  const handleOpenAllCast = () => {
+    openPanel(<CreditPanel credits={plainedCredits} />, title)
+  }
+
+  const cast = credits.cast
+  const plainedCredits = [...credits.cast, ...credits.crew]
 
   const renderItem = (item: Person) => {
     return (
@@ -44,7 +57,7 @@ export const CastSection: React.FC<CastSectionProps> = ({ cast, onSeeAll }) => {
     <SliderSection
       title={t('details.cast.title')}
       items={cast}
-      onSeeAll={onSeeAll}
+      onSeeAll={handleOpenAllCast}
       renderItem={renderItem}
       seeAllLabel={t('global.slider.seeAll')}
     />

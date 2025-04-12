@@ -46,7 +46,7 @@ export const Detail = () => {
           autoplay={autoplay}
         />
         <ImageSection title={details.title} images={details.images} />
-        <CastSection cast={details.credits.cast} onSeeAll={() => {}} />
+        <CastSection title={details.title} credits={details.credits} />
       </Box>
     </PageLayout>
   )
