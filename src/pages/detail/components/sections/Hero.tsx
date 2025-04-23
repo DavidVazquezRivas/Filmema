@@ -2,7 +2,7 @@ import StarRoundedIcon from '@mui/icons-material/StarRounded'
 import { SelectOption } from '@/models/selectOption'
 import { Person } from '@/pages/detail/models/movieDetails'
 import { minToHoursMin } from '@/utils/time-utils'
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { shortNumber } from '@/utils/number-utils'
 import { PosterContainer } from '@/components/containers/PosterContainer'
@@ -40,6 +40,9 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   const { t } = useTranslation()
   const formattedRuntime = minToHoursMin(runtime)
+  const theme = useTheme()
+  const isBig = useMediaQuery(theme.breakpoints.up('md'))
+  const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
 
   const handleClickRate = () => {
     // TODO : Handle rate click
@@ -91,6 +94,8 @@ export const Hero: React.FC<HeroProps> = ({
       </Typography>
     )
 
+  const showImages = [isSmall || isBig, !isSmall]
+
   return (
     <Box
       component="section"
@@ -114,7 +119,11 @@ export const Hero: React.FC<HeroProps> = ({
             {`${releaseYear} · ${formattedRuntime}`}
           </Typography>
         </Box>
-        <Box display="flex" flexDirection="row" gap={1}>
+        <Box
+          display="flex"
+          gap={1}
+          sx={{ flexDirection: { xs: 'column', md: 'row' } }}
+        >
           <Button
             variant="contained"
             sx={{
@@ -159,28 +168,40 @@ export const Hero: React.FC<HeroProps> = ({
         height="400px"
         overflow="hidden"
       >
-        <PosterContainer
-          src={poster}
-          alt={t('details.hero.posterAlt', { title: title })}
-          height="100%"
-          style={{
-            borderRadius: '0',
-          }}
-        />
-        <Box
-          component="img"
-          src={backdrop}
-          alt={t('details.hero.backdropAlt', { title: title })}
-          sx={{
-            objectFit: 'fill',
-          }}
-        />
+        {showImages[0] && (
+          <PosterContainer
+            src={poster}
+            alt={t('details.hero.posterAlt', { title: title })}
+            height="100%"
+            style={{
+              borderRadius: '0',
+            }}
+          />
+        )}
+        {showImages[1] && (
+          <Box
+            component="img"
+            src={backdrop}
+            alt={t('details.hero.backdropAlt', { title: title })}
+            sx={{
+              objectFit: 'fill',
+            }}
+          />
+        )}
       </Box>
       <Box
         display="grid"
         position="relative"
-        gridTemplateColumns="3fr 1fr"
         gap={3}
+        sx={
+          isSmall
+            ? {
+                gridTemplateRows: 'auto auto',
+              }
+            : {
+                gridTemplateColumns: '3fr 1fr',
+              }
+        }
       >
         <Box
           display="grid"
