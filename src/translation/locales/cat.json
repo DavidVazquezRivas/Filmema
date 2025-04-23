@@ -150,5 +150,10 @@
         "Creator": "Creador"
       }
     }
+  },
+  "near": {
+    "map": {
+      "year": "Any"
+    }
   }
 }
