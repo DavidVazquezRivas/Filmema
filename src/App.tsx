@@ -10,6 +10,7 @@ import { Detail } from './pages/detail/Detail'
 import { useSelector } from 'react-redux'
 import { PanelProvider } from './context/PanelContext'
 import { Panel } from './components/panel/Panel'
+import { Near } from './pages/near/Near'
 
 function App() {
   const { theme } = useThemeContext()
@@ -45,6 +46,7 @@ function App() {
               element={<Discover mode={DiscoverMode.search} />}
             />
             <Route path="/movie/:id/:action?" element={<Detail />} />
+            <Route path="/near" element={<Near />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
