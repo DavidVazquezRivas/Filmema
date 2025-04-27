@@ -2,7 +2,7 @@ import { NearMovie } from '@/pages/near/models/nearMovie'
 import { Hero } from './Hero'
 import { Box, Button } from '@mui/material'
 import { LocationSection } from './LocationSection'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { usePanel } from '@/context/PanelContext'
 
