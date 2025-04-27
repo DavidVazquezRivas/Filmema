@@ -49,8 +49,8 @@ function App() {
             <Route path="/near" element={<Near />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Panel />
         </BrowserRouter>
-        <Panel />
       </PanelProvider>
     </ThemeProvider>
   )
