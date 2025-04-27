@@ -4,20 +4,19 @@ import { useLocation } from '@/pages/near/contexts/LocationContext'
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import { MapConfig } from '@/pages/near/constants/map'
 import { MallorcaCenter } from '@/pages/near/constants/mallorca'
-import { NearMovie } from '@/pages/near/models/nearMovie'
 import { MovieMarker } from './MovieMarker'
+import { useFilterContext } from '@/pages/near/contexts/FilterContext'
 
 const UserIcon = L.icon({
   iconUrl: MapConfig.UserMarker.Url,
   iconSize: MapConfig.UserMarker.Size,
 })
 
-interface MovieMapProps {
-  movies: NearMovie[]
-}
+interface MovieMapProps {}
 
-export const MovieMap: React.FC<MovieMapProps> = ({ movies }) => {
+export const MovieMap: React.FC<MovieMapProps> = () => {
   const { latitude, longitude } = useLocation()
+  const { filteredMovies: movies } = useFilterContext()
 
   if (!latitude || !longitude) return null
 

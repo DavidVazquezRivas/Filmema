@@ -6,6 +6,8 @@ import { LocationProvider } from './contexts/LocationContext'
 import { useEffect, useState } from 'react'
 import { getNearMovies } from './services/getNearMovies'
 import { NearMovie } from './models/nearMovie'
+import { FilterProvider } from './contexts/FilterContext'
+import { NearMovieFilterPanel } from './components/filters/NearMovieFilterPanel'
 
 export const Near = () => {
   const [movies, setMovies] = useState<NearMovie[]>([])
@@ -22,22 +24,36 @@ export const Near = () => {
 
   return (
     <LocationProvider>
-      <PageLayout>
-        <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap={2}>
+      <FilterProvider>
+        <PageLayout>
           <Box
-            width={{ xs: '100%', md: '70%' }}
-            height={600}
-            borderRadius={3}
-            overflow="hidden"
+            display="flex"
+            flexDirection={{ xs: 'column', md: 'row' }}
+            justifyContent={{ xs: 'center', md: 'space-between' }}
+            gap={2}
           >
-            <MovieMap movies={movies} />
+            <Box
+              width={{ xs: '100%', md: '70%' }}
+              height={600}
+              borderRadius={3}
+              overflow="hidden"
+            >
+              <MovieMap />
+            </Box>
+            <Box
+              flex={1}
+              height={600}
+              borderRadius={3}
+              width="100%"
+              display="flex"
+              flexDirection="row"
+              justifyContent="center"
+            >
+              <NearMovieFilterPanel movies={movies} />
+            </Box>
           </Box>
-          <Box flex={1} height={600} bgcolor="primary.main" borderRadius={3}>
-            {/* Placeholder for right content */}
-            Sidebar Content
-          </Box>
-        </Box>
-      </PageLayout>
+        </PageLayout>
+      </FilterProvider>
     </LocationProvider>
   )
 }
