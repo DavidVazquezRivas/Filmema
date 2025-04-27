@@ -28,6 +28,7 @@ export const MovieMap: React.FC<MovieMapProps> = ({ movies }) => {
       style={{ height: '100%', width: '100%' }}
       scrollWheelZoom={false}
       attributionControl={false}
+      className="leaflet-container"
     >
       <TileLayer url={MapConfig.TileUrl} attribution={MapConfig.Attribution} />
       <Marker position={[latitude, longitude]} icon={UserIcon}></Marker>

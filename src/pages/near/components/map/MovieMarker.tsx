@@ -6,7 +6,7 @@ import { Box, Typography, styled } from '@mui/material'
 import { AccesibleText } from '@/components/accessibletext/AccesibleText'
 import { useTranslation } from 'react-i18next'
 import { usePanel } from '@/context/PanelContext'
-import { NearMoviePanel } from '../panels/NearMoviePanel'
+import { NearMoviePanel } from '../panels/movie/NearMoviePanel'
 
 const Icon = L.icon({
   iconUrl: MapConfig.MovieMarker.Url,
@@ -47,12 +47,7 @@ export const MovieMarker: React.FC<MovieMarkerProps> = ({ movie }) => {
         click: handleOpen,
       }}
     >
-      <StyledTooltip
-        direction="top"
-        offset={[0, -10]}
-        permanent={false}
-        interactive
-      >
+      <StyledTooltip direction="top" offset={[0, -10]} permanent={false}>
         <Box display="flex" width="100%" flexDirection="column" gap={0.5}>
           <Typography
             variant="h6"

@@ -18,6 +18,7 @@ interface SliderSectionProps {
   slidesPerView?: number | 'auto'
   spaceBetween?: number
   noContent?: string
+  seeAll?: boolean
 }
 
 export const SliderSection = ({
@@ -30,6 +31,7 @@ export const SliderSection = ({
   slidesPerView = 'auto',
   spaceBetween = 20,
   noContent,
+  seeAll = true,
 }: SliderSectionProps) => {
   const { t } = useTranslation()
   const swiperRef = useRef<SwiperRef>(null)
@@ -62,23 +64,25 @@ export const SliderSection = ({
           <Typography variant="h5" fontWeight="bold">
             {title}
           </Typography>
-          <Button
-            onClick={onSeeAll}
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              gap: 1,
-              borderRadius: 3,
-              padding: 1.5,
-              backgroundColor: 'rgba(120, 120, 120, 0.4)',
-              color: 'text.primary',
-              textTransform: 'none',
-            }}
-          >
-            <Typography variant="body1">{seeAllLabel}</Typography>
-            <ChevronRightIcon />
-          </Button>
+          {seeAll && (
+            <Button
+              onClick={onSeeAll}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: 1,
+                borderRadius: 3,
+                padding: 1.5,
+                backgroundColor: 'rgba(120, 120, 120, 0.4)',
+                color: 'text.primary',
+                textTransform: 'none',
+              }}
+            >
+              <Typography variant="body1">{seeAllLabel}</Typography>
+              <ChevronRightIcon />
+            </Button>
+          )}
         </Box>
         <NavigationButtons ref={swiperRef} />
       </Box>
