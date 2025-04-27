@@ -64,22 +64,22 @@
         "image": [
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/scenes/hotel.webp",
+            "contentUrl": "/assets/images/296096/scenes/hotel.webp",
             "description": "Scene from the movie Before You, aerial view of the hotel"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/scenes/beach.webp",
+            "contentUrl": "/assets/images/296096/scenes/beach.webp",
             "description": "Scene from the movie Before You on the beach at night, with Will and Louisa"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/location/hotel.webp",
+            "contentUrl": "/assets/images/296096/location/hotel.webp",
             "description": "Garden of the Barceló hotel in Pollensa from the movie, showing a chillout area with lots of vegetation and traditional Mallorcan structures"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/location/beach.webp",
+            "contentUrl": "/assets/images/296096/location/beach.webp",
             "description": "Pollensa beach, where the scene from the movie Before You was filmed"
           }
         ],

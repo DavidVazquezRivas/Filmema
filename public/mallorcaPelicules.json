@@ -64,22 +64,22 @@
         "image": [
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/scenes/hotel.webp",
+            "contentUrl": "/assets/images/296096/scenes/hotel.webp",
             "description": "Escena de la pel·lícula Abans de tu vista aèria de l'hotel"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/scenes/beach.webp",
+            "contentUrl": "/assets/images/296096/scenes/beach.webp",
             "description": "Escena de la pel·lícula Abans de tu a la platja de nit, amb Will i Louisa"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/location/hotel.webp",
+            "contentUrl": "/assets/images/296096/location/hotel.webp",
             "description": "Jardí de l'hotel Barceló de Pollença de la pel·lícula, es veu una zona de chillout amb molta vegetació i estructures tradicionals mallorquines"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/location/beach.webp",
+            "contentUrl": "/assets/images/296096/location/beach.webp",
             "description": "Platja de Pollença, on es va rodar l'escena de la pel·lícula Abans de tu"
           }
         ],
