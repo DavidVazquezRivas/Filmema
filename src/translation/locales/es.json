@@ -154,6 +154,50 @@
   "near": {
     "map": {
       "year": "Año"
+    },
+    "detail": {
+      "images": "Escenas y fotos de la zona",
+      "info": {
+        "title": "Información de la ubicación",
+        "name": "Nombre",
+        "description": "Descripción",
+        "country": "País",
+        "region": "Región",
+        "locality": "Localidad",
+        "zoneType": "Tipo de zona",
+        "accesibility": "Accesibilidad",
+        "access": "Acceso"
+      },
+      "renderers": {
+        "zoneType": {
+          "0": "Playa",
+          "1": "Montaña",
+          "2": "Urbano",
+          "3": "Bosque",
+          "4": "Río",
+          "5": "Desierto",
+          "6": "Pueblo",
+          "7": "Cueva",
+          "8": "Otro"
+        },
+        "accesibility": {
+          "0": "Fácil",
+          "1": "Medio",
+          "2": "Difícil"
+        },
+        "access": {
+          "false": "Privado",
+          "true": "Público"
+        },
+        "region": {
+          "0": "Palma",
+          "1": "Sierra de Tramuntana",
+          "2": "Raiguer",
+          "3": "Pla de Mallorca",
+          "4": "Llevant",
+          "5": "Migjorn"
+        }
+      }
     }
   }
 }
