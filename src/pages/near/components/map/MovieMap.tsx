@@ -18,7 +18,10 @@ export const MovieMap: React.FC<MovieMapProps> = () => {
   const { latitude, longitude } = useLocation()
   const { filteredMovies: movies } = useFilterContext()
 
-  if (!latitude || !longitude) return null
+  const userMarker =
+    latitude && longitude ? (
+      <Marker position={[latitude, longitude]} icon={UserIcon}></Marker>
+    ) : null
 
   return (
     <MapContainer
@@ -30,7 +33,7 @@ export const MovieMap: React.FC<MovieMapProps> = () => {
       className="leaflet-container"
     >
       <TileLayer url={MapConfig.TileUrl} attribution={MapConfig.Attribution} />
-      <Marker position={[latitude, longitude]} icon={UserIcon}></Marker>
+      {userMarker}
       {movies.map((movie) => (
         <MovieMarker key={movie.identifier} movie={movie} />
       ))}
