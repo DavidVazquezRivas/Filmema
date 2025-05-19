@@ -5,6 +5,7 @@ import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import { DetailActions } from '@/models/detailActions'
+import { AccesibleText } from '@/components/accessibletext/AccesibleText'
 
 interface HeroCardProps {
   movie: Movie
@@ -65,14 +66,15 @@ export const HeroCard: React.FC<HeroCardProps> = ({ movie }) => {
       {/* Movie info */}
       <Box component="section" display="flex" flexDirection="column" gap={1}>
         <Box component="article" display="flex" flexDirection="column" p={1}>
-          <Typography
+          <AccesibleText
             variant="body1"
             fontWeight="bold"
             color="white"
             fontSize="0.9rem"
+            maxLength={20}
           >
             {movie.title}
-          </Typography>
+          </AccesibleText>
           <Typography variant="body1" color="lightgray" fontSize="0.65rem">
             {t('home.hero.subtitle', { title: movie.title })}
           </Typography>
