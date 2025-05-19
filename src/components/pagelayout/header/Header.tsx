@@ -57,7 +57,7 @@ export const Header = () => {
           </Button>
           <Button
             component={Link}
-            to="/near-you"
+            to="/near"
             aria-label={t('header.navigation.nearYouLabel')}
           >
             {t('header.navigation.nearYou')}

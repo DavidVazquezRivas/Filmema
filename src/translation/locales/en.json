@@ -150,5 +150,85 @@
         "Creator": "Creator"
       }
     }
+  },
+  "near": {
+    "map": {
+      "year": "Year"
+    },
+    "detail": {
+      "images": "Scenes and images of the zone",
+      "info": {
+        "title": "Location Information",
+        "name": "Name",
+        "description": "Description",
+        "country": "Country",
+        "region": "Region",
+        "locality": "Locality",
+        "zoneType": "Zone Type",
+        "accesibility": "Accessibility",
+        "access": "Access"
+      },
+      "renderers": {
+        "zoneType": {
+            "0": "Beach",
+            "1": "Mountain",
+            "2": "Urban",
+            "3": "Forest",
+            "4": "River",
+            "5": "Desert",
+            "6": "Village",
+            "7": "Cave",
+            "8": "Other"
+        },
+        "accesibility": {
+          "0": "Easy",
+          "1": "Medium",
+          "2": "Difficult"
+        },
+        "access": {
+          "false": "Private",
+          "true": "Public"
+        },
+        "region": {
+          "0": "Palma",
+          "1": "Serra de Tramuntana",
+          "2": "Raiguer",
+          "3": "Pla de Mallorca",
+          "4": "Llevant",
+          "5": "Migjorn"
+        }
+      }
+    },
+    "filters": {
+      "genres": "Genres",
+      "releaseDate": "Release Date",
+      "voteAverage": "Rating",
+      "distance": "Distance (Km)",
+      "zoneType": {
+        "title": "Zone Type",
+        "options": {
+          "0": "Beach",
+          "1": "Mountain",
+          "2": "Urban",
+          "3": "Forest",
+          "4": "River",
+          "5": "Desert",
+          "6": "Village",
+          "7": "Cave",
+          "8": "Other"
+        }
+      },
+      "regions": {
+        "title": "Region",
+        "options": {
+          "0": "Palma",
+          "1": "Serra de Tramuntana",
+          "2": "Raiguer",
+          "3": "Pla de Mallorca",
+          "4": "Llevant",
+          "5": "Migjorn"
+        }
+      }
+    }
   }
 }

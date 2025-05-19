@@ -79,7 +79,7 @@ export const Home = () => {
         <Button
           variant="contained"
           component={Link}
-          to="/near-you"
+          to="/near"
           aria-label={t('home.nearYou.subtitle')}
           sx={{ fontWeight: 'bold' }}
         >

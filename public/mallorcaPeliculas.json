@@ -64,22 +64,22 @@
         "image": [
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/scenes/hotel.webp",
+            "contentUrl": "/assets/images/296096/scenes/hotel.webp",
             "description": "Escena de la película Antes de ti vista aérea del hotel"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/scenes/beach.webp",
+            "contentUrl": "/assets/images/296096/scenes/beach.webp",
             "description": "Escena de la película Antes de ti en la playa de noche, con Will y Louisa"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/location/hotel.webp",
+            "contentUrl": "/assets/images/296096/location/hotel.webp",
             "description": "Jardín del hotel barceló de Pollensa de la película, se ve una zona de chillout con mucha vegetacion y estructuras tradicionales mallorquinas"
           },
           {
             "@type": "ImageObject",
-            "contentUrl": "/assets/images/images/296096/location/beach.webp",
+            "contentUrl": "/assets/images/296096/location/beach.webp",
             "description": "Playa de Pollensa, donde se rodó la escena de la película Antes de ti"
           }
         ],
