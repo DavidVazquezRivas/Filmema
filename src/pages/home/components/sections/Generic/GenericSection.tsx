@@ -1,6 +1,12 @@
 import { HalfMovieCard } from '@/components/cards/HalfMovieCard'
 import { Movie } from '@/models/movie'
-import { Box, IconButton, Typography } from '@mui/material'
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import CircleRoundedIcon from '@mui/icons-material/CircleRounded'
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded'
 import { Link } from 'react-router-dom'
@@ -20,6 +26,10 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
   descriptions,
   movies,
 }) => {
+  const theme = useTheme()
+  const isLgUp = useMediaQuery(theme.breakpoints.up('lg'))
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
+
   const link = href ? (
     <IconButton component={Link} to={href} aria-label={subtitle}>
       <ArrowForwardRoundedIcon fontSize="large" sx={{ color: 'textPrimary' }} />
@@ -41,9 +51,13 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
     )
   })
 
-  const cards = movies.map((movie, index) => (
-    <HalfMovieCard key={movie.id} movie={movie} index={`${index + 1}`} />
-  ))
+  const maxCards = isLgUp ? 6 : isMdUp ? 4 : 3
+
+  const cards = movies
+    .map((movie, index) => (
+      <HalfMovieCard key={movie.id} movie={movie} index={`${index + 1}`} />
+    ))
+    .slice(0, maxCards)
   return (
     <Box
       component="section"
@@ -55,6 +69,7 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
       p={2}
     >
       <Typography
+        display={{ xs: 'none', md: 'block' }}
         variant="h2"
         position="absolute"
         fontWeight="bold"
@@ -101,7 +116,12 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
         component="section"
         gap={3}
         position="relative"
-        display="flex"
+        display="grid"
+        gridTemplateColumns={{
+          xs: 'repeat(1, 1fr)',
+          md: 'repeat(2, 1fr)',
+          lg: 'repeat(3, 1fr)',
+        }}
         width="100%"
         flexWrap="wrap"
         justifyContent="center"

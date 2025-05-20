@@ -26,7 +26,7 @@ export const Detail = () => {
 
   return (
     <PageLayout>
-      <Box display="flex" flexDirection="column" gap={20} width="80%">
+      <Box display="flex" flexDirection="column" gap={20} width="100%">
         <Hero
           backdrop={details.backdrop}
           genres={details.genres}

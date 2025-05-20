@@ -1,7 +1,13 @@
 import { PageLayout } from '@/components/pagelayout/PageLayout'
 import { Movie } from '@/models/movie'
 import { FullMovieCard } from '@/components/cards/FullMovieCard'
-import { Box, Typography } from '@mui/material'
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material'
 import { DiscoverMode } from '@/models/discoverModes'
 import { getMovies } from './services/getMovies'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -14,6 +20,8 @@ import { filterRequestAdapter } from './adapters/filterRequestAdapter'
 import { DiscoverPagination } from './components/DiscoverPagination'
 import { INITIAL_PAGE, MAX_PAGES } from './constants/pageConstants'
 import { getFilters } from './constants/filters'
+import FilterListIcon from '@mui/icons-material/FilterList'
+import { HalfMovieCard } from '@/components/cards/HalfMovieCard'
 
 interface DiscoverProps {
   mode?: DiscoverMode
@@ -35,9 +43,16 @@ export const Discover: React.FC<DiscoverProps> = ({
     page: INITIAL_PAGE,
     totalPages: MAX_PAGES,
   })
+  const [showFilters, setShowFiltrs] = useState<boolean>(false)
+  const theme = useTheme()
+  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'))
   const { query } = useParams<{ query: string }>()
   const { t } = useTranslation()
   const genresRaw = useGetGenres()
+
+  const toggleFilters = (newShowFilters: boolean) => () => {
+    setShowFiltrs(newShowFilters)
+  }
 
   const genres = useMemo(
     () =>
@@ -84,9 +99,13 @@ export const Discover: React.FC<DiscoverProps> = ({
 
   const filters = getFilters(mode, genres, t)
 
-  const movieCards = state.movies.map((movie) => (
-    <FullMovieCard key={movie.id} movie={movie} />
-  ))
+  const movieCards = state.movies.map((movie) =>
+    isSmUp ? (
+      <FullMovieCard key={movie.id} movie={movie} />
+    ) : (
+      <HalfMovieCard key={movie.id} movie={movie} />
+    )
+  )
 
   const noContent = (
     <Typography
@@ -110,7 +129,11 @@ export const Discover: React.FC<DiscoverProps> = ({
         justifyContent="space-between"
         gap={2}
       >
-        <FilterPanel onApply={handleApplyFilters} filters={filters} />
+        <FilterPanel
+          onApply={handleApplyFilters}
+          filters={filters}
+          sx={{ display: { xs: 'none', lg: 'flex' } }}
+        />
         <Box
           display="flex"
           flexDirection="column"
@@ -118,6 +141,32 @@ export const Discover: React.FC<DiscoverProps> = ({
           component="section"
           alignItems="center"
         >
+          <Box
+            display={{ xs: 'flex', lg: 'none' }}
+            justifyContent="flex-end"
+            alignItems="center"
+            width="100%"
+            position="relative"
+          >
+            <Typography variant="h5" color="text.secondary">
+              {t('global.filters.title')}
+              <IconButton onClick={toggleFilters(!showFilters)}>
+                <FilterListIcon />
+              </IconButton>
+            </Typography>
+            <FilterPanel
+              onApply={handleApplyFilters}
+              filters={filters}
+              sx={{
+                display: showFilters ? 'flex' : 'none',
+                position: 'absolute',
+                top: '100%',
+                right: 0,
+                zIndex: 100,
+                elevation: 5,
+              }}
+            />
+          </Box>
           {content}
           <DiscoverPagination
             page={state.page}

@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   Paper,
+  PaperProps,
   Typography,
 } from '@mui/material'
 import FilterListIcon from '@mui/icons-material/FilterList'
@@ -15,7 +16,7 @@ import { useTranslation } from 'react-i18next'
 import { MemoizedFilterComponent } from './FilterComponent'
 import { useCallback, useState } from 'react'
 
-interface FilterPanelProps {
+interface FilterPanelProps extends PaperProps {
   filters: FilterType[]
   onApply: (filterValues: FilterResult) => void
 }
@@ -23,6 +24,7 @@ interface FilterPanelProps {
 export const FilterPanel: React.FC<FilterPanelProps> = ({
   filters,
   onApply,
+  ...props
 }) => {
   const { t } = useTranslation()
   const [filterValues, setFilterValues] = useState<FilterResult>({})
@@ -66,10 +68,11 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
 
   return (
     <Paper
+      {...props}
       sx={{
+        display: 'flex',
         position: 'sticky',
         top: 100,
-        display: 'flex',
         width: 300,
         height: 'fit-content',
         padding: 2,
@@ -77,6 +80,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         gap: 2,
         flexDirection: 'column',
         alignItems: 'left',
+        ...props.sx,
       }}
     >
       <Box display="flex" justifyContent="space-between" alignItems="center">

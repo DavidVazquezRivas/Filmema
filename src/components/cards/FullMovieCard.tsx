@@ -7,6 +7,7 @@ import {
   Divider,
   IconButton,
   Typography,
+  useMediaQuery,
   useTheme,
 } from '@mui/material'
 import { useTranslation } from 'react-i18next'
@@ -29,7 +30,9 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
 
   const indexSize = theme.typography.h4.fontSize
   const releaseYear = new Date(movie.releaseDate).getFullYear()
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'))
 
+  const maxLength = isMdUp ? 200 : 120
   return (
     <Card
       component="article"
@@ -38,8 +41,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
         display: 'flex',
         p: 2,
         borderRadius: 2,
-        maxWidth: 800,
-        minWidth: 800,
+        width: '100%',
         maxHeight: 240,
       }}
     >
@@ -94,7 +96,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
             />
           ))}
         </Box>
-        <AccesibleText variant="body2" maxLength={200} audible>
+        <AccesibleText variant="body2" maxLength={maxLength} audible>
           {movie.overview}
         </AccesibleText>
         <Box
@@ -122,7 +124,7 @@ export const FullMovieCard: React.FC<FullMovieCardProps> = ({ movie }) => {
       {/* Rate movie */}
       <Box
         component="aside"
-        display="flex"
+        display={{ xs: 'none', md: 'flex' }}
         flexDirection="row"
         p={2}
         position="absolute"

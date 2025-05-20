@@ -162,10 +162,10 @@ export const Hero: React.FC<HeroProps> = ({
         position="relative"
         display="flex"
         flexDirection="row"
-        justifyContent="flex-start"
+        justifyContent={{ xs: 'center', md: 'flex-start' }}
         gap={1}
         width="100%"
-        height="400px"
+        height="470px"
         overflow="hidden"
       >
         {showImages[0] && (

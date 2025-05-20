@@ -12,7 +12,7 @@ export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <Header />
         <Container
           maxWidth="lg"
-          sx={{ padding: 2, marginTop: '50px' }}
+          sx={{ padding: 2, marginTop: '20px' }}
           component="main"
         >
           {children}

@@ -35,14 +35,13 @@ export const Hero: React.FC<HeroProps> = ({ movies }) => {
       display="flex"
       flexDirection="row"
       gap={3}
-      minHeight="550px"
-      height="60vh"
+      minHeight="400px"
       width="100%"
     >
-      <HeroMain movie={movies?.[currentMain] || null} />
+      <HeroMain movie={movies?.[currentMain] || null} display="flex" />
       <Box
         component="div"
-        display="flex"
+        display={{ xs: 'none', md: 'flex' }}
         flexDirection="column"
         gap={4}
         justifyContent="center"

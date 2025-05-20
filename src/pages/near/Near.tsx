@@ -28,7 +28,7 @@ export const Near = () => {
         <PageLayout>
           <Box
             display="flex"
-            flexDirection={{ xs: 'column', md: 'row' }}
+            flexDirection={{ xs: 'column-reverse', md: 'row' }}
             justifyContent={{ xs: 'center', md: 'space-between' }}
             gap={2}
           >
@@ -40,17 +40,7 @@ export const Near = () => {
             >
               <MovieMap />
             </Box>
-            <Box
-              flex={1}
-              height={600}
-              borderRadius={3}
-              width="100%"
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
-            >
-              <NearMovieFilterPanel movies={movies} />
-            </Box>
+            <NearMovieFilterPanel movies={movies} />
           </Box>
         </PageLayout>
       </FilterProvider>

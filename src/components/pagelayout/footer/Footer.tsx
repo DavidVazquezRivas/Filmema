@@ -12,7 +12,9 @@ export const Footer = () => {
       padding={4}
       alignItems="center"
       display="flex"
-      justifyContent="space-evenly"
+      flexDirection={{ xs: 'column', sm: 'row' }}
+      gap={2}
+      justifyContent={{ xs: 'center', sm: 'space-evenly' }}
       sx={{
         backgroundColor: 'darkZone',
       }}
@@ -23,6 +25,7 @@ export const Footer = () => {
         display="flex"
         gap={1}
         flexDirection="column"
+        alignItems={{ xs: 'center', sm: 'flex-start' }}
       >
         <Link
           variant="button"

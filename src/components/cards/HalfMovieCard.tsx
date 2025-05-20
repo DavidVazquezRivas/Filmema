@@ -41,8 +41,7 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
         p: 2,
         pl: 0,
         borderRadius: 2,
-        maxWidth: 350,
-        minWidth: 350,
+        minWidth: '100%',
         maxHeight: 240,
       }}
     >
@@ -111,6 +110,9 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
             />
           ))}
         </Box>
+        <AccesibleText variant="body2" maxLength={60} audible>
+          {movie.overview}
+        </AccesibleText>
         <Box display="flex" gap={1} alignItems="center" flexDirection="row">
           <StarRoundedIcon color="primary" />
           <Typography mr={2} variant="body1" fontWeight="bold">
