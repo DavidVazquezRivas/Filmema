@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
-import { Paper, InputBase, IconButton } from '@mui/material'
+import { Paper, InputBase, IconButton, PaperProps } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import { useNavigate } from 'react-router-dom'
 
-interface SearchBarProps {
+interface SearchBarProps extends PaperProps {
   placeholder?: string
   label?: string
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({ placeholder, label }) => {
+export const SearchBar: React.FC<SearchBarProps> = ({
+  placeholder,
+  label,
+  ...props
+}) => {
   const [value, setValue] = useState<string>('')
   const navigate = useNavigate()
 
@@ -37,7 +41,15 @@ export const SearchBar: React.FC<SearchBarProps> = ({ placeholder, label }) => {
   return (
     <Paper
       component="form"
-      sx={{ display: 'flex', alignItems: 'center', width: 300 }}
+      display="flex"
+      alignItems="center"
+      maxWidth={500}
+      {...props}
+      sx={{
+        flexGrow: 1,
+        maxWidth: 500,
+        ...props.sx,
+      }}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
