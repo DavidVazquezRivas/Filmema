@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   AddressRegion,
   NearMovie,
@@ -10,14 +10,18 @@ import { FilterType, FilterTypeEnum } from '@/models/filters'
 import { useTranslation } from 'react-i18next'
 import { useGetGenres } from '@/hooks/genres/useGetGenres'
 import { FilterPanel } from '@/components/filters/FilterPanel'
+import { Box, IconButton, PaperProps, Typography } from '@mui/material'
+import FilterListIcon from '@mui/icons-material/FilterList'
 
-interface NearMovieFiltersProps {
+interface NearMovieFiltersProps extends PaperProps {
   movies: NearMovie[]
 }
 
 export const NearMovieFilterPanel: React.FC<NearMovieFiltersProps> = ({
   movies,
+  ...props
 }) => {
+  const [showFilters, setShowFilters] = useState<boolean>(false)
   const { setAllMovies, updateFilters } = useFilterContext()
   const { t } = useTranslation()
   const genresRaw = useGetGenres()
@@ -25,6 +29,10 @@ export const NearMovieFilterPanel: React.FC<NearMovieFiltersProps> = ({
   useEffect(() => {
     setAllMovies(movies)
   }, [movies])
+
+  const toggleFilters = (newShowFilters: boolean) => () => {
+    setShowFilters(newShowFilters)
+  }
 
   const genres = useMemo(
     () =>
@@ -93,5 +101,40 @@ export const NearMovieFilterPanel: React.FC<NearMovieFiltersProps> = ({
     updateFilters(newFilters)
   }
 
-  return <FilterPanel filters={filters} onApply={handleApplyFilters} />
+  return (
+    <>
+      <FilterPanel
+        filters={filters}
+        onApply={handleApplyFilters}
+        {...props}
+        sx={{ display: { xs: 'none', md: 'flex' } }}
+      />
+      <Box
+        display={{ xs: 'flex', md: 'none' }}
+        justifyContent="flex-end"
+        alignItems="center"
+        width="100%"
+        position="relative"
+      >
+        <Typography variant="h5" color="text.secondary">
+          {t('global.filters.title')}
+          <IconButton onClick={toggleFilters(!showFilters)}>
+            <FilterListIcon />
+          </IconButton>
+        </Typography>
+        <FilterPanel
+          onApply={handleApplyFilters}
+          filters={filters}
+          sx={{
+            display: showFilters ? 'flex' : 'none',
+            position: 'absolute',
+            top: '100%',
+            right: 0,
+            zIndex: 100,
+            elevation: 5,
+          }}
+        />
+      </Box>
+    </>
+  )
 }
