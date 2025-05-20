@@ -110,9 +110,6 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
             />
           ))}
         </Box>
-        <AccesibleText variant="body2" maxLength={60} audible>
-          {movie.overview}
-        </AccesibleText>
         <Box display="flex" gap={1} alignItems="center" flexDirection="row">
           <StarRoundedIcon color="primary" />
           <Typography mr={2} variant="body1" fontWeight="bold">

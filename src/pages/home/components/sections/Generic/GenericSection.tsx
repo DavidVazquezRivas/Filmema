@@ -95,7 +95,9 @@ export const GenericSection: React.FC<GenericSectionProps> = ({
           color="primary"
           sx={{ fontSize: '0.5rem' }}
         />
-        <Typography variant="h3">{subtitle}</Typography>
+        <Typography variant="h3" fontSize={{ xs: '2rem', md: '3rem' }}>
+          {subtitle}
+        </Typography>
         {link}
       </Box>
       <Box

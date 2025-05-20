@@ -66,6 +66,8 @@ export const Header = () => {
     <Box
       component="header"
       padding={2}
+      pl={0}
+      pr={0}
       display="flex"
       justifyContent="space-between"
       alignItems="center"
@@ -136,10 +138,19 @@ export const Header = () => {
             display: { xs: 'none', md: 'flex' },
           }}
         />
-        <Stack direction="row" spacing={2} alignItems="center">
+        <Stack direction="row" spacing={0} alignItems="center">
+          <Box
+            component="section"
+            role="group"
+            display={{ xs: 'flex', md: 'flex' }}
+            sx={{ alignItems: 'center' }}
+          >
+            <LanguageSelector />
+            <ThemeModeToggle />
+          </Box>
           <Box
             component="nav"
-            sx={{ display: 'flex', gap: 1 }}
+            sx={{ display: 'flex' }}
             aria-label={t('header.user.label')}
             display={{ xs: 'none', md: 'flex' }}
           >
@@ -158,15 +169,6 @@ export const Header = () => {
             >
               <AccountCircleIcon />
             </IconButton>
-          </Box>
-          <Box
-            component="section"
-            role="group"
-            display={{ xs: 'flex', md: 'flex' }}
-            sx={{ gap: 1, alignItems: 'center' }}
-          >
-            <LanguageSelector />
-            <ThemeModeToggle />
           </Box>
           <Box display={{ xs: 'flex', lg: 'none' }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>

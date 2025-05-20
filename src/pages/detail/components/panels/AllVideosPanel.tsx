@@ -37,7 +37,10 @@ export const AllVideosPanel: React.FC<AllVideosPanelProps> = ({
     <Box
       display="grid"
       gap={2}
-      gridTemplateColumns="repeat(auto-fill, minmax(350px, 1fr))"
+      gridTemplateColumns={{
+        xs: 'repeat(auto-fill, minmax(250px, 1fr))',
+        sm: 'repeat(auto-fill, minmax(350px, 1fr))',
+      }}
       padding={2}
     >
       {videos.map((video) => (

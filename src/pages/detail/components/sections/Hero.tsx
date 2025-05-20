@@ -218,7 +218,15 @@ export const Hero: React.FC<HeroProps> = ({
           >
             {t('details.hero.genre')}
           </Typography>
-          <Box component="ul" display="flex" gap={1} m={0} p={0}>
+          <Box
+            component="ul"
+            display="flex"
+            gap={1}
+            m={0}
+            p={0}
+            overflow="scroll"
+            flexWrap="wrap"
+          >
             {genreChips}
           </Box>
 

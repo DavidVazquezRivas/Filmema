@@ -48,9 +48,10 @@ export const CreditPanel: React.FC<CreditPanelProps> = ({ credits }) => {
   const cards = groupedByDepartment[selectedDepartment].map((person) => (
     <Box
       component="li"
-      display="grid"
-      gridTemplateColumns={'100px 200px 1fr'}
-      gap={10}
+      display={{ xs: 'flex', sm: 'grid' }}
+      gridTemplateColumns={'70px 100px 1fr'}
+      gap={{ xs: 1, sm: 5, md: 10 }}
+      flexDirection="column"
       alignItems="center"
       key={person.id}
     >
@@ -102,7 +103,14 @@ export const CreditPanel: React.FC<CreditPanelProps> = ({ credits }) => {
         <Typography variant="h6">
           {t(`details.credits.departments.${selectedDepartment}`)}
         </Typography>
-        <Box component="ul" display="flex" gap={2} flexDirection="column" p={0}>
+        <Box
+          component="ul"
+          display={{ xs: 'grid', sm: 'flex' }}
+          gridTemplateColumns="repeat(auto-fill, minmax(100px, 1fr))"
+          gap={{ xs: 4, sm: 2 }}
+          flexDirection="column"
+          p={0}
+        >
           {cards}
         </Box>
       </Box>
