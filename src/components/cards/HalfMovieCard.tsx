@@ -42,7 +42,7 @@ export const HalfMovieCard: React.FC<HalfMovieCardProps> = ({
         pl: 0,
         borderRadius: 2,
         maxWidth: 350,
-        minWidth: 350,
+        minWidth: '100%',
         maxHeight: 240,
       }}
     >
