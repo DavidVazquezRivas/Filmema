@@ -41,7 +41,7 @@ export const Home = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        gap={25}
+        gap={10}
       >
         <Hero movies={state.movies.hero} />
         <GenericSection

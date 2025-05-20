@@ -1,17 +1,17 @@
 import { BookmarkButton } from '@/components/bookmarkbutton/BookmarkButton'
 import { PosterContainer } from '@/components/containers/PosterContainer'
 import { Movie } from '@/models/movie'
-import { Box, IconButton, Typography } from '@mui/material'
+import { Box, BoxProps, IconButton, Typography } from '@mui/material'
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import { DetailActions } from '@/models/detailActions'
 
-interface HeroMainProps {
+interface HeroMainProps extends BoxProps {
   movie: Movie | null
 }
 
-export const HeroMain: React.FC<HeroMainProps> = ({ movie }) => {
+export const HeroMain: React.FC<HeroMainProps> = ({ movie, ...props }) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
 
@@ -35,6 +35,7 @@ export const HeroMain: React.FC<HeroMainProps> = ({ movie }) => {
       width="100%"
       position="relative"
       p={4}
+      {...props}
     >
       <img
         src={movie.backdrop}
@@ -85,7 +86,12 @@ export const HeroMain: React.FC<HeroMainProps> = ({ movie }) => {
           >
             <PlayArrowRoundedIcon sx={{ fontSize: 60, color: 'white' }} />
           </IconButton>
-          <Box component="article" display="flex" flexDirection="column" p={1}>
+          <Box
+            component="article"
+            display={{ xs: 'none', sm: 'flex' }}
+            flexDirection="column"
+            p={1}
+          >
             <Typography
               variant="h4"
               component="div"
