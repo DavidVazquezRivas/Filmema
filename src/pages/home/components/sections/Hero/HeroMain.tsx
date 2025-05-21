@@ -6,6 +6,7 @@ import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import { DetailActions } from '@/models/detailActions'
+import { useEffect } from 'react'
 
 interface HeroMainProps extends BoxProps {
   movie: Movie | null
@@ -14,6 +15,21 @@ interface HeroMainProps extends BoxProps {
 export const HeroMain: React.FC<HeroMainProps> = ({ movie, ...props }) => {
   const { t } = useTranslation()
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!movie) return
+
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = movie.backdrop
+    link.crossOrigin = 'anonymous'
+    document.head.appendChild(link)
+
+    return () => {
+      document.head.removeChild(link)
+    }
+  }, [movie])
 
   const navigateToMovie = () => {
     if (movie) {
