@@ -25,10 +25,7 @@
       "datePublished": "2016-06-01",
       "description": "Louisa “Lou” Clark (Emilia Clarke), una chica inestable y creativa, reside en un pequeño pueblo de la campiña inglesa. Vive sin rumbo y va de un trabajo a otro para ayudar a su familia a llegar a fin de mes. Sin embargo, un nuevo trabajo pondrá a prueba su habitual alegría. En el castillo local, se ocupa de cuidar y acompañar a Will Traynor (Sam Claflin), un joven y rico banquero que se quedó paralítico tras un accidente.",
       "duration": "PT1H50M",
-      "genre": [
-        "Drama",
-        "Romance"
-      ],
+      "genre": ["Drama", "Romance"],
       "identifier": 296096,
       "locationCreated": {
         "@type": "Place",
@@ -251,6 +248,93 @@
         }
       ],
       "url": "https://www.filmematv.com/movie/296096"
+    },
+    {
+      "@type": "Movie",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingCount": 892,
+        "ratingValue": 6.2
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w342/ibtYPDUQXKK2CIYzMEWgt1VNMlP.jpg",
+          "description": "Poster de la película Mejor otro dia",
+          "name": "Poster"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w780/cA2lXcl4rVKsRltJwVYRqpSqvhq.jpg",
+          "description": "Imágen de fondo de la película Mejor otro dia",
+          "name": "Backdrop"
+        }
+      ],
+      "datePublished": "2014-03-20",
+      "description": "Cuatro personas se reúnen por casualidad en el tejado de uno de los edificios más altos de su ciudad para saltar al vacío. En esas situaciones, un poco de cortesía nunca está de más, pero puede traer un cambio de planes radical: tras un rato hablando, deciden que quizá sea mejor idea volver a bajar y ver qué son capaces de hacer.",
+      "duration": "PT1H36M",
+      "genre": ["Drama", "Comedia"],
+      "identifier": 141043,
+      "locationCreated": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "España",
+          "addressLocality": "Camp de Mar",
+          "addressRegion": 1
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "accessibility",
+            "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "publicAccess",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "zoneType",
+            "value": 0
+          }
+        ],
+        "description": "Los personajes visitan Camp de Mar como un momento de escape y conexión, ofreciendo un descanso pacífico de sus luchas y una oportunidad para unirse fuera del caos de sus vidas cotidianas.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.541906,
+          "longitude": 2.424668
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/141043/scenes/bridge.webp",
+            "description": "Escena de la película Mejor otro día en el puente de la playa de Camp de Mar"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/141043/location/beach.webp",
+            "description": "El puente de la playa de Camp de Mar que lleva al restaurante, donde se rodó la escena de la película Mejor otro día"
+          }
+        ],
+        "name": "Camp de Mar"
+      },
+      "name": "Mejor otro día",
+      "review": [],
+      "trailer": [
+        {
+          "@type": "VideoObject",
+          "identifier": "EEIJc3foHvM",
+          "contentUrl": "https://www.youtube.com/watch?v=EEIJc3foHvM",
+          "description": "Mejor otro día Trailer 2014 Español",
+          "embedUrl": "https://www.youtube.com/embed/EEIJc3foHvM",
+          "name": "Mejor otro día Trailer 2014 Español",
+          "thumbnailUrl": "https://img.youtube.com/vi/EEIJc3foHvM/maxresdefault.jpg",
+          "uploadDate": "2014-03-03T15:55:12Z"
+        }
+      ],
+      "url": "https://www.filmematv.com/movie/141043"
     }
   ]
 }

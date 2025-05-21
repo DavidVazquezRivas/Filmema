@@ -25,10 +25,7 @@
       "datePublished": "2016-06-01",
       "description": "Louisa “Lou” Clark (Emilia Clarke), una noia inestable i creativa, resideix en un petit poble de la campinya anglesa. Viu sense rumb i va d'un treball a un altre per ajudar la seva família a arribar a final de mes. Tanmateix, una nova feina posarà a prova la seva habitual alegria. Al castell local, es fa càrrec de cuidar i acompanyar Will Traynor (Sam Claflin), un jove i ric banquer que va quedar paralític després d'un accident.",
       "duration": "PT1H50M",
-      "genre": [
-        "Drama",
-        "Romàntic"
-      ],
+      "genre": ["Drama", "Romàntic"],
       "identifier": 296096,
       "locationCreated": {
         "@type": "Place",
@@ -151,6 +148,93 @@
         }
       ],
       "url": "https://www.filmematv.com/movie/296096"
+    },
+    {
+      "@type": "Movie",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingCount": 892,
+        "ratingValue": 6.2
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w342/ibtYPDUQXKK2CIYzMEWgt1VNMlP.jpg",
+          "description": "Poster de la pel·lícula Millor un altre dia",
+          "name": "Poster"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://image.tmdb.org/t/p/w780/cA2lXcl4rVKsRltJwVYRqpSqvhq.jpg",
+          "description": "Imatge de fons de la pel·lícula Millor un altre dia",
+          "name": "Backdrop"
+        }
+      ],
+      "datePublished": "2014-03-20",
+      "description": "Quatre persones es troben la nit de cap d'any en un dels edificis més alts de Londres. Tots quatre estan desesperats i tenen la intenció de suïcidar-se. Es tracta de Martin, un famós personatge de la televisió en hores baixes, Mauren, una mare soltera amb problemes, Jess, una adolescent rebel i JJ, un jove músic que ha de sobreviure repartint pizzes. Al final decideixen fer un pacte: no saltaran i es donaran un termini, fins el dia de Sant Valentí, per mirar de superar junts aquest moment tan difícil de llurs vides.",
+      "duration": "PT1H36M",
+      "genre": ["Drama", "Comedia"],
+      "identifier": 141043,
+      "locationCreated": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Espanya",
+          "addressLocality": "Camp de Mar",
+          "addressRegion": 1
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "accessibility",
+            "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "publicAccess",
+            "value": true
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "zoneType",
+            "value": 0
+          }
+        ],
+        "description": "Els personatges visiten Camp de Mar com un moment d’escapada i connexió, oferint un descans tranquil de les seves lluites i una oportunitat per unir-se fora del caos de les seves vides quotidianes.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.541906,
+          "longitude": 2.424668
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/141043/scenes/bridge.webp",
+            "description": "Escena de la pel·lícula Millor un altre dia, amb el pont de la platja de Camp de Mar"
+          },
+          {
+            "@type": "ImageObject",
+            "contentUrl": "/assets/images/141043/location/beach.webp",
+            "description": "El pont de la platja de Camp de Mar, que du al restaurant, on es va rodar l'escena de la pel·lícula Millor un altre dia"
+          }
+        ],
+        "name": "Camp de Mar"
+      },
+      "name": "Millor un altre dia",
+      "review": [],
+      "trailer": [
+        {
+          "@type": "VideoObject",
+          "identifier": "EEIJc3foHvM",
+          "contentUrl": "https://www.youtube.com/watch?v=EEIJc3foHvM",
+          "description": "Mejor otro día Trailer 2014 Español",
+          "embedUrl": "https://www.youtube.com/embed/EEIJc3foHvM",
+          "name": "Mejor otro día Trailer 2014 Español",
+          "thumbnailUrl": "https://img.youtube.com/vi/EEIJc3foHvM/maxresdefault.jpg",
+          "uploadDate": "2014-03-03T15:55:12Z"
+        }
+      ],
+      "url": "https://www.filmematv.com/movie/141043"
     }
   ]
 }
