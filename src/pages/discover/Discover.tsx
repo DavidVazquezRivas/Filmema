@@ -178,3 +178,5 @@ export const Discover: React.FC<DiscoverProps> = ({
     </PageLayout>
   )
 }
+
+export default Discover

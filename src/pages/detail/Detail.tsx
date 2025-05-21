@@ -50,3 +50,5 @@ export const Detail = () => {
     </PageLayout>
   )
 }
+
+export default Detail

@@ -95,3 +95,5 @@ const formatFromTo = (from: Date, to?: Date) => {
     to ? `To: ${to.toLocaleDateString('es-ES')}` : '',
   ]
 }
+
+export default Home
