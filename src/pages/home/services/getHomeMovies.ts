@@ -6,17 +6,19 @@ import {
   TMDB_API_URL,
   TMDB_DEFAULT_LANGUAGE,
 } from '@/constants/tmdbConstants'
+import axios from 'axios'
 
 export const getHomeMovies = async () => {
   const options = {
-    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${TMDB_API_KEY}`,
     },
   }
+
   const language =
     LanguagesMap[i18n.resolvedLanguage as string] ?? TMDB_DEFAULT_LANGUAGE
+
   const url = `${TMDB_API_URL}/discover/movie?language=${language}&sort_by=popularity.desc&page=1`
   const dateIso = new Date().toISOString().split('T')[0]
   const lastMonthsDateIso = new Date(
@@ -30,20 +32,18 @@ export const getHomeMovies = async () => {
   const upcomingQuery = `${url}&primary_release_date.gte=${dateIso}`
   const nowPlayingQuery = `${url}&primary_release_date.lte=${dateIso}&primary_release_date.gte=${lastMonthsDateIso}&vote_count.gte=200`
 
-  const heroResponse = await fetch(heroQuery, options)
-  const discoverResponse = await fetch(discoverQuery, options)
-  const upcomingResponse = await fetch(upcomingQuery, options)
-  const nowPlayingResponse = await fetch(nowPlayingQuery, options)
-
-  const heroObj = await heroResponse.json()
-  const discoverObj = await discoverResponse.json()
-  const upcomingObj = await upcomingResponse.json()
-  const nowPlayingObj = await nowPlayingResponse.json()
+  const [heroResponse, discoverResponse, upcomingResponse, nowPlayingResponse] =
+    await Promise.all([
+      axios.get(heroQuery, options),
+      axios.get(discoverQuery, options),
+      axios.get(upcomingQuery, options),
+      axios.get(nowPlayingQuery, options),
+    ])
 
   return homeMoviesAdapter({
-    hero: heroObj.results,
-    discover: discoverObj.results,
-    upcoming: upcomingObj.results,
-    nowPlaying: nowPlayingObj.results,
+    hero: heroResponse.data.results,
+    discover: discoverResponse.data.results,
+    upcoming: upcomingResponse.data.results,
+    nowPlaying: nowPlayingResponse.data.results,
   })
 }

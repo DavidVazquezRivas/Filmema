@@ -6,15 +6,16 @@ import {
 } from '@/constants/tmdbConstants'
 import i18n from '@/translation/i18n'
 import { getDetailsAdapter } from '../adapters/getDetailsAdapter'
+import axios from 'axios'
 
 export const getDetails = async (id: string) => {
   const options = {
-    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${TMDB_API_KEY}`,
     },
   }
+
   const language =
     LanguagesMap[i18n.resolvedLanguage as string] ?? TMDB_DEFAULT_LANGUAGE
 
@@ -24,12 +25,13 @@ export const getDetails = async (id: string) => {
     language.split('-')[0]
   }`
 
-  const response = await fetch(url, options)
-  const imagesResponse = await fetch(imagesUrl, options)
-  const obj = await response.json()
-  const imagesObj = await imagesResponse.json()
+  const [response, imagesResponse] = await Promise.all([
+    axios.get(url, options),
+    axios.get(imagesUrl, options),
+  ])
 
-  obj.images = imagesObj
+  const obj = response.data
+  obj.images = imagesResponse.data
 
   return getDetailsAdapter(obj)
 }
