@@ -30,8 +30,7 @@ export const Home = () => {
   }, [])
 
   if (state.loading) {
-    // TODO: Handle loading state better
-    return <h1>Loading...</h1>
+    return <PageLayout />
   }
 
   return (
@@ -96,3 +95,5 @@ const formatFromTo = (from: Date, to?: Date) => {
     to ? `To: ${to.toLocaleDateString('es-ES')}` : '',
   ]
 }
+
+export default Home

@@ -225,6 +225,7 @@ export const Hero: React.FC<HeroProps> = ({
             m={0}
             p={0}
             overflow="scroll"
+            className="no-scrollbar"
             flexWrap="wrap"
           >
             {genreChips}

@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { LanguagesMap } from '@/constants/languages'
 import {
   TMDB_API_KEY,
@@ -23,7 +24,6 @@ export const getMovies = async ({
   filters,
 }: GetMoviesParams) => {
   const options = {
-    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${TMDB_API_KEY}`,
@@ -33,20 +33,20 @@ export const getMovies = async ({
   const modeUrl = getModeUrl(mode, query)
   const language =
     LanguagesMap[i18n.resolvedLanguage as string] ?? TMDB_DEFAULT_LANGUAGE
+
   const filterQuery = filters
     ? Object.entries(filters).reduce((acc, [key, value]) => {
-        if (value instanceof Array) {
+        if (Array.isArray(value)) {
           return `${acc}&${key}=${value.join('|')}`
         }
         return `${acc}&${key}=${value}`
       }, '')
     : ''
 
-  let url = `${TMDB_API_URL}/${modeUrl}page=${page}&language=${language}&sort_by=popularity.desc${filterQuery}`
+  const url = `${TMDB_API_URL}/${modeUrl}page=${page}&language=${language}&sort_by=popularity.desc${filterQuery}`
 
-  const response = await fetch(url, options)
-  const obj = await response.json()
-  return movieListAdapter(obj)
+  const response = await axios.get(url, options)
+  return movieListAdapter(response.data)
 }
 
 const getModeUrl = (mode: DiscoverMode, query = '') => {

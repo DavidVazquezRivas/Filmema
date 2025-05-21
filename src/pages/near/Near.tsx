@@ -47,3 +47,5 @@ export const Near = () => {
     </LocationProvider>
   )
 }
+
+export default Near
