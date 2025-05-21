@@ -11,19 +11,32 @@ import { useSelector } from 'react-redux'
 import { PanelProvider } from './context/PanelContext'
 import { Panel } from './components/panel/Panel'
 import { Near } from './pages/near/Near'
+import { useEffect } from 'react'
+import { LoadingInterceptor } from './interceptors/loading.interceptor'
+import LoadingSpinner from './components/spinner/Spinner'
 
 function App() {
   const { theme } = useThemeContext()
-  const loading = useLoadGenres()
   const version = useSelector((state: any) => state.language.version)
 
-  if (loading) {
-    return <div>Cargando ...</div> // TODO good loading component
-  }
+  useEffect(() => {
+    LoadingInterceptor()
+  }, [])
+
+  const loading = useLoadGenres()
+
+  if (loading)
+    return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <LoadingSpinner />
+      </ThemeProvider>
+    )
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <LoadingSpinner />
       <PanelProvider>
         <BrowserRouter>
           <Routes key={version}>
