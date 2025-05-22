@@ -2,7 +2,7 @@
   "global": {
     "noData": "Not avaliable in this language",
     "listen": "Listen",
-    "watchlist" : "Add to watchlist",
+    "watchlist": "Add to watchlist",
     "filters": {
       "title": "Filters",
       "apply": "Apply"
@@ -109,7 +109,7 @@
     "noResults": "No results found matching the selected filters or search"
   },
   "details": {
-    "hero":{
+    "hero": {
       "rate": "Rate",
       "genre": "Genre",
       "overview": "Overview",
@@ -170,15 +170,15 @@
       },
       "renderers": {
         "zoneType": {
-            "0": "Beach",
-            "1": "Mountain",
-            "2": "Urban",
-            "3": "Forest",
-            "4": "River",
-            "5": "Desert",
-            "6": "Village",
-            "7": "Cave",
-            "8": "Other"
+          "0": "Beach",
+          "1": "Mountain",
+          "2": "Urban",
+          "3": "Forest",
+          "4": "River",
+          "5": "Desert",
+          "6": "Village",
+          "7": "Cave",
+          "8": "Other"
         },
         "accesibility": {
           "0": "Easy",
@@ -230,5 +230,12 @@
         }
       }
     }
+  },
+  "notFound": {
+    "title": "Oops! Page Not Found",
+    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "back": "Back to previous page",
+    "home": "Back to homepage",
+    "alt": "Page Not Found"
   }
 }

@@ -101,15 +101,15 @@
     "filters": {
       "genres": "Géneros",
       "releaseDate": "Fecha de estreno",
-      "voteAverage": "Puntuación", 
+      "voteAverage": "Puntuación",
       "voteCount": "Mínimo de votos",
-      "countries" : "Países",
+      "countries": "Países",
       "runtime": "Duración (minutos)"
     },
     "noResults": "No hay resultados que coincidan con la búsqueda o los filtros aplicados"
   },
   "details": {
-    "hero":{
+    "hero": {
       "rate": "Puntúa",
       "genre": "Género",
       "overview": "Resumen",
@@ -230,5 +230,12 @@
         }
       }
     }
+  },
+  "notFound": {
+    "title": "¡Oops! Página no encontrada",
+    "description": "Lo sentimos, la página que estás buscando no existe o ha sido movida.",
+    "home": "Volver a la página de inicio",
+    "back": "Volver a la página anterior",
+    "alt": "Página no encontrada"
   }
 }

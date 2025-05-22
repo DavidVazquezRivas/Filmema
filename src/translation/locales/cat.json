@@ -109,7 +109,7 @@
     "noResults": "No s'han trobat resultats pels filtres o la cerca seleccionats"
   },
   "details": {
-    "hero":{
+    "hero": {
       "rate": "Puntua",
       "genre": "Gènere",
       "overview": "Resum",
@@ -230,5 +230,12 @@
         }
       }
     }
+  },
+  "notFound": {
+    "title": "Uops! Pàgina no trobada",
+    "description": "Ho sentim, la pàgina que estàs cercant no existeix o ha estat moguda.",
+    "back": "Torna a la pàgina anterior",
+    "home": "Torna a la pàgina d'inici",
+    "alt": "Pàgina no trobada"
   }
 }
