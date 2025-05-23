@@ -23,7 +23,6 @@ export const HeroMain: React.FC<HeroMainProps> = ({ movie, ...props }) => {
     link.rel = 'preload'
     link.as = 'image'
     link.href = movie.backdrop
-    link.crossOrigin = 'anonymous'
     document.head.appendChild(link)
 
     return () => {
