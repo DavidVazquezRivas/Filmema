@@ -218,6 +218,10 @@
           "4": "Llevant",
           "5": "Migjorn"
         }
+      },
+      "video": {
+        "title": "Video de la zona",
+        "unsupported": "Este navegador no soporta el video"
       }
     },
     "filters": {

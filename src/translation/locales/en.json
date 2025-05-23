@@ -218,6 +218,10 @@
           "4": "Llevant",
           "5": "Migjorn"
         }
+      },
+      "video": {
+        "title": "Video of the zone",
+        "unsupported": "This video is not supported in your browser"
       }
     },
     "filters": {
