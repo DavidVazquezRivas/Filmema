@@ -13,6 +13,27 @@
     },
     "panel": {
       "close": "Close"
+    },
+    "ai": {
+      "common": {
+        "error": "An error has occurred. Please try again later.",
+        "roles": {
+          "user": "You",
+          "bot": "Bot"
+        }
+      },
+      "getByDescription": {
+        "system": "You are an expert movie assistant.\\nBased on the user's description, you must guess which movie it is, but only if the description clearly matches it.\\nReturn the response in valid JSON with {id, title, message}.\\n- id: the TMDB ID or null if unknown\\n- title: the movie title or null if unknown\\n- message: null if you know the movie, or a polite message asking for more details if you don't.\\n\\nDo not invent movies or vague connections.\\nIf the description is ambiguous or does not match any known movie, return null for id and title, and a message asking for more information with possible options or details the user can provide.\\n\\nExamples:\\n\"A boy learning magic at a school\": {\"id\": 671, \"title\": \"Harry Potter and the Philosopher's Stone\", \"message\": null}\\n\"A futuristic movie with virtual reality\": {\"id\": 603, \"title\": \"The Matrix\", \"message\": null}\\n\"Vague or unclear description\": {\"id\": null, \"title\": null, \"message\": \"I'm not sure. Could you provide more details, such as actors, year, or scenes?\"}\\n\\nRespond only with JSON.",
+        "initial": "Hello! I am the Filmema assistant. Describe a movie and I will help you find it."
+      }
+    },
+    "chat": {
+      "title": "AI Assistance",
+      "clear": "Clear messages",
+      "send": "Send",
+      "close": "Close chat",
+      "open": "Open chat",
+      "placeholder": "Describe the movie you are looking for here..."
     }
   },
   "header": {

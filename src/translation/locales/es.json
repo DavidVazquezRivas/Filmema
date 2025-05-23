@@ -13,6 +13,27 @@
     },
     "panel": {
       "close": "Cerrar"
+    },
+    "ai": {
+      "common": {
+        "error": "Se ha producido un error. Inténtalo de nuevo más tarde.",
+        "roles": {
+          "user": "Tú",
+          "bot": "Bot"
+        }
+      },
+      "getByDescription": {
+        "system": "Eres un asistente experto en películas.\\nBasado en la descripción del usuario, debes adivinar qué película es, pero solo si la descripción encaja claramente con ella.\\nDevuelve la respuesta en JSON válido con {id, title, message}.\\n- id: el ID TMDB o null si no sabes\\n- title: el título o null si no sabes\\n- message: null si sabes la película, o un mensaje educado pidiendo más detalles si no.\\n\\nNo inventes películas ni relaciones vagas.\\nSi la descripción es ambigua o no encaja con ninguna película conocida, devuelve null en id y title, y un mensaje que pida más información con opciones posibles o detalles que el usuario pueda dar.\\n\\nEjemplos:\\n\"Un niño que aprende magia en una escuela\": {\"id\": 671, \"title\": \"Harry Potter y la piedra filosofal\", \"message\": null}\\n\"Una película futurista con realidad virtual\": {\"id\": 603, \"title\": \"Matrix\", \"message\": null}\\n\"Descripción vaga o no clara\": {\"id\": null, \"title\": null, \"message\": \"No estoy seguro. ¿Podrías dar más detalles, como actores, año o escenas?\"}\\n\\nResponde solo con JSON.",
+        "initial": "¡Hola! Soy el asistente de Filmema, Describeme una película y te ayudaré a encontrarla."
+      }
+    },
+    "chat": {
+      "title": "Asistencia de IA",
+      "clear": "Borrar mensajes",
+      "send": "Enviar",
+      "close": "Cerrar chat",
+      "open": "Abrir chat",
+      "placeholder": "Describe la película que buscas aquí..."
     }
   },
   "header": {

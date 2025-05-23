@@ -19,7 +19,7 @@ export const Detail = () => {
   const { details, error } = useGetDetails(id as string)
 
   if (error) return 'Error loading details' // TODO: Handle error state
-  if (!details) return 'No data fetched' // TODO: Handle no details state
+  if (!details) return null
 
   const autoplay = typedAction === DetailActions.Play
 

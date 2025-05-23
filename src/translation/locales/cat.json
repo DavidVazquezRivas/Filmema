@@ -13,6 +13,27 @@
     },
     "panel": {
       "close": "Tancar"
+    },
+    "ai": {
+      "common": {
+        "error": "S'ha produït un error. Torna-ho a provar més tard.",
+        "roles": {
+          "user": "Tu",
+          "bot": "Bot"
+        }
+      },
+      "getByDescription": {
+        "system": "Ets un assistent expert en pel·lícules.\\nBasat en la descripció de l'usuari, has d'endevinar quina pel·lícula és, però només si la descripció encaixa clarament amb ella.\\nTorna la resposta en JSON vàlid amb {id, title, message}.\\n- id: l'ID TMDB o null si no saps\\n- title: el títol o null si no saps\\n- message: null si saps la pel·lícula, o un missatge educat demanant més detalls si no.\\n\\nNo inventis pel·lícules ni relacions vagues.\\nSi la descripció és ambigua o no encaixa amb cap pel·lícula coneguda, torna null a id i title, i un missatge que demani més informació amb opcions possibles o detalls que l'usuari pugui donar.\\n\\nExemples:\\n\"Un nen que aprèn màgia en una escola\": {\"id\": 671, \"title\": \"Harry Potter i la pedra filosofal\", \"message\": null}\\n\"Una pel·lícula futurista amb realitat virtual\": {\"id\": 603, \"title\": \"Matrix\", \"message\": null}\\n\"Descripció vaga o no clara\": {\"id\": null, \"title\": null, \"message\": \"No estic segur. Podries donar més detalls, com actors, any o escenes?\"}\\n\\nRespón només amb JSON.",
+        "initial": "Hola! Sóc l'assistent de Filmema. Descriu-me una pel·lícula i t'ajudaré a trobar-la."
+      }
+    },
+    "chat": {
+      "title": "Assistència d'IA",
+      "clear": "Esborrar missatges",
+      "send": "Enviar",
+      "close": "Tancar xat",
+      "open": "Obrir xat",
+      "placeholder": "Descripció de la pel·lícula que busques aquí..."
     }
   },
   "header": {
