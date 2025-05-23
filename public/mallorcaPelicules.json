@@ -50,6 +50,11 @@
             "@type": "PropertyValue",
             "name": "zoneType",
             "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "video",
+            "value": "/assets/videos/296096/beach.webm"
           }
         ],
         "description": "Els protagonistes viatgen a la platja per animar Will i ensenyar-li a Louisa a deixar-se portar una mica per l'aventura.",
@@ -198,6 +203,11 @@
             "@type": "PropertyValue",
             "name": "zoneType",
             "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "video",
+            "value": "/assets/videos/141043/beach.webm"
           }
         ],
         "description": "Els personatges visiten Camp de Mar com un moment d’escapada i connexió, oferint un descans tranquil de les seves lluites i una oportunitat per unir-se fora del caos de les seves vides quotidianes.",
