@@ -50,6 +50,11 @@
             "@type": "PropertyValue",
             "name": "zoneType",
             "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "video",
+            "value": "/assets/videos/296096/beach.webm"
           }
         ],
         "description": "The protagonists travel to the beach to cheer up Will and teach Louisa to let go a little and embrace adventure.",
@@ -178,6 +183,11 @@
             "@type": "PropertyValue",
             "name": "zoneType",
             "value": 0
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "video",
+            "value": "/assets/videos/141043/beach.webm"
           }
         ],
         "description": "The characters visit Camp de Mar as a moment of escape and connection, offering a peaceful break from their struggles and a chance to bond outside the chaos of their everyday lives.",

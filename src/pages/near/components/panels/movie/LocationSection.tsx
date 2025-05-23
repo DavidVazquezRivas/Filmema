@@ -1,7 +1,7 @@
 import { InfoSection } from '@/components/sections/infosection/InfoSection'
 import { SliderSection } from '@/components/slidersection/SliderSection'
 import { Location, NearImage } from '@/pages/near/models/nearMovie'
-import { Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -37,6 +37,9 @@ export const LocationSection: React.FC<LocationProps> = ({ location }) => {
 
   const zoneType = location.additionalProperty.find(
     (property) => property.name === 'zoneType'
+  )?.value as string
+  const video = location.additionalProperty.find(
+    (property) => property.name === 'video'
   )?.value as string
 
   const infoItems = [
@@ -97,6 +100,20 @@ export const LocationSection: React.FC<LocationProps> = ({ location }) => {
         renderItem={renderItem}
         seeAll={false}
       />
+      <Stack spacing={2} direction="column">
+        <Typography variant="h5" fontWeight="bold">
+          {t('near.detail.video.title')}
+        </Typography>
+        <Box
+          component="video"
+          controls
+          width="100%"
+          sx={{ borderRadius: 2, bgcolor: 'black' }}
+        >
+          <source src={video} type="video/webm" />
+          {t('near.detail.video.unsupported')}
+        </Box>
+      </Stack>
       <InfoSection title={t('near.detail.info.title')} items={infoItems} />
     </Stack>
   )
