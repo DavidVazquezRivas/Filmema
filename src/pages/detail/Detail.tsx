@@ -7,6 +7,7 @@ import { Hero } from './components/sections/Hero'
 import { ImageSection } from './components/sections/ImageSection'
 import { VideoSection } from './components/sections/VideoSection'
 import { CastSection } from './components/sections/CastSection'
+import NotFound from '../404/NotFound'
 
 export const Detail = () => {
   const { id, action } = useParams()
@@ -18,7 +19,7 @@ export const Detail = () => {
 
   const { details, error } = useGetDetails(id as string)
 
-  if (error) return 'Error loading details' // TODO: Handle error state
+  if (error) return <NotFound />
   if (!details) return null
 
   const autoplay = typedAction === DetailActions.Play
