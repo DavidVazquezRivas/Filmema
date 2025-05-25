@@ -3,6 +3,7 @@ import { Movie } from '@/models/movie'
 import { FullMovieCard } from '@/components/cards/FullMovieCard'
 import {
   Box,
+  Button,
   IconButton,
   Typography,
   useMediaQuery,
@@ -22,6 +23,8 @@ import { INITIAL_PAGE, MAX_PAGES } from './constants/pageConstants'
 import { getFilters } from './constants/filters'
 import FilterListIcon from '@mui/icons-material/FilterList'
 import { HalfMovieCard } from '@/components/cards/HalfMovieCard'
+import { usePanel } from '@/context/PanelContext'
+import ChartPanel from '@/components/charts/ChartPanel'
 
 interface DiscoverProps {
   mode?: DiscoverMode
@@ -49,6 +52,7 @@ export const Discover: React.FC<DiscoverProps> = ({
   const { query } = useParams<{ query: string }>()
   const { t } = useTranslation()
   const genresRaw = useGetGenres()
+  const { openPanel } = usePanel()
 
   const toggleFilters = (newShowFilters: boolean) => () => {
     setShowFiltrs(newShowFilters)
@@ -97,6 +101,10 @@ export const Discover: React.FC<DiscoverProps> = ({
     setState((prev) => ({ ...prev, page }))
   }, [])
 
+  const handleOpenPanel = () => {
+    openPanel(<ChartPanel movies={state.movies} />, t('global.charts.title'))
+  }
+
   const filters = getFilters(mode, genres, t)
 
   const movieCards = state.movies.map((movie) =>
@@ -142,30 +150,43 @@ export const Discover: React.FC<DiscoverProps> = ({
           alignItems="center"
         >
           <Box
-            display={{ xs: 'flex', lg: 'none' }}
             justifyContent="flex-end"
-            alignItems="center"
+            display="flex"
+            flexDirection="row"
             width="100%"
-            position="relative"
+            gap={2}
           >
-            <Typography variant="h5" color="text.secondary">
-              {t('global.filters.title')}
-              <IconButton onClick={toggleFilters(!showFilters)}>
-                <FilterListIcon />
-              </IconButton>
-            </Typography>
-            <FilterPanel
-              onApply={handleApplyFilters}
-              filters={filters}
-              sx={{
-                display: showFilters ? 'flex' : 'none',
-                position: 'absolute',
-                top: '100%',
-                right: 0,
-                zIndex: 100,
-                elevation: 5,
-              }}
-            />
+            <Button
+              variant="contained"
+              onClick={handleOpenPanel}
+              sx={{ maxWidth: 250 }}
+            >
+              {t('global.charts.button.show')}
+            </Button>
+            <Box
+              display={{ xs: 'flex', lg: 'none' }}
+              alignItems="center"
+              position="relative"
+            >
+              <Typography variant="h5" color="text.secondary">
+                {t('global.filters.title')}
+                <IconButton onClick={toggleFilters(!showFilters)}>
+                  <FilterListIcon />
+                </IconButton>
+              </Typography>
+              <FilterPanel
+                onApply={handleApplyFilters}
+                filters={filters}
+                sx={{
+                  display: showFilters ? 'flex' : 'none',
+                  position: 'absolute',
+                  top: '100%',
+                  right: 0,
+                  zIndex: 100,
+                  elevation: 5,
+                }}
+              />
+            </Box>
           </Box>
           {content}
           <DiscoverPagination

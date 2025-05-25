@@ -34,6 +34,24 @@
       "close": "Close chat",
       "open": "Open chat",
       "placeholder": "Describe the movie you are looking for here..."
+    },
+    "charts": {
+      "title": "Charts",
+      "button": {
+        "show": "Show charts"
+      },
+      "genre": {
+        "title": "Genre Distribution"
+      },
+      "rating": {
+        "title": "Rating Distribution"
+      },
+      "releaseDate": {
+        "title": "Release Decade Distribution"
+      },
+      "voteCount": {
+        "title": "Vote Count Distribution"
+      }
     }
   },
   "header": {
