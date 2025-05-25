@@ -1,4 +1,4 @@
-import { Box, Pagination } from '@mui/material'
+import { Box, Pagination, useMediaQuery, useTheme } from '@mui/material'
 
 interface DiscoverPaginationProps {
   page: number
@@ -11,6 +11,9 @@ export const DiscoverPagination: React.FC<DiscoverPaginationProps> = ({
   totalPages,
   setPage,
 }) => {
+  const theme = useTheme()
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value)
   }
@@ -22,6 +25,7 @@ export const DiscoverPagination: React.FC<DiscoverPaginationProps> = ({
         count={totalPages}
         onChange={handleChange}
         shape="rounded"
+        siblingCount={isSmallScreen ? 0 : 1}
       ></Pagination>
     </Box>
   )
