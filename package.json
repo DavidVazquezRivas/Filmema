@@ -15,6 +15,7 @@
     "@justinribeiro/lite-youtube": "^1.7.1",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
+    "@mui/x-charts": "^8.4.0",
     "@reduxjs/toolkit": "^2.6.1",
     "axios": "^1.9.0",
     "i18next": "^24.2.2",
