@@ -34,6 +34,24 @@
       "close": "Cerrar chat",
       "open": "Abrir chat",
       "placeholder": "Describe la película que buscas aquí..."
+    },
+    "charts": {
+      "title": "Gráficos",
+      "button": {
+        "show": "Mostrar gráficos"
+      },
+      "genre": {
+        "title": "Distribución de géneros"
+      },
+      "rating": {
+        "title": "Distribución de puntuaciones"
+      },
+      "releaseDate": {
+        "title": "Distribución por decadas de estreno"
+      },
+      "voteCount": {
+        "title": "Distribución de número de votos"
+      }
     }
   },
   "header": {

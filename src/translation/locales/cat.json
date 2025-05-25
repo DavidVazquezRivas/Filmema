@@ -34,6 +34,24 @@
       "close": "Tancar xat",
       "open": "Obrir xat",
       "placeholder": "Descripció de la pel·lícula que busques aquí..."
+    },
+    "charts": {
+      "title": "Gràfics",
+      "button": {
+        "show": "Mostra gràfics"
+      },
+      "genre": {
+        "title": "Distribució de gèneres"
+      },
+      "rating": {
+        "title": "Distribució de puntuacions"
+      },
+      "releaseDate": {
+        "title": "Distribució per dècades d'estrena"
+      },
+      "voteCount": {
+        "title": "Distribució del nombre de vots"
+      }
     }
   },
   "header": {
