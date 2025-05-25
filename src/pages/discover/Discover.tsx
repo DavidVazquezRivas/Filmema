@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   IconButton,
-  Stack,
   Typography,
   useMediaQuery,
   useTheme,
