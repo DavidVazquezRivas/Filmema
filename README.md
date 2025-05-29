@@ -28,7 +28,8 @@ Filmema is built using the following technologies:
 - **Media Components**: lite-youtube  
 - **Layout**: React Responsive Masonry  
 - **Slider**: Swiper  
-- **Build Tool**: Vite  
+- **Build Tool**: Vite
+- **Http request**: Axios
   
 ## System Architecture  
   
@@ -39,7 +40,7 @@ Filmema follows a modern front-end architecture using React with TypeScript, org
 - **Internationalization**: Manages multiple language support  
 - **Panel System**: Provides modal/dialog functionality  
 - **Theme System**: Supports theme switching (light/dark modes)  
-- **Data Services**: Connects to TMDB API to fetch movie data  
+- **Data Services**: Connects to TMDB API to fetch movie data
   
 ## Getting Started  
   
